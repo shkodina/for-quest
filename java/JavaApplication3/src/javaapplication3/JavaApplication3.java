@@ -66,6 +66,7 @@ public class JavaApplication3 {
                     curtime = System.currentTimeMillis();
                     modbus_worker.updateData();
                 }
+                Thread.sleep(50);
                 //System.out.println("modbus_worker updateData done");
             }
         }catch (Exception e){
