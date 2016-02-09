@@ -34,6 +34,7 @@ import java.util.logging.Logger;
  */
 public class ModBusWorker {
     
+    
     public void init (){
         
         ModbusFactory factory = new ModbusFactory();
@@ -79,7 +80,7 @@ public class ModBusWorker {
             try{
                 ReadHoldingRegistersResponse res = (ReadHoldingRegistersResponse)master_.send(new ReadHoldingRegistersRequest(
                                 addr, 
-                                data_start_address_ - 1 + addr * reg_count_per_client_ , 
+                                client_data_address_, 
                                 reg_count_per_client_));
 
                 map_.position(i * reg_count_per_client_);
@@ -117,11 +118,13 @@ public class ModBusWorker {
     // FUNCTIONS TO SET FIELDS
     public void setModBusParams (   int client_start_id, 
                                     int client_max_count,
-                                    int data_start_address){
+                                    int data_start_address,
+                                    int client_data_address){
         client_start_id_ = client_start_id;
         client_max_count_ = client_max_count;
         data_start_address_ = data_start_address;
         reg_count_per_client_ = 4;
+        client_data_address_ = client_data_address;
         
         map_ = ShortBuffer.allocate((client_max_count_ + 1 ) * reg_count_per_client_ );
         
@@ -146,6 +149,7 @@ public class ModBusWorker {
     private int client_max_count_; 
     private int data_start_address_;
     private int reg_count_per_client_;
+    private int client_data_address_;
     
     private String port_name_;
     private int port_speed_;

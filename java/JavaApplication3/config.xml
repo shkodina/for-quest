@@ -7,7 +7,8 @@
 	<modbus 	
 				client_start_id="1" 
 				client_max_count="10" 
-				data_start_address="20" 
+				data_start_address="20"
+				client_data_address="10"
 	/>
 	
 	<exchange 	

@@ -15,7 +15,6 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -46,7 +45,7 @@ public class DataXmlWorker {
         }
         
         if ((System.currentTimeMillis() - last_change_timestamp_) < check_period_){
-            //System.out.println("NO upDateData");
+            //System.out.println("NO upDateData: " + (System.currentTimeMillis() - last_change_timestamp_));
             return mem_data;
         }
         

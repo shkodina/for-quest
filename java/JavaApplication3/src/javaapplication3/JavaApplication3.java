@@ -34,7 +34,8 @@ public class JavaApplication3 {
                              Integer.parseInt(cnf_reader.getCnfParam("comport", "speed")));
         modbus_worker.setModBusParams(Integer.parseInt(cnf_reader.getCnfParam("modbus", "client_start_id")), 
                             Integer.parseInt(cnf_reader.getCnfParam("modbus", "client_max_count")), 
-                            Integer.parseInt(cnf_reader.getCnfParam("modbus", "data_start_address")));
+                            Integer.parseInt(cnf_reader.getCnfParam("modbus", "data_start_address")),
+                            Integer.parseInt(cnf_reader.getCnfParam("modbus", "client_data_address")));
         
         modbus_worker.setDataXmlWorker(dataxmlworker);
         
