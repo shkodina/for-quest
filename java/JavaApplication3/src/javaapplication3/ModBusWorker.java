@@ -47,7 +47,7 @@ public class ModBusWorker {
             params.setStopBits(1);
             params.setParity(0);
         master_ = factory.createRtuMaster(params);
-            master_.setTimeout(2000);
+            master_.setTimeout(500);
             master_.setRetries(0);
             
  
@@ -77,7 +77,7 @@ public class ModBusWorker {
 
         for (int i = client_start_id_; i <= client_max_count_; i++){
             // TODO FOR DEBUG
-            int addr = 1;
+            int addr = i;
             try{
                 ReadHoldingRegistersResponse res = (ReadHoldingRegistersResponse)master_.send(new ReadHoldingRegistersRequest(
                                 addr, 
@@ -97,18 +97,25 @@ public class ModBusWorker {
         
         //System.out.println("Update xml");
         
-        //data_xml_worker_.test();
+        //for (char ii = 0; ii < map_.limit(); ii++){
+        //    System.out.println("map[" + ii + "]=" + map_.get(ii));
+        //}
+
         
         map_ = time_data_xml_worker_.upDateData(map_);
-        map_ = data_xml_worker_.upDateData(map_);
+        // for (char ii = 0; ii < map_.limit(); ii++){
+        //    System.out.println("map+t[" + ii + "]=" + map_.get(ii));
+        //}
+       map_ = data_xml_worker_.upDateData(map_);
         
         //System.out.println("Update xml finished");
         
         //System.out.println("Send Braodcast data");
         
+        
         // TODO need set broadcast address
         try {
-            master_.send(new WriteRegistersRequest(1, data_start_address_ - 1, map_.array()));            
+            master_.send(new WriteRegistersRequest(0, data_start_address_ - 1, map_.array()));            
         } catch (ModbusTransportException ex) {
             System.out.println("try send Broadcast exception: " + ex.getMessage());
             //Logger.getLogger(ModBusWorker.class.getName()).log(Level.SEVERE, null, ex);

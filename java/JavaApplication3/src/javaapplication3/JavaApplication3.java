@@ -19,7 +19,7 @@ public class JavaApplication3 {
         
         ConfigReader cnf_reader = new ConfigReader();
         try {
-            cnf_reader.parse("config.xml");
+            cnf_reader.parse(args[0]);
         }catch (Exception e){
             System.out.println("Exeption: " + e.getMessage());
         }

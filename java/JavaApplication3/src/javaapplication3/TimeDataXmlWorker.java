@@ -34,15 +34,21 @@ public class TimeDataXmlWorker {
     
     public ShortBuffer upDateData (ShortBuffer mem_data){
         
-        System.out.println("in update last_change_timestamp_ = " + last_change_timestamp_);
-        System.out.println("in update getChangeTimeStamp() = " + getChangeTimeStamp());
+        //System.out.println("in update last_change_timestamp_ = " + last_change_timestamp_);
+        //System.out.println("in update getChangeTimeStamp()   = " + getChangeTimeStamp());
         
         if (last_change_timestamp_ < getChangeTimeStamp()){
-            //System.out.println("some new data in XML");
-            ShortBuffer cur_data = getXmlData(mem_data);
-            last_change_timestamp_ = getChangeTimeStamp();
-            return cur_data;
+            try{
+                //System.out.println("some new data in XML");
+                ShortBuffer cur_data = getXmlData(mem_data);
+                last_change_timestamp_ = getChangeTimeStamp();
+                return cur_data;
+            }catch(Exception ex){
+                System.out.println("Exception in time data update: " + ex.getMessage());
+            }
+            
         }
+        
         
         return mem_data;
     }
@@ -51,12 +57,16 @@ public class TimeDataXmlWorker {
     private ShortBuffer getXmlData(ShortBuffer mem_data){
         
         ShortBuffer exitData = ShortBuffer.allocate(mem_data.limit());
-        exitData.put(mem_data);
+        exitData.put(mem_data.array());
+        
+        //for (char ii = 0; ii < exitData.limit(); ii++){
+        //    System.out.println("exitData[" + ii + "]=" + exitData.get(ii));
+        //}
         
         SAXReader reader = new SAXReader();
 
         File f = new File(file_name_);
-
+        
         if (!f.exists()){
             System.out.println("no time data file " + file_name_);
         }
@@ -64,17 +74,18 @@ public class TimeDataXmlWorker {
         try {
             Document document = reader.read(f);
             
-            Element root = document.getRootElement().element("map");
+            Element root = document.getRootElement();
             
             // iterate through child elements of root
             for ( Iterator i = root.elementIterator(); i.hasNext(); ) {
                 Element element = (Element) i.next();
-                
+
                 //System.out.println("addr[ " + element.attributeValue("addr") + "] = " + element.attributeValue("value"));
                 
                 int mem_adr = Integer.parseInt(element.attributeValue("addr")) - mem_shift_;
                 if (mem_adr < mem_data.limit())
                     exitData.put(mem_adr, Short.parseShort(element.attributeValue("value")));
+
             }
 
             return exitData;
