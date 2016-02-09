@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exchange>
+	<map>
+		<reg addr="21" value="4"/>
+
+		<reg addr="24" value="68"/>
+		<reg addr="25" value="1040"/>
+
+	</map>
+</exchange>

@@ -81,7 +81,8 @@ public class DataXmlWorker {
                 
                 //System.out.println("addr[ " + element.attributeValue("addr") + "] = " + element.attributeValue("value"));
                 
-                int mem_adr = Integer.parseInt(element.attributeValue("addr")) - mem_shift_;
+                // TODO put +2 into config
+                int mem_adr = Integer.parseInt(element.attributeValue("addr")) - mem_shift_ + 2; // DEBUG +2 for fix webface bug
                 if (mem_adr < mem_data.limit())
                     exitData.put(mem_adr, (short) Integer.parseInt(element.attributeValue("value")));
             }
