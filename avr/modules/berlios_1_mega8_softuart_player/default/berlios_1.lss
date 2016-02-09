@@ -1,0 +1,4592 @@
+
+berlios_1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001828  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000004c  00800060  00001828  000018bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000001d0  008000ac  008000ac  00001908  2**0
+                  ALLOC
+  3 .stab         00000c84  00000000  00000000  00001908  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      000001b6  00000000  00000000  0000258c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 000001c0  00000000  00000000  00002742  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000724  00000000  00000000  00002902  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00002a98  00000000  00000000  00003026  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000f6c  00000000  00000000  00005abe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   000023e1  00000000  00000000  00006a2a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000580  00000000  00000000  00008e0c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00000ff3  00000000  00000000  0000938c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00001a74  00000000  00000000  0000a37f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 000004d2  00000000  00000000  0000bdf3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000048  00000000  00000000  0000c2c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	12 c1       	rjmp	.+548    	; 0x226 <__ctors_end>
+       2:	2c c1       	rjmp	.+600    	; 0x25c <__bad_interrupt>
+       4:	2b c1       	rjmp	.+598    	; 0x25c <__bad_interrupt>
+       6:	2a c1       	rjmp	.+596    	; 0x25c <__bad_interrupt>
+       8:	29 c1       	rjmp	.+594    	; 0x25c <__bad_interrupt>
+       a:	28 c1       	rjmp	.+592    	; 0x25c <__bad_interrupt>
+       c:	a7 c2       	rjmp	.+1358   	; 0x55c <__vector_6>
+       e:	26 c1       	rjmp	.+588    	; 0x25c <__bad_interrupt>
+      10:	25 c1       	rjmp	.+586    	; 0x25c <__bad_interrupt>
+      12:	0c c7       	rjmp	.+3608   	; 0xe2c <__vector_9>
+      14:	23 c1       	rjmp	.+582    	; 0x25c <__bad_interrupt>
+      16:	3e c2       	rjmp	.+1148   	; 0x494 <__vector_11>
+      18:	16 c2       	rjmp	.+1068   	; 0x446 <__vector_12>
+      1a:	63 c2       	rjmp	.+1222   	; 0x4e2 <__vector_13>
+      1c:	1f c1       	rjmp	.+574    	; 0x25c <__bad_interrupt>
+      1e:	1e c1       	rjmp	.+572    	; 0x25c <__bad_interrupt>
+      20:	1d c1       	rjmp	.+570    	; 0x25c <__bad_interrupt>
+      22:	1c c1       	rjmp	.+568    	; 0x25c <__bad_interrupt>
+      24:	1b c1       	rjmp	.+566    	; 0x25c <__bad_interrupt>
+
+00000026 <aucCRCHi>:
+      26:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      36:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      46:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      56:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      66:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      76:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      86:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      96:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      a6:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      b6:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      c6:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      d6:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+      e6:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+      f6:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+     106:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+     116:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+
+00000126 <aucCRCLo>:
+     126:	00 c0 c1 01 c3 03 02 c2 c6 06 07 c7 05 c5 c4 04     ................
+     136:	cc 0c 0d cd 0f cf ce 0e 0a ca cb 0b c9 09 08 c8     ................
+     146:	d8 18 19 d9 1b db da 1a 1e de df 1f dd 1d 1c dc     ................
+     156:	14 d4 d5 15 d7 17 16 d6 d2 12 13 d3 11 d1 d0 10     ................
+     166:	f0 30 31 f1 33 f3 f2 32 36 f6 f7 37 f5 35 34 f4     .01.3..26..7.54.
+     176:	3c fc fd 3d ff 3f 3e fe fa 3a 3b fb 39 f9 f8 38     <..=.?>..:;.9..8
+     186:	28 e8 e9 29 eb 2b 2a ea ee 2e 2f ef 2d ed ec 2c     (..).+*.../.-..,
+     196:	e4 24 25 e5 27 e7 e6 26 22 e2 e3 23 e1 21 20 e0     .$%.'..&"..#.! .
+     1a6:	a0 60 61 a1 63 a3 a2 62 66 a6 a7 67 a5 65 64 a4     .`a.c..bf..g.ed.
+     1b6:	6c ac ad 6d af 6f 6e ae aa 6a 6b ab 69 a9 a8 68     l..m.on..jk.i..h
+     1c6:	78 b8 b9 79 bb 7b 7a ba be 7e 7f bf 7d bd bc 7c     x..y.{z..~..}..|
+     1d6:	b4 74 75 b5 77 b7 b6 76 72 b2 b3 73 b1 71 70 b0     .tu.w..vr..s.qp.
+     1e6:	50 90 91 51 93 53 52 92 96 56 57 97 55 95 94 54     P..Q.SR..VW.U..T
+     1f6:	9c 5c 5d 9d 5f 9f 9e 5e 5a 9a 9b 5b 99 59 58 98     .\]._..^Z..[.YX.
+     206:	88 48 49 89 4b 8b 8a 4a 4e 8e 8f 4f 8d 4d 4c 8c     .HI.K..JN..O.ML.
+     216:	44 84 85 45 87 47 46 86 82 42 43 83 41 81 80 40     D..E.GF..BC.A..@
+
+00000226 <__ctors_end>:
+     226:	11 24       	eor	r1, r1
+     228:	1f be       	out	0x3f, r1	; 63
+     22a:	cf e5       	ldi	r28, 0x5F	; 95
+     22c:	d4 e0       	ldi	r29, 0x04	; 4
+     22e:	de bf       	out	0x3e, r29	; 62
+     230:	cd bf       	out	0x3d, r28	; 61
+
+00000232 <__do_copy_data>:
+     232:	10 e0       	ldi	r17, 0x00	; 0
+     234:	a0 e6       	ldi	r26, 0x60	; 96
+     236:	b0 e0       	ldi	r27, 0x00	; 0
+     238:	e8 e2       	ldi	r30, 0x28	; 40
+     23a:	f8 e1       	ldi	r31, 0x18	; 24
+     23c:	02 c0       	rjmp	.+4      	; 0x242 <__do_copy_data+0x10>
+     23e:	05 90       	lpm	r0, Z+
+     240:	0d 92       	st	X+, r0
+     242:	ac 3a       	cpi	r26, 0xAC	; 172
+     244:	b1 07       	cpc	r27, r17
+     246:	d9 f7       	brne	.-10     	; 0x23e <__do_copy_data+0xc>
+
+00000248 <__do_clear_bss>:
+     248:	12 e0       	ldi	r17, 0x02	; 2
+     24a:	ac ea       	ldi	r26, 0xAC	; 172
+     24c:	b0 e0       	ldi	r27, 0x00	; 0
+     24e:	01 c0       	rjmp	.+2      	; 0x252 <.do_clear_bss_start>
+
+00000250 <.do_clear_bss_loop>:
+     250:	1d 92       	st	X+, r1
+
+00000252 <.do_clear_bss_start>:
+     252:	ac 37       	cpi	r26, 0x7C	; 124
+     254:	b1 07       	cpc	r27, r17
+     256:	e1 f7       	brne	.-8      	; 0x250 <.do_clear_bss_loop>
+     258:	02 d0       	rcall	.+4      	; 0x25e <main>
+     25a:	e4 ca       	rjmp	.-2616   	; 0xfffff824 <__eeprom_end+0xff7ef824>
+
+0000025c <__bad_interrupt>:
+     25c:	d1 ce       	rjmp	.-606    	; 0x0 <__vectors>
+
+0000025e <main>:
+#include "softUart.h"
+
+/* ----------------------- Start implementation -----------------------------*/
+int
+main( void )
+{
+     25e:	ef 92       	push	r14
+     260:	0f 93       	push	r16
+     262:	1f 93       	push	r17
+
+	SUART_Init();
+     264:	a1 d6       	rcall	.+3394   	; 0xfa8 <SUART_Init>
+
+    const UCHAR     ucSlaveID[] = { 0xAA, 0xBB, 0xCC };
+    eMBErrorCode    eStatus;
+
+    eStatus = eMBInit( MB_RTU, CLIENT_ID, 0, BAUDRATE, MB_PAR_NONE );
+     266:	80 e0       	ldi	r24, 0x00	; 0
+     268:	62 e0       	ldi	r22, 0x02	; 2
+     26a:	40 e0       	ldi	r20, 0x00	; 0
+     26c:	00 e0       	ldi	r16, 0x00	; 0
+     26e:	16 e9       	ldi	r17, 0x96	; 150
+     270:	20 e0       	ldi	r18, 0x00	; 0
+     272:	30 e0       	ldi	r19, 0x00	; 0
+     274:	ee 24       	eor	r14, r14
+     276:	99 d1       	rcall	.+818    	; 0x5aa <eMBInit>
+
+    //eStatus = eMBSetSlaveID( 0x34, TRUE, ucSlaveID, 3 );
+    sei(  );
+     278:	78 94       	sei
+
+    /* Enable the Modbus Protocol Stack. */
+    eStatus = eMBEnable(  );
+     27a:	43 d2       	rcall	.+1158   	; 0x702 <eMBEnable>
+
+
+    for( ;; )
+    {
+        ( void )eMBPoll(  );
+     27c:	64 d2       	rcall	.+1224   	; 0x746 <eMBPoll>
+
+        /* Here we simply count the number of poll cycles. */
+        g_reg_holding_device[0]++;
+     27e:	80 91 ac 00 	lds	r24, 0x00AC
+     282:	8f 5f       	subi	r24, 0xFF	; 255
+     284:	80 93 ac 00 	sts	0x00AC, r24
+
+		g_reg_holding_device[1] = g_reg_holding_data[0];
+     288:	80 91 b0 00 	lds	r24, 0x00B0
+     28c:	80 93 ad 00 	sts	0x00AD, r24
+
+		if (g_reg_holding_data[0] != 0){
+     290:	80 91 b0 00 	lds	r24, 0x00B0
+     294:	88 23       	and	r24, r24
+     296:	91 f3       	breq	.-28     	; 0x27c <main+0x1e>
+			mp3_play_arg(g_reg_holding_data[0]);
+     298:	80 91 b0 00 	lds	r24, 0x00B0
+     29c:	90 e0       	ldi	r25, 0x00	; 0
+     29e:	a6 d7       	rcall	.+3916   	; 0x11ec <mp3_play_arg>
+			g_reg_holding_data[0] = 0;
+     2a0:	10 92 b0 00 	sts	0x00B0, r1
+     2a4:	eb cf       	rjmp	.-42     	; 0x27c <main+0x1e>
+
+000002a6 <eMBRegHoldingCB>:
+
+
+  eMBErrorCode  eStatus = MB_ENOERR;
+
+	// READ REGESTERS
+	if (eMode == MB_REG_READ){
+     2a6:	22 23       	and	r18, r18
+     2a8:	19 f5       	brne	.+70     	; 0x2f0 <eMBRegHoldingCB+0x4a>
+		if (( usAddress == REG_HOLDING_START ) && 
+     2aa:	6a 30       	cpi	r22, 0x0A	; 10
+     2ac:	71 05       	cpc	r23, r1
+     2ae:	f1 f5       	brne	.+124    	; 0x32c <eMBRegHoldingCB+0x86>
+     2b0:	42 30       	cpi	r20, 0x02	; 2
+     2b2:	51 05       	cpc	r21, r1
+     2b4:	d9 f5       	brne	.+118    	; 0x32c <eMBRegHoldingCB+0x86>
+			( usNRegs == REG_HOLDING_NREGS )){
+
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+     2b6:	20 91 ae 00 	lds	r18, 0x00AE
+     2ba:	32 2f       	mov	r19, r18
+     2bc:	3f 5f       	subi	r19, 0xFF	; 255
+     2be:	30 93 ae 00 	sts	0x00AE, r19
+     2c2:	2f 3f       	cpi	r18, 0xFF	; 255
+     2c4:	29 f4       	brne	.+10     	; 0x2d0 <eMBRegHoldingCB+0x2a>
+				g_reg_holding_device[3]++;
+     2c6:	20 91 af 00 	lds	r18, 0x00AF
+     2ca:	2f 5f       	subi	r18, 0xFF	; 255
+     2cc:	20 93 af 00 	sts	0x00AF, r18
+}
+
+eMBErrorCode
+eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
+                 eMBRegisterMode eMode )
+{
+     2d0:	40 e0       	ldi	r20, 0x00	; 0
+     2d2:	09 c0       	rjmp	.+18     	; 0x2e6 <eMBRegHoldingCB+0x40>
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+				g_reg_holding_device[3]++;
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				pucRegBuffer[i] = g_reg_holding_device[i];
+     2d4:	f9 01       	movw	r30, r18
+     2d6:	e4 55       	subi	r30, 0x54	; 84
+     2d8:	ff 4f       	sbci	r31, 0xFF	; 255
+     2da:	50 81       	ld	r21, Z
+     2dc:	28 0f       	add	r18, r24
+     2de:	39 1f       	adc	r19, r25
+     2e0:	f9 01       	movw	r30, r18
+     2e2:	50 83       	st	Z, r21
+
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+				g_reg_holding_device[3]++;
+
+			for (char i = 0; i < usNRegs * 2; i++){
+     2e4:	4f 5f       	subi	r20, 0xFF	; 255
+     2e6:	24 2f       	mov	r18, r20
+     2e8:	30 e0       	ldi	r19, 0x00	; 0
+     2ea:	44 30       	cpi	r20, 0x04	; 4
+     2ec:	99 f7       	brne	.-26     	; 0x2d4 <eMBRegHoldingCB+0x2e>
+     2ee:	1a c0       	rjmp	.+52     	; 0x324 <eMBRegHoldingCB+0x7e>
+			eStatus = MB_ENORES;
+		}
+	}
+
+	// WRITE REGESTERS
+	if (eMode == MB_REG_WRITE){
+     2f0:	21 30       	cpi	r18, 0x01	; 1
+     2f2:	c1 f4       	brne	.+48     	; 0x324 <eMBRegHoldingCB+0x7e>
+		if (( usAddress == REG_HOLDING_DATA_START ) && 
+     2f4:	64 31       	cpi	r22, 0x14	; 20
+     2f6:	71 05       	cpc	r23, r1
+     2f8:	c9 f4       	brne	.+50     	; 0x32c <eMBRegHoldingCB+0x86>
+     2fa:	4f 33       	cpi	r20, 0x3F	; 63
+     2fc:	51 05       	cpc	r21, r1
+     2fe:	a0 f4       	brcc	.+40     	; 0x328 <eMBRegHoldingCB+0x82>
+			( usNRegs <= REG_HOLDING_DATA_NREGS)){
+
+			for (char i = 0; i < usNRegs * 2; i++){
+     300:	44 0f       	add	r20, r20
+     302:	55 1f       	adc	r21, r21
+     304:	60 e0       	ldi	r22, 0x00	; 0
+     306:	09 c0       	rjmp	.+18     	; 0x31a <eMBRegHoldingCB+0x74>
+				g_reg_holding_data[i] = pucRegBuffer[i];
+     308:	fc 01       	movw	r30, r24
+     30a:	e2 0f       	add	r30, r18
+     30c:	f3 1f       	adc	r31, r19
+     30e:	70 81       	ld	r23, Z
+     310:	20 55       	subi	r18, 0x50	; 80
+     312:	3f 4f       	sbci	r19, 0xFF	; 255
+     314:	f9 01       	movw	r30, r18
+     316:	70 83       	st	Z, r23
+	// WRITE REGESTERS
+	if (eMode == MB_REG_WRITE){
+		if (( usAddress == REG_HOLDING_DATA_START ) && 
+			( usNRegs <= REG_HOLDING_DATA_NREGS)){
+
+			for (char i = 0; i < usNRegs * 2; i++){
+     318:	6f 5f       	subi	r22, 0xFF	; 255
+     31a:	26 2f       	mov	r18, r22
+     31c:	30 e0       	ldi	r19, 0x00	; 0
+     31e:	24 17       	cp	r18, r20
+     320:	35 07       	cpc	r19, r21
+     322:	90 f3       	brcs	.-28     	; 0x308 <eMBRegHoldingCB+0x62>
+                 eMBRegisterMode eMode )
+{
+
+
+
+  eMBErrorCode  eStatus = MB_ENOERR;
+     324:	80 e0       	ldi	r24, 0x00	; 0
+     326:	08 95       	ret
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				g_reg_holding_data[i] = pucRegBuffer[i];
+			}
+		}else{
+			eStatus = MB_ENORES;
+     328:	84 e0       	ldi	r24, 0x04	; 4
+		}
+	}
+
+  return eStatus;
+}
+     32a:	08 95       	ret
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				pucRegBuffer[i] = g_reg_holding_device[i];
+			}
+		}else{
+			eStatus = MB_ENORES;
+     32c:	84 e0       	ldi	r24, 0x04	; 4
+     32e:	08 95       	ret
+
+00000330 <usMBCRC16>:
+    0x40
+};
+
+USHORT
+usMBCRC16( UCHAR * pucFrame, USHORT usLen )
+{
+     330:	dc 01       	movw	r26, r24
+    UCHAR           ucCRCHi = 0xFF;
+    UCHAR           ucCRCLo = 0xFF;
+     332:	4f ef       	ldi	r20, 0xFF	; 255
+};
+
+USHORT
+usMBCRC16( UCHAR * pucFrame, USHORT usLen )
+{
+    UCHAR           ucCRCHi = 0xFF;
+     334:	5f ef       	ldi	r21, 0xFF	; 255
+    UCHAR           ucCRCLo = 0xFF;
+    int             iIndex;
+
+    while( usLen-- )
+     336:	0f c0       	rjmp	.+30     	; 0x356 <usMBCRC16+0x26>
+    {
+        iIndex = ucCRCLo ^ *( pucFrame++ );
+     338:	2d 91       	ld	r18, X+
+        ucCRCLo = ucCRCHi ^ pgm_read_byte( &aucCRCHi[iIndex] );
+     33a:	84 2f       	mov	r24, r20
+     33c:	82 27       	eor	r24, r18
+     33e:	90 e0       	ldi	r25, 0x00	; 0
+     340:	fc 01       	movw	r30, r24
+     342:	ea 5d       	subi	r30, 0xDA	; 218
+     344:	ff 4f       	sbci	r31, 0xFF	; 255
+     346:	44 91       	lpm	r20, Z+
+     348:	45 27       	eor	r20, r21
+        ucCRCHi = pgm_read_byte( &aucCRCLo[iIndex] );;
+     34a:	8a 5d       	subi	r24, 0xDA	; 218
+     34c:	9e 4f       	sbci	r25, 0xFE	; 254
+     34e:	fc 01       	movw	r30, r24
+     350:	54 91       	lpm	r21, Z+
+     352:	61 50       	subi	r22, 0x01	; 1
+     354:	70 40       	sbci	r23, 0x00	; 0
+{
+    UCHAR           ucCRCHi = 0xFF;
+    UCHAR           ucCRCLo = 0xFF;
+    int             iIndex;
+
+    while( usLen-- )
+     356:	61 15       	cp	r22, r1
+     358:	71 05       	cpc	r23, r1
+     35a:	71 f7       	brne	.-36     	; 0x338 <usMBCRC16+0x8>
+    {
+        iIndex = ucCRCLo ^ *( pucFrame++ );
+        ucCRCLo = ucCRCHi ^ pgm_read_byte( &aucCRCHi[iIndex] );
+        ucCRCHi = pgm_read_byte( &aucCRCLo[iIndex] );;
+    }
+    return ucCRCHi << 8 | ucCRCLo;
+     35c:	35 2f       	mov	r19, r21
+     35e:	20 e0       	ldi	r18, 0x00	; 0
+     360:	e4 2f       	mov	r30, r20
+     362:	f0 e0       	ldi	r31, 0x00	; 0
+     364:	e2 2b       	or	r30, r18
+     366:	f3 2b       	or	r31, r19
+}
+     368:	cf 01       	movw	r24, r30
+     36a:	08 95       	ret
+
+0000036c <xMBPortEventInit>:
+
+/* ----------------------- Start implementation -----------------------------*/
+BOOL
+xMBPortEventInit( void )
+{
+    xEventInQueue = FALSE;
+     36c:	10 92 2c 01 	sts	0x012C, r1
+    return TRUE;
+}
+     370:	81 e0       	ldi	r24, 0x01	; 1
+     372:	08 95       	ret
+
+00000374 <xMBPortEventPost>:
+
+BOOL
+xMBPortEventPost( eMBEventType eEvent )
+{
+    xEventInQueue = TRUE;
+     374:	91 e0       	ldi	r25, 0x01	; 1
+     376:	90 93 2c 01 	sts	0x012C, r25
+    eQueuedEvent = eEvent;
+     37a:	80 93 2d 01 	sts	0x012D, r24
+    return TRUE;
+}
+     37e:	81 e0       	ldi	r24, 0x01	; 1
+     380:	08 95       	ret
+
+00000382 <xMBPortEventGet>:
+BOOL
+xMBPortEventGet( eMBEventType * eEvent )
+{
+    BOOL            xEventHappened = FALSE;
+
+    if( xEventInQueue )
+     382:	20 91 2c 01 	lds	r18, 0x012C
+     386:	22 23       	and	r18, r18
+     388:	41 f0       	breq	.+16     	; 0x39a <xMBPortEventGet+0x18>
+    {
+        *eEvent = eQueuedEvent;
+     38a:	20 91 2d 01 	lds	r18, 0x012D
+     38e:	fc 01       	movw	r30, r24
+     390:	20 83       	st	Z, r18
+        xEventInQueue = FALSE;
+     392:	10 92 2c 01 	sts	0x012C, r1
+        xEventHappened = TRUE;
+     396:	81 e0       	ldi	r24, 0x01	; 1
+     398:	08 95       	ret
+}
+
+BOOL
+xMBPortEventGet( eMBEventType * eEvent )
+{
+    BOOL            xEventHappened = FALSE;
+     39a:	80 e0       	ldi	r24, 0x00	; 0
+        *eEvent = eQueuedEvent;
+        xEventInQueue = FALSE;
+        xEventHappened = TRUE;
+    }
+    return xEventHappened;
+}
+     39c:	08 95       	ret
+
+0000039e <vMBPortSerialEnable>:
+
+void
+vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
+{
+#ifdef RTS_ENABLE
+    UCSRB |= _BV( TXEN ) | _BV(TXCIE);
+     39e:	9a b1       	in	r25, 0x0a	; 10
+     3a0:	98 64       	ori	r25, 0x48	; 72
+     3a2:	9a b9       	out	0x0a, r25	; 10
+#else
+    UCSRB |= _BV( TXEN );
+#endif
+
+    if( xRxEnable )
+     3a4:	88 23       	and	r24, r24
+     3a6:	19 f0       	breq	.+6      	; 0x3ae <vMBPortSerialEnable+0x10>
+    {
+        UCSRB |= _BV( RXEN ) | _BV( RXCIE );
+     3a8:	8a b1       	in	r24, 0x0a	; 10
+     3aa:	80 69       	ori	r24, 0x90	; 144
+     3ac:	02 c0       	rjmp	.+4      	; 0x3b2 <vMBPortSerialEnable+0x14>
+    }
+    else
+    {
+        UCSRB &= ~( _BV( RXEN ) | _BV( RXCIE ) );
+     3ae:	8a b1       	in	r24, 0x0a	; 10
+     3b0:	8f 76       	andi	r24, 0x6F	; 111
+     3b2:	8a b9       	out	0x0a, r24	; 10
+    }
+
+    if( xTxEnable )
+     3b4:	66 23       	and	r22, r22
+     3b6:	29 f0       	breq	.+10     	; 0x3c2 <vMBPortSerialEnable+0x24>
+    {
+        UCSRB |= _BV( TXEN ) | _BV( UDRE );
+     3b8:	8a b1       	in	r24, 0x0a	; 10
+     3ba:	88 62       	ori	r24, 0x28	; 40
+     3bc:	8a b9       	out	0x0a, r24	; 10
+#ifdef RTS_ENABLE
+        RTS_HIGH;
+     3be:	92 9a       	sbi	0x12, 2	; 18
+     3c0:	08 95       	ret
+#endif
+    }
+    else
+    {
+        UCSRB &= ~( _BV( UDRE ) );
+     3c2:	55 98       	cbi	0x0a, 5	; 10
+     3c4:	08 95       	ret
+
+000003c6 <xMBPortSerialInit>:
+    }
+}
+
+BOOL
+xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity )
+{
+     3c6:	cf 92       	push	r12
+     3c8:	df 92       	push	r13
+     3ca:	ef 92       	push	r14
+     3cc:	ff 92       	push	r15
+     3ce:	0f 93       	push	r16
+     3d0:	1f 93       	push	r17
+     3d2:	6a 01       	movw	r12, r20
+     3d4:	7b 01       	movw	r14, r22
+     3d6:	12 2f       	mov	r17, r18
+    UCHAR ucUCSRC = 0;
+
+    /* prevent compiler warning. */
+    (void)ucPORT;
+	
+    UBRR = UART_BAUD_CALC( ulBaudRate, F_CPU );
+     3d8:	84 e0       	ldi	r24, 0x04	; 4
+     3da:	cc 0c       	add	r12, r12
+     3dc:	dd 1c       	adc	r13, r13
+     3de:	ee 1c       	adc	r14, r14
+     3e0:	ff 1c       	adc	r15, r15
+     3e2:	8a 95       	dec	r24
+     3e4:	d1 f7       	brne	.-12     	; 0x3da <xMBPortSerialInit+0x14>
+     3e6:	60 e0       	ldi	r22, 0x00	; 0
+     3e8:	70 e8       	ldi	r23, 0x80	; 128
+     3ea:	80 e7       	ldi	r24, 0x70	; 112
+     3ec:	90 e0       	ldi	r25, 0x00	; 0
+     3ee:	a7 01       	movw	r20, r14
+     3f0:	96 01       	movw	r18, r12
+     3f2:	35 d7       	rcall	.+3690   	; 0x125e <__udivmodsi4>
+     3f4:	21 50       	subi	r18, 0x01	; 1
+     3f6:	29 b9       	out	0x09, r18	; 9
+     3f8:	03 30       	cpi	r16, 0x03	; 3
+     3fa:	30 f4       	brcc	.+12     	; 0x408 <xMBPortSerialInit+0x42>
+     3fc:	e0 2f       	mov	r30, r16
+     3fe:	f0 e0       	ldi	r31, 0x00	; 0
+     400:	e0 5a       	subi	r30, 0xA0	; 160
+     402:	ff 4f       	sbci	r31, 0xFF	; 255
+     404:	80 81       	ld	r24, Z
+     406:	01 c0       	rjmp	.+2      	; 0x40a <xMBPortSerialInit+0x44>
+     408:	80 e0       	ldi	r24, 0x00	; 0
+            break;
+        case MB_PAR_NONE:
+            break;
+    }
+
+    switch ( ucDataBits )
+     40a:	17 30       	cpi	r17, 0x07	; 7
+     40c:	21 f0       	breq	.+8      	; 0x416 <xMBPortSerialInit+0x50>
+     40e:	18 30       	cpi	r17, 0x08	; 8
+     410:	19 f4       	brne	.+6      	; 0x418 <xMBPortSerialInit+0x52>
+    {
+        case 8:
+            ucUCSRC |= _BV( UCSZ0 ) | _BV( UCSZ1 );
+     412:	86 60       	ori	r24, 0x06	; 6
+            break;
+     414:	01 c0       	rjmp	.+2      	; 0x418 <xMBPortSerialInit+0x52>
+        case 7:
+            ucUCSRC |= _BV( UCSZ1 );
+     416:	84 60       	ori	r24, 0x04	; 4
+#if defined (__AVR_ATmega168__)
+    UCSRC |= ucUCSRC;
+#elif defined (__AVR_ATmega169__)
+    UCSRC |= ucUCSRC;
+#elif defined (__AVR_ATmega8__)
+    UCSRC = _BV( URSEL ) | ucUCSRC;
+     418:	80 68       	ori	r24, 0x80	; 128
+     41a:	80 bd       	out	0x20, r24	; 32
+    UCSRC = _BV( URSEL ) | ucUCSRC;
+#elif defined (__AVR_ATmega128__)
+    UCSRC |= ucUCSRC;
+#endif
+
+    vMBPortSerialEnable( FALSE, FALSE );
+     41c:	80 e0       	ldi	r24, 0x00	; 0
+     41e:	60 e0       	ldi	r22, 0x00	; 0
+     420:	be df       	rcall	.-132    	; 0x39e <vMBPortSerialEnable>
+
+#ifdef RTS_ENABLE
+    RTS_INIT;
+     422:	8a 9a       	sbi	0x11, 2	; 17
+     424:	92 98       	cbi	0x12, 2	; 18
+#endif
+    return TRUE;
+}
+     426:	81 e0       	ldi	r24, 0x01	; 1
+     428:	1f 91       	pop	r17
+     42a:	0f 91       	pop	r16
+     42c:	ff 90       	pop	r15
+     42e:	ef 90       	pop	r14
+     430:	df 90       	pop	r13
+     432:	cf 90       	pop	r12
+     434:	08 95       	ret
+
+00000436 <xMBPortSerialPutByte>:
+
+BOOL
+xMBPortSerialPutByte( CHAR ucByte )
+{
+    UDR = ucByte;
+     436:	8c b9       	out	0x0c, r24	; 12
+    return TRUE;
+}
+     438:	81 e0       	ldi	r24, 0x01	; 1
+     43a:	08 95       	ret
+
+0000043c <xMBPortSerialGetByte>:
+
+BOOL
+xMBPortSerialGetByte( CHAR * pucByte )
+{
+    *pucByte = UDR;
+     43c:	2c b1       	in	r18, 0x0c	; 12
+     43e:	fc 01       	movw	r30, r24
+     440:	20 83       	st	Z, r18
+    return TRUE;
+}
+     442:	81 e0       	ldi	r24, 0x01	; 1
+     444:	08 95       	ret
+
+00000446 <__vector_12>:
+
+SIGNAL( SIG_USART_DATA )
+{
+     446:	1f 92       	push	r1
+     448:	0f 92       	push	r0
+     44a:	0f b6       	in	r0, 0x3f	; 63
+     44c:	0f 92       	push	r0
+     44e:	11 24       	eor	r1, r1
+     450:	2f 93       	push	r18
+     452:	3f 93       	push	r19
+     454:	4f 93       	push	r20
+     456:	5f 93       	push	r21
+     458:	6f 93       	push	r22
+     45a:	7f 93       	push	r23
+     45c:	8f 93       	push	r24
+     45e:	9f 93       	push	r25
+     460:	af 93       	push	r26
+     462:	bf 93       	push	r27
+     464:	ef 93       	push	r30
+     466:	ff 93       	push	r31
+    pxMBFrameCBTransmitterEmpty(  );
+     468:	e0 91 6c 01 	lds	r30, 0x016C
+     46c:	f0 91 6d 01 	lds	r31, 0x016D
+     470:	09 95       	icall
+}
+     472:	ff 91       	pop	r31
+     474:	ef 91       	pop	r30
+     476:	bf 91       	pop	r27
+     478:	af 91       	pop	r26
+     47a:	9f 91       	pop	r25
+     47c:	8f 91       	pop	r24
+     47e:	7f 91       	pop	r23
+     480:	6f 91       	pop	r22
+     482:	5f 91       	pop	r21
+     484:	4f 91       	pop	r20
+     486:	3f 91       	pop	r19
+     488:	2f 91       	pop	r18
+     48a:	0f 90       	pop	r0
+     48c:	0f be       	out	0x3f, r0	; 63
+     48e:	0f 90       	pop	r0
+     490:	1f 90       	pop	r1
+     492:	18 95       	reti
+
+00000494 <__vector_11>:
+
+SIGNAL( SIG_USART_RECV )
+{
+     494:	1f 92       	push	r1
+     496:	0f 92       	push	r0
+     498:	0f b6       	in	r0, 0x3f	; 63
+     49a:	0f 92       	push	r0
+     49c:	11 24       	eor	r1, r1
+     49e:	2f 93       	push	r18
+     4a0:	3f 93       	push	r19
+     4a2:	4f 93       	push	r20
+     4a4:	5f 93       	push	r21
+     4a6:	6f 93       	push	r22
+     4a8:	7f 93       	push	r23
+     4aa:	8f 93       	push	r24
+     4ac:	9f 93       	push	r25
+     4ae:	af 93       	push	r26
+     4b0:	bf 93       	push	r27
+     4b2:	ef 93       	push	r30
+     4b4:	ff 93       	push	r31
+    pxMBFrameCBByteReceived(  );
+     4b6:	e0 91 70 01 	lds	r30, 0x0170
+     4ba:	f0 91 71 01 	lds	r31, 0x0171
+     4be:	09 95       	icall
+}
+     4c0:	ff 91       	pop	r31
+     4c2:	ef 91       	pop	r30
+     4c4:	bf 91       	pop	r27
+     4c6:	af 91       	pop	r26
+     4c8:	9f 91       	pop	r25
+     4ca:	8f 91       	pop	r24
+     4cc:	7f 91       	pop	r23
+     4ce:	6f 91       	pop	r22
+     4d0:	5f 91       	pop	r21
+     4d2:	4f 91       	pop	r20
+     4d4:	3f 91       	pop	r19
+     4d6:	2f 91       	pop	r18
+     4d8:	0f 90       	pop	r0
+     4da:	0f be       	out	0x3f, r0	; 63
+     4dc:	0f 90       	pop	r0
+     4de:	1f 90       	pop	r1
+     4e0:	18 95       	reti
+
+000004e2 <__vector_13>:
+
+#ifdef RTS_ENABLE
+SIGNAL( SIG_UART_TRANS )
+{
+     4e2:	1f 92       	push	r1
+     4e4:	0f 92       	push	r0
+     4e6:	0f b6       	in	r0, 0x3f	; 63
+     4e8:	0f 92       	push	r0
+     4ea:	11 24       	eor	r1, r1
+    RTS_LOW;
+     4ec:	92 98       	cbi	0x12, 2	; 18
+}
+     4ee:	0f 90       	pop	r0
+     4f0:	0f be       	out	0x3f, r0	; 63
+     4f2:	0f 90       	pop	r0
+     4f4:	1f 90       	pop	r1
+     4f6:	18 95       	reti
+
+000004f8 <vMBPortTimersEnable>:
+
+
+inline void
+vMBPortTimersEnable(  )
+{
+    TCNT1 = 0x0000;
+     4f8:	1d bc       	out	0x2d, r1	; 45
+     4fa:	1c bc       	out	0x2c, r1	; 44
+    if( usTimerOCRADelta > 0 )
+     4fc:	80 91 2e 01 	lds	r24, 0x012E
+     500:	90 91 2f 01 	lds	r25, 0x012F
+     504:	00 97       	sbiw	r24, 0x00	; 0
+     506:	29 f0       	breq	.+10     	; 0x512 <vMBPortTimersEnable+0x1a>
+    {
+        TIMSK1 |= _BV( OCIE1A );
+     508:	29 b7       	in	r18, 0x39	; 57
+     50a:	20 61       	ori	r18, 0x10	; 16
+     50c:	29 bf       	out	0x39, r18	; 57
+        OCR1A = usTimerOCRADelta;
+     50e:	9b bd       	out	0x2b, r25	; 43
+     510:	8a bd       	out	0x2a, r24	; 42
+    }
+
+    TCCR1B |= _BV( CS12 ) | _BV( CS10 );
+     512:	8e b5       	in	r24, 0x2e	; 46
+     514:	85 60       	ori	r24, 0x05	; 5
+     516:	8e bd       	out	0x2e, r24	; 46
+}
+     518:	08 95       	ret
+
+0000051a <vMBPortTimersDisable>:
+
+inline void
+vMBPortTimersDisable(  )
+{
+    /* Disable the timer. */
+    TCCR1B &= ~( _BV( CS12 ) | _BV( CS10 ) );
+     51a:	8e b5       	in	r24, 0x2e	; 46
+     51c:	8a 7f       	andi	r24, 0xFA	; 250
+     51e:	8e bd       	out	0x2e, r24	; 46
+    /* Disable the output compare interrupts for channel A/B. */
+    TIMSK1 &= ~( _BV( OCIE1A ) );
+     520:	89 b7       	in	r24, 0x39	; 57
+     522:	8f 7e       	andi	r24, 0xEF	; 239
+     524:	89 bf       	out	0x39, r24	; 57
+    /* Clear output compare flags for channel A/B. */
+    TIFR1 |= _BV( OCF1A ) ;
+     526:	88 b7       	in	r24, 0x38	; 56
+     528:	80 61       	ori	r24, 0x10	; 16
+     52a:	88 bf       	out	0x38, r24	; 56
+}
+     52c:	08 95       	ret
+
+0000052e <xMBPortTimersInit>:
+BOOL
+xMBPortTimersInit( USHORT usTim1Timerout50us )
+{
+    /* Calculate overflow counter an OCR values for Timer1. */
+    usTimerOCRADelta =
+        ( MB_TIMER_TICKS * usTim1Timerout50us ) / ( MB_50US_TICKS );
+     52e:	bc 01       	movw	r22, r24
+     530:	80 e0       	ldi	r24, 0x00	; 0
+     532:	90 e0       	ldi	r25, 0x00	; 0
+     534:	20 e2       	ldi	r18, 0x20	; 32
+     536:	3c e1       	ldi	r19, 0x1C	; 28
+     538:	40 e0       	ldi	r20, 0x00	; 0
+     53a:	50 e0       	ldi	r21, 0x00	; 0
+     53c:	71 d6       	rcall	.+3298   	; 0x1220 <__mulsi3>
+     53e:	20 e2       	ldi	r18, 0x20	; 32
+     540:	3e e4       	ldi	r19, 0x4E	; 78
+     542:	40 e0       	ldi	r20, 0x00	; 0
+     544:	50 e0       	ldi	r21, 0x00	; 0
+     546:	8b d6       	rcall	.+3350   	; 0x125e <__udivmodsi4>
+/* ----------------------- Start implementation -----------------------------*/
+BOOL
+xMBPortTimersInit( USHORT usTim1Timerout50us )
+{
+    /* Calculate overflow counter an OCR values for Timer1. */
+    usTimerOCRADelta =
+     548:	30 93 2f 01 	sts	0x012F, r19
+     54c:	20 93 2e 01 	sts	0x012E, r18
+        ( MB_TIMER_TICKS * usTim1Timerout50us ) / ( MB_50US_TICKS );
+
+    TCCR1A = 0x00;
+     550:	1f bc       	out	0x2f, r1	; 47
+    TCCR1B = 0x00;
+     552:	1e bc       	out	0x2e, r1	; 46
+    TCCR1C = 0x00;
+     554:	1f bc       	out	0x2f, r1	; 47
+
+    vMBPortTimersDisable(  );
+     556:	e1 df       	rcall	.-62     	; 0x51a <vMBPortTimersDisable>
+
+    return TRUE;
+}
+     558:	81 e0       	ldi	r24, 0x01	; 1
+     55a:	08 95       	ret
+
+0000055c <__vector_6>:
+    /* Clear output compare flags for channel A/B. */
+    TIFR1 |= _BV( OCF1A ) ;
+}
+
+SIGNAL( SIG_OUTPUT_COMPARE1A )
+{
+     55c:	1f 92       	push	r1
+     55e:	0f 92       	push	r0
+     560:	0f b6       	in	r0, 0x3f	; 63
+     562:	0f 92       	push	r0
+     564:	11 24       	eor	r1, r1
+     566:	2f 93       	push	r18
+     568:	3f 93       	push	r19
+     56a:	4f 93       	push	r20
+     56c:	5f 93       	push	r21
+     56e:	6f 93       	push	r22
+     570:	7f 93       	push	r23
+     572:	8f 93       	push	r24
+     574:	9f 93       	push	r25
+     576:	af 93       	push	r26
+     578:	bf 93       	push	r27
+     57a:	ef 93       	push	r30
+     57c:	ff 93       	push	r31
+    ( void )pxMBPortCBTimerExpired(  );
+     57e:	e0 91 6e 01 	lds	r30, 0x016E
+     582:	f0 91 6f 01 	lds	r31, 0x016F
+     586:	09 95       	icall
+}
+     588:	ff 91       	pop	r31
+     58a:	ef 91       	pop	r30
+     58c:	bf 91       	pop	r27
+     58e:	af 91       	pop	r26
+     590:	9f 91       	pop	r25
+     592:	8f 91       	pop	r24
+     594:	7f 91       	pop	r23
+     596:	6f 91       	pop	r22
+     598:	5f 91       	pop	r21
+     59a:	4f 91       	pop	r20
+     59c:	3f 91       	pop	r19
+     59e:	2f 91       	pop	r18
+     5a0:	0f 90       	pop	r0
+     5a2:	0f be       	out	0x3f, r0	; 63
+     5a4:	0f 90       	pop	r0
+     5a6:	1f 90       	pop	r1
+     5a8:	18 95       	reti
+
+000005aa <eMBInit>:
+};
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBInit( eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+     5aa:	ef 92       	push	r14
+     5ac:	0f 93       	push	r16
+     5ae:	1f 93       	push	r17
+     5b0:	98 2f       	mov	r25, r24
+     5b2:	86 2f       	mov	r24, r22
+     5b4:	64 2f       	mov	r22, r20
+     5b6:	a9 01       	movw	r20, r18
+     5b8:	98 01       	movw	r18, r16
+     5ba:	0e 2d       	mov	r16, r14
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    /* check preconditions */
+    if( ( ucSlaveAddress == MB_ADDRESS_BROADCAST ) ||
+        ( ucSlaveAddress < MB_ADDRESS_MIN ) || ( ucSlaveAddress > MB_ADDRESS_MAX ) )
+     5bc:	78 2f       	mov	r23, r24
+     5be:	71 50       	subi	r23, 0x01	; 1
+eMBInit( eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    /* check preconditions */
+    if( ( ucSlaveAddress == MB_ADDRESS_BROADCAST ) ||
+     5c0:	77 3f       	cpi	r23, 0xF7	; 247
+     5c2:	08 f0       	brcs	.+2      	; 0x5c6 <eMBInit+0x1c>
+     5c4:	3f c0       	rjmp	.+126    	; 0x644 <eMBInit+0x9a>
+    {
+        eStatus = MB_EINVAL;
+    }
+    else
+    {
+        ucMBAddress = ucSlaveAddress;
+     5c6:	80 93 32 01 	sts	0x0132, r24
+
+        switch ( eMode )
+     5ca:	99 23       	and	r25, r25
+     5cc:	d9 f5       	brne	.+118    	; 0x644 <eMBInit+0x9a>
+        {
+#if MB_RTU_ENABLED > 0
+        case MB_RTU:
+            pvMBFrameStartCur = eMBRTUStart;
+     5ce:	e5 e6       	ldi	r30, 0x65	; 101
+     5d0:	f4 e0       	ldi	r31, 0x04	; 4
+     5d2:	f0 93 3f 01 	sts	0x013F, r31
+     5d6:	e0 93 3e 01 	sts	0x013E, r30
+            pvMBFrameStopCur = eMBRTUStop;
+     5da:	ee e6       	ldi	r30, 0x6E	; 110
+     5dc:	f4 e0       	ldi	r31, 0x04	; 4
+     5de:	f0 93 3d 01 	sts	0x013D, r31
+     5e2:	e0 93 3c 01 	sts	0x013C, r30
+            peMBFrameSendCur = eMBRTUSend;
+     5e6:	ea ea       	ldi	r30, 0xAA	; 170
+     5e8:	f4 e0       	ldi	r31, 0x04	; 4
+     5ea:	f0 93 34 01 	sts	0x0134, r31
+     5ee:	e0 93 33 01 	sts	0x0133, r30
+            peMBFrameReceiveCur = eMBRTUReceive;
+     5f2:	e5 e7       	ldi	r30, 0x75	; 117
+     5f4:	f4 e0       	ldi	r31, 0x04	; 4
+     5f6:	f0 93 31 01 	sts	0x0131, r31
+     5fa:	e0 93 30 01 	sts	0x0130, r30
+            pvMBFrameCloseCur = MB_PORT_HAS_CLOSE ? vMBPortClose : NULL;
+     5fe:	10 92 41 01 	sts	0x0141, r1
+     602:	10 92 40 01 	sts	0x0140, r1
+            pxMBFrameCBByteReceived = xMBRTUReceiveFSM;
+     606:	e5 ef       	ldi	r30, 0xF5	; 245
+     608:	f4 e0       	ldi	r31, 0x04	; 4
+     60a:	f0 93 71 01 	sts	0x0171, r31
+     60e:	e0 93 70 01 	sts	0x0170, r30
+            pxMBFrameCBTransmitterEmpty = xMBRTUTransmitFSM;
+     612:	ec e3       	ldi	r30, 0x3C	; 60
+     614:	f5 e0       	ldi	r31, 0x05	; 5
+     616:	f0 93 6d 01 	sts	0x016D, r31
+     61a:	e0 93 6c 01 	sts	0x016C, r30
+            pxMBPortCBTimerExpired = xMBRTUTimerT35Expired;
+     61e:	e4 e7       	ldi	r30, 0x74	; 116
+     620:	f5 e0       	ldi	r31, 0x05	; 5
+     622:	f0 93 6f 01 	sts	0x016F, r31
+     626:	e0 93 6e 01 	sts	0x016E, r30
+
+            eStatus = eMBRTUInit( ucMBAddress, ucPort, ulBaudRate, eParity );
+     62a:	19 d1       	rcall	.+562    	; 0x85e <eMBRTUInit>
+     62c:	08 2f       	mov	r16, r24
+#endif
+        default:
+            eStatus = MB_EINVAL;
+        }
+
+        if( eStatus == MB_ENOERR )
+     62e:	88 23       	and	r24, r24
+     630:	61 f4       	brne	.+24     	; 0x64a <eMBInit+0xa0>
+        {
+            if( !xMBPortEventInit(  ) )
+     632:	9c de       	rcall	.-712    	; 0x36c <xMBPortEventInit>
+     634:	88 23       	and	r24, r24
+     636:	41 f0       	breq	.+16     	; 0x648 <eMBInit+0x9e>
+                /* port dependent event module initalization failed. */
+                eStatus = MB_EPORTERR;
+            }
+            else
+            {
+                eMBCurrentMode = eMode;
+     638:	10 92 42 01 	sts	0x0142, r1
+                eMBState = STATE_DISABLED;
+     63c:	81 e0       	ldi	r24, 0x01	; 1
+     63e:	80 93 63 00 	sts	0x0063, r24
+     642:	03 c0       	rjmp	.+6      	; 0x64a <eMBInit+0xa0>
+
+            eStatus = eMBASCIIInit( ucMBAddress, ucPort, ulBaudRate, eParity );
+            break;
+#endif
+        default:
+            eStatus = MB_EINVAL;
+     644:	02 e0       	ldi	r16, 0x02	; 2
+     646:	01 c0       	rjmp	.+2      	; 0x64a <eMBInit+0xa0>
+        if( eStatus == MB_ENOERR )
+        {
+            if( !xMBPortEventInit(  ) )
+            {
+                /* port dependent event module initalization failed. */
+                eStatus = MB_EPORTERR;
+     648:	03 e0       	ldi	r16, 0x03	; 3
+                eMBState = STATE_DISABLED;
+            }
+        }
+    }
+    return eStatus;
+}
+     64a:	80 2f       	mov	r24, r16
+     64c:	1f 91       	pop	r17
+     64e:	0f 91       	pop	r16
+     650:	ef 90       	pop	r14
+     652:	08 95       	ret
+
+00000654 <eMBRegisterCB>:
+eMBRegisterCB( UCHAR ucFunctionCode, pxMBFunctionHandler pxHandler )
+{
+    int             i;
+    eMBErrorCode    eStatus;
+
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+     654:	18 16       	cp	r1, r24
+     656:	0c f0       	brlt	.+2      	; 0x65a <eMBRegisterCB+0x6>
+     658:	41 c0       	rjmp	.+130    	; 0x6dc <eMBRegisterCB+0x88>
+    {
+        ENTER_CRITICAL_SECTION(  );
+     65a:	f8 94       	cli
+        if( pxHandler != NULL )
+     65c:	61 15       	cp	r22, r1
+     65e:	71 05       	cpc	r23, r1
+     660:	11 f1       	breq	.+68     	; 0x6a6 <eMBRegisterCB+0x52>
+     662:	e5 e6       	ldi	r30, 0x65	; 101
+     664:	f0 e0       	ldi	r31, 0x00	; 0
+     666:	20 e0       	ldi	r18, 0x00	; 0
+     668:	30 e0       	ldi	r19, 0x00	; 0
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+            {
+                if( ( xFuncHandlers[i].pxHandler == NULL ) ||
+     66a:	40 81       	ld	r20, Z
+     66c:	51 81       	ldd	r21, Z+1	; 0x01
+     66e:	41 15       	cp	r20, r1
+     670:	51 05       	cpc	r21, r1
+     672:	19 f0       	breq	.+6      	; 0x67a <eMBRegisterCB+0x26>
+     674:	46 17       	cp	r20, r22
+     676:	57 07       	cpc	r21, r23
+     678:	71 f4       	brne	.+28     	; 0x696 <eMBRegisterCB+0x42>
+                    ( xFuncHandlers[i].pxHandler == pxHandler ) )
+                {
+                    xFuncHandlers[i].ucFunctionCode = ucFunctionCode;
+     67a:	f9 01       	movw	r30, r18
+     67c:	ee 0f       	add	r30, r30
+     67e:	ff 1f       	adc	r31, r31
+     680:	e2 0f       	add	r30, r18
+     682:	f3 1f       	adc	r31, r19
+     684:	ec 59       	subi	r30, 0x9C	; 156
+     686:	ff 4f       	sbci	r31, 0xFF	; 255
+     688:	80 83       	st	Z, r24
+                    xFuncHandlers[i].pxHandler = pxHandler;
+     68a:	72 83       	std	Z+2, r23	; 0x02
+     68c:	61 83       	std	Z+1, r22	; 0x01
+                    break;
+                }
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+     68e:	20 31       	cpi	r18, 0x10	; 16
+     690:	31 05       	cpc	r19, r1
+     692:	09 f5       	brne	.+66     	; 0x6d6 <eMBRegisterCB+0x82>
+     694:	06 c0       	rjmp	.+12     	; 0x6a2 <eMBRegisterCB+0x4e>
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+     696:	2f 5f       	subi	r18, 0xFF	; 255
+     698:	3f 4f       	sbci	r19, 0xFF	; 255
+     69a:	33 96       	adiw	r30, 0x03	; 3
+     69c:	20 31       	cpi	r18, 0x10	; 16
+     69e:	31 05       	cpc	r19, r1
+     6a0:	21 f7       	brne	.-56     	; 0x66a <eMBRegisterCB+0x16>
+                    xFuncHandlers[i].ucFunctionCode = ucFunctionCode;
+                    xFuncHandlers[i].pxHandler = pxHandler;
+                    break;
+                }
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+     6a2:	84 e0       	ldi	r24, 0x04	; 4
+     6a4:	19 c0       	rjmp	.+50     	; 0x6d8 <eMBRegisterCB+0x84>
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+     6a6:	e4 e6       	ldi	r30, 0x64	; 100
+     6a8:	f0 e0       	ldi	r31, 0x00	; 0
+    eMBErrorCode    eStatus;
+
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+     6aa:	20 e0       	ldi	r18, 0x00	; 0
+     6ac:	30 e0       	ldi	r19, 0x00	; 0
+        }
+        else
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+            {
+                if( xFuncHandlers[i].ucFunctionCode == ucFunctionCode )
+     6ae:	90 81       	ld	r25, Z
+     6b0:	98 17       	cp	r25, r24
+     6b2:	59 f4       	brne	.+22     	; 0x6ca <eMBRegisterCB+0x76>
+                {
+                    xFuncHandlers[i].ucFunctionCode = 0;
+     6b4:	f9 01       	movw	r30, r18
+     6b6:	ee 0f       	add	r30, r30
+     6b8:	ff 1f       	adc	r31, r31
+     6ba:	e2 0f       	add	r30, r18
+     6bc:	f3 1f       	adc	r31, r19
+     6be:	ec 59       	subi	r30, 0x9C	; 156
+     6c0:	ff 4f       	sbci	r31, 0xFF	; 255
+     6c2:	10 82       	st	Z, r1
+                    xFuncHandlers[i].pxHandler = NULL;
+     6c4:	12 82       	std	Z+2, r1	; 0x02
+     6c6:	11 82       	std	Z+1, r1	; 0x01
+     6c8:	06 c0       	rjmp	.+12     	; 0x6d6 <eMBRegisterCB+0x82>
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+        }
+        else
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+     6ca:	2f 5f       	subi	r18, 0xFF	; 255
+     6cc:	3f 4f       	sbci	r19, 0xFF	; 255
+     6ce:	33 96       	adiw	r30, 0x03	; 3
+     6d0:	20 31       	cpi	r18, 0x10	; 16
+     6d2:	31 05       	cpc	r19, r1
+     6d4:	61 f7       	brne	.-40     	; 0x6ae <eMBRegisterCB+0x5a>
+                    xFuncHandlers[i].pxHandler = NULL;
+                    break;
+                }
+            }
+            /* Remove can't fail. */
+            eStatus = MB_ENOERR;
+     6d6:	80 e0       	ldi	r24, 0x00	; 0
+        }
+        EXIT_CRITICAL_SECTION(  );
+     6d8:	78 94       	sei
+     6da:	08 95       	ret
+    }
+    else
+    {
+        eStatus = MB_EINVAL;
+     6dc:	82 e0       	ldi	r24, 0x02	; 2
+    }
+    return eStatus;
+}
+     6de:	08 95       	ret
+
+000006e0 <eMBClose>:
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    if( eMBState == STATE_DISABLED )
+     6e0:	80 91 63 00 	lds	r24, 0x0063
+     6e4:	81 30       	cpi	r24, 0x01	; 1
+     6e6:	49 f4       	brne	.+18     	; 0x6fa <eMBClose+0x1a>
+    {
+        if( pvMBFrameCloseCur != NULL )
+     6e8:	e0 91 40 01 	lds	r30, 0x0140
+     6ec:	f0 91 41 01 	lds	r31, 0x0141
+     6f0:	30 97       	sbiw	r30, 0x00	; 0
+     6f2:	29 f0       	breq	.+10     	; 0x6fe <eMBClose+0x1e>
+        {
+            pvMBFrameCloseCur(  );
+     6f4:	09 95       	icall
+
+
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+     6f6:	80 e0       	ldi	r24, 0x00	; 0
+     6f8:	08 95       	ret
+            pvMBFrameCloseCur(  );
+        }
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+     6fa:	86 e0       	ldi	r24, 0x06	; 6
+     6fc:	08 95       	ret
+
+
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+     6fe:	80 e0       	ldi	r24, 0x00	; 0
+    else
+    {
+        eStatus = MB_EILLSTATE;
+    }
+    return eStatus;
+}
+     700:	08 95       	ret
+
+00000702 <eMBEnable>:
+eMBErrorCode
+eMBEnable( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    if( eMBState == STATE_DISABLED )
+     702:	80 91 63 00 	lds	r24, 0x0063
+     706:	81 30       	cpi	r24, 0x01	; 1
+     708:	49 f4       	brne	.+18     	; 0x71c <eMBEnable+0x1a>
+    {
+        /* Activate the protocol stack. */
+        pvMBFrameStartCur(  );
+     70a:	e0 91 3e 01 	lds	r30, 0x013E
+     70e:	f0 91 3f 01 	lds	r31, 0x013F
+     712:	09 95       	icall
+        eMBState = STATE_ENABLED;
+     714:	10 92 63 00 	sts	0x0063, r1
+}
+
+eMBErrorCode
+eMBEnable( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+     718:	80 e0       	ldi	r24, 0x00	; 0
+     71a:	08 95       	ret
+        pvMBFrameStartCur(  );
+        eMBState = STATE_ENABLED;
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+     71c:	86 e0       	ldi	r24, 0x06	; 6
+    }
+    return eStatus;
+}
+     71e:	08 95       	ret
+
+00000720 <eMBDisable>:
+eMBErrorCode
+eMBDisable( void )
+{
+    eMBErrorCode    eStatus;
+
+    if( eMBState == STATE_ENABLED )
+     720:	80 91 63 00 	lds	r24, 0x0063
+     724:	88 23       	and	r24, r24
+     726:	49 f4       	brne	.+18     	; 0x73a <eMBDisable+0x1a>
+    {
+        pvMBFrameStopCur(  );
+     728:	e0 91 3c 01 	lds	r30, 0x013C
+     72c:	f0 91 3d 01 	lds	r31, 0x013D
+     730:	09 95       	icall
+        eMBState = STATE_DISABLED;
+     732:	81 e0       	ldi	r24, 0x01	; 1
+     734:	80 93 63 00 	sts	0x0063, r24
+     738:	02 c0       	rjmp	.+4      	; 0x73e <eMBDisable+0x1e>
+        eStatus = MB_ENOERR;
+    }
+    else if( eMBState == STATE_DISABLED )
+     73a:	81 30       	cpi	r24, 0x01	; 1
+     73c:	11 f4       	brne	.+4      	; 0x742 <eMBDisable+0x22>
+    {
+        eStatus = MB_ENOERR;
+     73e:	80 e0       	ldi	r24, 0x00	; 0
+     740:	08 95       	ret
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+     742:	86 e0       	ldi	r24, 0x06	; 6
+    }
+    return eStatus;
+}
+     744:	08 95       	ret
+
+00000746 <eMBPoll>:
+
+eMBErrorCode
+eMBPoll( void )
+{
+     746:	df 93       	push	r29
+     748:	cf 93       	push	r28
+     74a:	0f 92       	push	r0
+     74c:	cd b7       	in	r28, 0x3d	; 61
+     74e:	de b7       	in	r29, 0x3e	; 62
+    int             i;
+    eMBErrorCode    eStatus = MB_ENOERR;
+    eMBEventType    eEvent;
+
+    /* Check if the protocol stack is ready. */
+    if( eMBState != STATE_ENABLED )
+     750:	80 91 63 00 	lds	r24, 0x0063
+     754:	88 23       	and	r24, r24
+     756:	09 f0       	breq	.+2      	; 0x75a <eMBPoll+0x14>
+     758:	7b c0       	rjmp	.+246    	; 0x850 <eMBPoll+0x10a>
+        return MB_EILLSTATE;
+    }
+
+    /* Check if there is a event available. If not return control to caller.
+     * Otherwise we will handle the event. */
+    if( xMBPortEventGet( &eEvent ) == TRUE )
+     75a:	ce 01       	movw	r24, r28
+     75c:	01 96       	adiw	r24, 0x01	; 1
+     75e:	11 de       	rcall	.-990    	; 0x382 <xMBPortEventGet>
+     760:	81 30       	cpi	r24, 0x01	; 1
+     762:	09 f0       	breq	.+2      	; 0x766 <eMBPoll+0x20>
+     764:	77 c0       	rjmp	.+238    	; 0x854 <eMBPoll+0x10e>
+    {
+        switch ( eEvent )
+     766:	99 81       	ldd	r25, Y+1	; 0x01
+     768:	91 30       	cpi	r25, 0x01	; 1
+     76a:	21 f0       	breq	.+8      	; 0x774 <eMBPoll+0x2e>
+     76c:	92 30       	cpi	r25, 0x02	; 2
+     76e:	09 f0       	breq	.+2      	; 0x772 <eMBPoll+0x2c>
+     770:	71 c0       	rjmp	.+226    	; 0x854 <eMBPoll+0x10e>
+     772:	1a c0       	rjmp	.+52     	; 0x7a8 <eMBPoll+0x62>
+        {
+        case EV_READY:
+            break;
+
+        case EV_FRAME_RECEIVED:
+            eStatus = peMBFrameReceiveCur( &ucRcvAddress, &ucMBFrame, &usLength );
+     774:	e0 91 30 01 	lds	r30, 0x0130
+     778:	f0 91 31 01 	lds	r31, 0x0131
+     77c:	89 e3       	ldi	r24, 0x39	; 57
+     77e:	91 e0       	ldi	r25, 0x01	; 1
+     780:	6a e3       	ldi	r22, 0x3A	; 58
+     782:	71 e0       	ldi	r23, 0x01	; 1
+     784:	46 e3       	ldi	r20, 0x36	; 54
+     786:	51 e0       	ldi	r21, 0x01	; 1
+     788:	09 95       	icall
+            if( eStatus == MB_ENOERR )
+     78a:	88 23       	and	r24, r24
+     78c:	09 f0       	breq	.+2      	; 0x790 <eMBPoll+0x4a>
+     78e:	62 c0       	rjmp	.+196    	; 0x854 <eMBPoll+0x10e>
+            {
+                /* Check if the frame is for us. If not ignore the frame. */
+                if( ( ucRcvAddress == ucMBAddress ) || ( ucRcvAddress == MB_ADDRESS_BROADCAST ) )
+     790:	80 91 39 01 	lds	r24, 0x0139
+     794:	90 91 32 01 	lds	r25, 0x0132
+     798:	89 17       	cp	r24, r25
+     79a:	19 f0       	breq	.+6      	; 0x7a2 <eMBPoll+0x5c>
+     79c:	88 23       	and	r24, r24
+     79e:	09 f0       	breq	.+2      	; 0x7a2 <eMBPoll+0x5c>
+     7a0:	59 c0       	rjmp	.+178    	; 0x854 <eMBPoll+0x10e>
+                {
+                    ( void )xMBPortEventPost( EV_EXECUTE );
+     7a2:	82 e0       	ldi	r24, 0x02	; 2
+     7a4:	e7 dd       	rcall	.-1074   	; 0x374 <xMBPortEventPost>
+     7a6:	56 c0       	rjmp	.+172    	; 0x854 <eMBPoll+0x10e>
+                }
+            }
+            break;
+
+        case EV_EXECUTE:
+            ucFunctionCode = ucMBFrame[MB_PDU_FUNC_OFF];
+     7a8:	a0 91 3a 01 	lds	r26, 0x013A
+     7ac:	b0 91 3b 01 	lds	r27, 0x013B
+     7b0:	9c 91       	ld	r25, X
+     7b2:	90 93 38 01 	sts	0x0138, r25
+            eException = MB_EX_ILLEGAL_FUNCTION;
+     7b6:	80 93 35 01 	sts	0x0135, r24
+     7ba:	e4 e6       	ldi	r30, 0x64	; 100
+     7bc:	f0 e0       	ldi	r31, 0x00	; 0
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+     7be:	20 e0       	ldi	r18, 0x00	; 0
+     7c0:	30 e0       	ldi	r19, 0x00	; 0
+            {
+                /* No more function handlers registered. Abort. */
+                if( xFuncHandlers[i].ucFunctionCode == 0 )
+     7c2:	80 81       	ld	r24, Z
+     7c4:	88 23       	and	r24, r24
+     7c6:	c9 f0       	breq	.+50     	; 0x7fa <eMBPoll+0xb4>
+                {
+                    break;
+                }
+                else if( xFuncHandlers[i].ucFunctionCode == ucFunctionCode )
+     7c8:	89 17       	cp	r24, r25
+     7ca:	89 f4       	brne	.+34     	; 0x7ee <eMBPoll+0xa8>
+                {
+                    eException = xFuncHandlers[i].pxHandler( ucMBFrame, &usLength );
+     7cc:	f9 01       	movw	r30, r18
+     7ce:	ee 0f       	add	r30, r30
+     7d0:	ff 1f       	adc	r31, r31
+     7d2:	e2 0f       	add	r30, r18
+     7d4:	f3 1f       	adc	r31, r19
+     7d6:	ec 59       	subi	r30, 0x9C	; 156
+     7d8:	ff 4f       	sbci	r31, 0xFF	; 255
+     7da:	01 80       	ldd	r0, Z+1	; 0x01
+     7dc:	f2 81       	ldd	r31, Z+2	; 0x02
+     7de:	e0 2d       	mov	r30, r0
+     7e0:	cd 01       	movw	r24, r26
+     7e2:	66 e3       	ldi	r22, 0x36	; 54
+     7e4:	71 e0       	ldi	r23, 0x01	; 1
+     7e6:	09 95       	icall
+     7e8:	80 93 35 01 	sts	0x0135, r24
+                    break;
+     7ec:	06 c0       	rjmp	.+12     	; 0x7fa <eMBPoll+0xb4>
+            break;
+
+        case EV_EXECUTE:
+            ucFunctionCode = ucMBFrame[MB_PDU_FUNC_OFF];
+            eException = MB_EX_ILLEGAL_FUNCTION;
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+     7ee:	2f 5f       	subi	r18, 0xFF	; 255
+     7f0:	3f 4f       	sbci	r19, 0xFF	; 255
+     7f2:	33 96       	adiw	r30, 0x03	; 3
+     7f4:	20 31       	cpi	r18, 0x10	; 16
+     7f6:	31 05       	cpc	r19, r1
+     7f8:	21 f7       	brne	.-56     	; 0x7c2 <eMBPoll+0x7c>
+                }
+            }
+
+            /* If the request was not sent to the broadcast address we
+             * return a reply. */
+            if( ucRcvAddress != MB_ADDRESS_BROADCAST )
+     7fa:	80 91 39 01 	lds	r24, 0x0139
+     7fe:	88 23       	and	r24, r24
+     800:	49 f1       	breq	.+82     	; 0x854 <eMBPoll+0x10e>
+            {
+                if( eException != MB_EX_NONE )
+     802:	90 91 35 01 	lds	r25, 0x0135
+     806:	99 23       	and	r25, r25
+     808:	99 f0       	breq	.+38     	; 0x830 <eMBPoll+0xea>
+                {
+                    /* An exception occured. Build an error frame. */
+                    usLength = 0;
+                    ucMBFrame[usLength++] = ( UCHAR )( ucFunctionCode | MB_FUNC_ERROR );
+     80a:	e0 91 3a 01 	lds	r30, 0x013A
+     80e:	f0 91 3b 01 	lds	r31, 0x013B
+     812:	80 91 38 01 	lds	r24, 0x0138
+     816:	80 68       	ori	r24, 0x80	; 128
+     818:	80 83       	st	Z, r24
+                    ucMBFrame[usLength++] = eException;
+     81a:	e0 91 3a 01 	lds	r30, 0x013A
+     81e:	f0 91 3b 01 	lds	r31, 0x013B
+     822:	91 83       	std	Z+1, r25	; 0x01
+     824:	82 e0       	ldi	r24, 0x02	; 2
+     826:	90 e0       	ldi	r25, 0x00	; 0
+     828:	90 93 37 01 	sts	0x0137, r25
+     82c:	80 93 36 01 	sts	0x0136, r24
+                }
+                if( ( eMBCurrentMode == MB_ASCII ) && MB_ASCII_TIMEOUT_WAIT_BEFORE_SEND_MS )
+                {
+                    vMBPortTimersDelay( MB_ASCII_TIMEOUT_WAIT_BEFORE_SEND_MS );
+                }                
+                eStatus = peMBFrameSendCur( ucMBAddress, ucMBFrame, usLength );
+     830:	60 91 3a 01 	lds	r22, 0x013A
+     834:	70 91 3b 01 	lds	r23, 0x013B
+     838:	40 91 36 01 	lds	r20, 0x0136
+     83c:	50 91 37 01 	lds	r21, 0x0137
+     840:	e0 91 33 01 	lds	r30, 0x0133
+     844:	f0 91 34 01 	lds	r31, 0x0134
+     848:	80 91 32 01 	lds	r24, 0x0132
+     84c:	09 95       	icall
+     84e:	02 c0       	rjmp	.+4      	; 0x854 <eMBPoll+0x10e>
+    eMBEventType    eEvent;
+
+    /* Check if the protocol stack is ready. */
+    if( eMBState != STATE_ENABLED )
+    {
+        return MB_EILLSTATE;
+     850:	86 e0       	ldi	r24, 0x06	; 6
+     852:	01 c0       	rjmp	.+2      	; 0x856 <eMBPoll+0x110>
+
+        case EV_FRAME_SENT:
+            break;
+        }
+    }
+    return MB_ENOERR;
+     854:	80 e0       	ldi	r24, 0x00	; 0
+}
+     856:	0f 90       	pop	r0
+     858:	cf 91       	pop	r28
+     85a:	df 91       	pop	r29
+     85c:	08 95       	ret
+
+0000085e <eMBRTUInit>:
+static volatile USHORT usRcvBufferPos;
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBRTUInit( UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+     85e:	cf 92       	push	r12
+     860:	df 92       	push	r13
+     862:	ef 92       	push	r14
+     864:	ff 92       	push	r15
+     866:	0f 93       	push	r16
+     868:	86 2f       	mov	r24, r22
+     86a:	69 01       	movw	r12, r18
+     86c:	7a 01       	movw	r14, r20
+    eMBErrorCode    eStatus = MB_ENOERR;
+    ULONG           usTimerT35_50us;
+
+    ( void )ucSlaveAddress;
+    ENTER_CRITICAL_SECTION(  );
+     86e:	f8 94       	cli
+
+    /* Modbus RTU uses 8 Databits. */
+    if( xMBPortSerialInit( ucPort, ulBaudRate, 8, eParity ) != TRUE )
+     870:	ba 01       	movw	r22, r20
+     872:	a9 01       	movw	r20, r18
+     874:	28 e0       	ldi	r18, 0x08	; 8
+     876:	a7 dd       	rcall	.-1202   	; 0x3c6 <xMBPortSerialInit>
+     878:	81 30       	cpi	r24, 0x01	; 1
+     87a:	f9 f4       	brne	.+62     	; 0x8ba <eMBRTUInit+0x5c>
+    else
+    {
+        /* If baudrate > 19200 then we should use the fixed timer values
+         * t35 = 1750us. Otherwise t35 must be 3.5 times the character time.
+         */
+        if( ulBaudRate > 19200 )
+     87c:	81 e0       	ldi	r24, 0x01	; 1
+     87e:	c8 16       	cp	r12, r24
+     880:	8b e4       	ldi	r24, 0x4B	; 75
+     882:	d8 06       	cpc	r13, r24
+     884:	80 e0       	ldi	r24, 0x00	; 0
+     886:	e8 06       	cpc	r14, r24
+     888:	80 e0       	ldi	r24, 0x00	; 0
+     88a:	f8 06       	cpc	r15, r24
+     88c:	60 f4       	brcc	.+24     	; 0x8a6 <eMBRTUInit+0x48>
+             *             = 11 * Ticks_per_1s / Baudrate
+             *             = 220000 / Baudrate
+             * The reload for t3.5 is 1.5 times this value and similary
+             * for t3.5.
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+     88e:	a7 01       	movw	r20, r14
+     890:	96 01       	movw	r18, r12
+     892:	22 0f       	add	r18, r18
+     894:	33 1f       	adc	r19, r19
+     896:	44 1f       	adc	r20, r20
+     898:	55 1f       	adc	r21, r21
+     89a:	60 ea       	ldi	r22, 0xA0	; 160
+     89c:	7f e7       	ldi	r23, 0x7F	; 127
+     89e:	87 e1       	ldi	r24, 0x17	; 23
+     8a0:	90 e0       	ldi	r25, 0x00	; 0
+     8a2:	dd d4       	rcall	.+2490   	; 0x125e <__udivmodsi4>
+     8a4:	04 c0       	rjmp	.+8      	; 0x8ae <eMBRTUInit+0x50>
+        /* If baudrate > 19200 then we should use the fixed timer values
+         * t35 = 1750us. Otherwise t35 must be 3.5 times the character time.
+         */
+        if( ulBaudRate > 19200 )
+        {
+            usTimerT35_50us = 35;       /* 1800us. */
+     8a6:	23 e2       	ldi	r18, 0x23	; 35
+     8a8:	30 e0       	ldi	r19, 0x00	; 0
+     8aa:	40 e0       	ldi	r20, 0x00	; 0
+     8ac:	50 e0       	ldi	r21, 0x00	; 0
+             * The reload for t3.5 is 1.5 times this value and similary
+             * for t3.5.
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+        }
+        if( xMBPortTimersInit( ( USHORT ) usTimerT35_50us ) != TRUE )
+     8ae:	c9 01       	movw	r24, r18
+     8b0:	3e de       	rcall	.-900    	; 0x52e <xMBPortTimersInit>
+     8b2:	81 30       	cpi	r24, 0x01	; 1
+     8b4:	11 f4       	brne	.+4      	; 0x8ba <eMBRTUInit+0x5c>
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBRTUInit( UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+     8b6:	80 e0       	ldi	r24, 0x00	; 0
+     8b8:	01 c0       	rjmp	.+2      	; 0x8bc <eMBRTUInit+0x5e>
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+        }
+        if( xMBPortTimersInit( ( USHORT ) usTimerT35_50us ) != TRUE )
+        {
+            eStatus = MB_EPORTERR;
+     8ba:	83 e0       	ldi	r24, 0x03	; 3
+        }
+    }
+    EXIT_CRITICAL_SECTION(  );
+     8bc:	78 94       	sei
+
+    return eStatus;
+}
+     8be:	0f 91       	pop	r16
+     8c0:	ff 90       	pop	r15
+     8c2:	ef 90       	pop	r14
+     8c4:	df 90       	pop	r13
+     8c6:	cf 90       	pop	r12
+     8c8:	08 95       	ret
+
+000008ca <eMBRTUStart>:
+
+void
+eMBRTUStart( void )
+{
+    ENTER_CRITICAL_SECTION(  );
+     8ca:	f8 94       	cli
+    /* Initially the receiver is in the state STATE_RX_INIT. we start
+     * the timer and if no character is received within t3.5 we change
+     * to STATE_RX_IDLE. This makes sure that we delay startup of the
+     * modbus protocol stack until the bus is free.
+     */
+    eRcvState = STATE_RX_INIT;
+     8cc:	10 92 43 01 	sts	0x0143, r1
+    vMBPortSerialEnable( TRUE, FALSE );
+     8d0:	81 e0       	ldi	r24, 0x01	; 1
+     8d2:	60 e0       	ldi	r22, 0x00	; 0
+     8d4:	64 dd       	rcall	.-1336   	; 0x39e <vMBPortSerialEnable>
+    vMBPortTimersEnable(  );
+     8d6:	10 de       	rcall	.-992    	; 0x4f8 <vMBPortTimersEnable>
+
+    EXIT_CRITICAL_SECTION(  );
+     8d8:	78 94       	sei
+}
+     8da:	08 95       	ret
+
+000008dc <eMBRTUStop>:
+
+void
+eMBRTUStop( void )
+{
+    ENTER_CRITICAL_SECTION(  );
+     8dc:	f8 94       	cli
+    vMBPortSerialEnable( FALSE, FALSE );
+     8de:	80 e0       	ldi	r24, 0x00	; 0
+     8e0:	60 e0       	ldi	r22, 0x00	; 0
+     8e2:	5d dd       	rcall	.-1350   	; 0x39e <vMBPortSerialEnable>
+    vMBPortTimersDisable(  );
+     8e4:	1a de       	rcall	.-972    	; 0x51a <vMBPortTimersDisable>
+    EXIT_CRITICAL_SECTION(  );
+     8e6:	78 94       	sei
+}
+     8e8:	08 95       	ret
+
+000008ea <eMBRTUReceive>:
+
+eMBErrorCode
+eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
+{
+     8ea:	ef 92       	push	r14
+     8ec:	ff 92       	push	r15
+     8ee:	0f 93       	push	r16
+     8f0:	1f 93       	push	r17
+     8f2:	cf 93       	push	r28
+     8f4:	df 93       	push	r29
+     8f6:	8c 01       	movw	r16, r24
+     8f8:	7b 01       	movw	r14, r22
+     8fa:	ea 01       	movw	r28, r20
+    BOOL            xFrameReceived = FALSE;
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    ENTER_CRITICAL_SECTION(  );
+     8fc:	f8 94       	cli
+    assert( usRcvBufferPos < MB_SER_PDU_SIZE_MAX );
+
+    /* Length and CRC check */
+    if( ( usRcvBufferPos >= MB_SER_PDU_SIZE_MIN )
+     8fe:	80 91 49 01 	lds	r24, 0x0149
+     902:	90 91 4a 01 	lds	r25, 0x014A
+     906:	84 30       	cpi	r24, 0x04	; 4
+     908:	91 05       	cpc	r25, r1
+     90a:	d8 f0       	brcs	.+54     	; 0x942 <eMBRTUReceive+0x58>
+        && ( usMBCRC16( ( UCHAR * ) ucRTUBuf, usRcvBufferPos ) == 0 ) )
+     90c:	60 91 49 01 	lds	r22, 0x0149
+     910:	70 91 4a 01 	lds	r23, 0x014A
+     914:	86 e7       	ldi	r24, 0x76	; 118
+     916:	91 e0       	ldi	r25, 0x01	; 1
+     918:	0b dd       	rcall	.-1514   	; 0x330 <usMBCRC16>
+     91a:	00 97       	sbiw	r24, 0x00	; 0
+     91c:	91 f4       	brne	.+36     	; 0x942 <eMBRTUReceive+0x58>
+    {
+        /* Save the address field. All frames are passed to the upper layed
+         * and the decision if a frame is used is done there.
+         */
+        *pucRcvAddress = ucRTUBuf[MB_SER_PDU_ADDR_OFF];
+     91e:	80 91 76 01 	lds	r24, 0x0176
+     922:	f8 01       	movw	r30, r16
+     924:	80 83       	st	Z, r24
+
+        /* Total length of Modbus-PDU is Modbus-Serial-Line-PDU minus
+         * size of address field and CRC checksum.
+         */
+        *pusLength = ( USHORT )( usRcvBufferPos - MB_SER_PDU_PDU_OFF - MB_SER_PDU_SIZE_CRC );
+     926:	80 91 49 01 	lds	r24, 0x0149
+     92a:	90 91 4a 01 	lds	r25, 0x014A
+     92e:	03 97       	sbiw	r24, 0x03	; 3
+     930:	99 83       	std	Y+1, r25	; 0x01
+     932:	88 83       	st	Y, r24
+
+        /* Return the start of the Modbus PDU to the caller. */
+        *pucFrame = ( UCHAR * ) & ucRTUBuf[MB_SER_PDU_PDU_OFF];
+     934:	87 e7       	ldi	r24, 0x77	; 119
+     936:	91 e0       	ldi	r25, 0x01	; 1
+     938:	f7 01       	movw	r30, r14
+     93a:	91 83       	std	Z+1, r25	; 0x01
+     93c:	80 83       	st	Z, r24
+
+eMBErrorCode
+eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
+{
+    BOOL            xFrameReceived = FALSE;
+    eMBErrorCode    eStatus = MB_ENOERR;
+     93e:	80 e0       	ldi	r24, 0x00	; 0
+         */
+        *pusLength = ( USHORT )( usRcvBufferPos - MB_SER_PDU_PDU_OFF - MB_SER_PDU_SIZE_CRC );
+
+        /* Return the start of the Modbus PDU to the caller. */
+        *pucFrame = ( UCHAR * ) & ucRTUBuf[MB_SER_PDU_PDU_OFF];
+        xFrameReceived = TRUE;
+     940:	01 c0       	rjmp	.+2      	; 0x944 <eMBRTUReceive+0x5a>
+    }
+    else
+    {
+        eStatus = MB_EIO;
+     942:	85 e0       	ldi	r24, 0x05	; 5
+    }
+
+    EXIT_CRITICAL_SECTION(  );
+     944:	78 94       	sei
+    return eStatus;
+}
+     946:	df 91       	pop	r29
+     948:	cf 91       	pop	r28
+     94a:	1f 91       	pop	r17
+     94c:	0f 91       	pop	r16
+     94e:	ff 90       	pop	r15
+     950:	ef 90       	pop	r14
+     952:	08 95       	ret
+
+00000954 <eMBRTUSend>:
+
+eMBErrorCode
+eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
+{
+     954:	1f 93       	push	r17
+    eMBErrorCode    eStatus = MB_ENOERR;
+    USHORT          usCRC16;
+
+    ENTER_CRITICAL_SECTION(  );
+     956:	f8 94       	cli
+
+    /* Check if the receiver is still in idle state. If not we where to
+     * slow with processing the received frame and the master sent another
+     * frame on the network. We have to abort sending the frame.
+     */
+    if( eRcvState == STATE_RX_IDLE )
+     958:	10 91 43 01 	lds	r17, 0x0143
+     95c:	11 30       	cpi	r17, 0x01	; 1
+     95e:	09 f0       	breq	.+2      	; 0x962 <eMBRTUSend+0xe>
+     960:	40 c0       	rjmp	.+128    	; 0x9e2 <eMBRTUSend+0x8e>
+    {
+        /* First byte before the Modbus-PDU is the slave address. */
+        pucSndBufferCur = ( UCHAR * ) pucFrame - 1;
+     962:	fb 01       	movw	r30, r22
+     964:	31 97       	sbiw	r30, 0x01	; 1
+     966:	f0 93 48 01 	sts	0x0148, r31
+     96a:	e0 93 47 01 	sts	0x0147, r30
+        usSndBufferCount = 1;
+     96e:	21 e0       	ldi	r18, 0x01	; 1
+     970:	30 e0       	ldi	r19, 0x00	; 0
+     972:	30 93 46 01 	sts	0x0146, r19
+     976:	20 93 45 01 	sts	0x0145, r18
+
+        /* Now copy the Modbus-PDU into the Modbus-Serial-Line-PDU. */
+        pucSndBufferCur[MB_SER_PDU_ADDR_OFF] = ucSlaveAddress;
+     97a:	80 83       	st	Z, r24
+        usSndBufferCount += usLength;
+     97c:	80 91 45 01 	lds	r24, 0x0145
+     980:	90 91 46 01 	lds	r25, 0x0146
+     984:	84 0f       	add	r24, r20
+     986:	95 1f       	adc	r25, r21
+     988:	90 93 46 01 	sts	0x0146, r25
+     98c:	80 93 45 01 	sts	0x0145, r24
+
+        /* Calculate CRC16 checksum for Modbus-Serial-Line-PDU. */
+        usCRC16 = usMBCRC16( ( UCHAR * ) pucSndBufferCur, usSndBufferCount );
+     990:	60 91 45 01 	lds	r22, 0x0145
+     994:	70 91 46 01 	lds	r23, 0x0146
+     998:	cf 01       	movw	r24, r30
+     99a:	ca dc       	rcall	.-1644   	; 0x330 <usMBCRC16>
+     99c:	49 2f       	mov	r20, r25
+        ucRTUBuf[usSndBufferCount++] = ( UCHAR )( usCRC16 & 0xFF );
+     99e:	20 91 45 01 	lds	r18, 0x0145
+     9a2:	30 91 46 01 	lds	r19, 0x0146
+     9a6:	f9 01       	movw	r30, r18
+     9a8:	ea 58       	subi	r30, 0x8A	; 138
+     9aa:	fe 4f       	sbci	r31, 0xFE	; 254
+     9ac:	80 83       	st	Z, r24
+     9ae:	2f 5f       	subi	r18, 0xFF	; 255
+     9b0:	3f 4f       	sbci	r19, 0xFF	; 255
+     9b2:	30 93 46 01 	sts	0x0146, r19
+     9b6:	20 93 45 01 	sts	0x0145, r18
+        ucRTUBuf[usSndBufferCount++] = ( UCHAR )( usCRC16 >> 8 );
+     9ba:	80 91 45 01 	lds	r24, 0x0145
+     9be:	90 91 46 01 	lds	r25, 0x0146
+     9c2:	fc 01       	movw	r30, r24
+     9c4:	ea 58       	subi	r30, 0x8A	; 138
+     9c6:	fe 4f       	sbci	r31, 0xFE	; 254
+     9c8:	40 83       	st	Z, r20
+     9ca:	01 96       	adiw	r24, 0x01	; 1
+     9cc:	90 93 46 01 	sts	0x0146, r25
+     9d0:	80 93 45 01 	sts	0x0145, r24
+
+        /* Activate the transmitter. */
+        eSndState = STATE_TX_XMIT;
+     9d4:	10 93 44 01 	sts	0x0144, r17
+        vMBPortSerialEnable( FALSE, TRUE );
+     9d8:	80 e0       	ldi	r24, 0x00	; 0
+     9da:	61 e0       	ldi	r22, 0x01	; 1
+     9dc:	e0 dc       	rcall	.-1600   	; 0x39e <vMBPortSerialEnable>
+}
+
+eMBErrorCode
+eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+     9de:	80 e0       	ldi	r24, 0x00	; 0
+     9e0:	01 c0       	rjmp	.+2      	; 0x9e4 <eMBRTUSend+0x90>
+        eSndState = STATE_TX_XMIT;
+        vMBPortSerialEnable( FALSE, TRUE );
+    }
+    else
+    {
+        eStatus = MB_EIO;
+     9e2:	85 e0       	ldi	r24, 0x05	; 5
+    }
+    EXIT_CRITICAL_SECTION(  );
+     9e4:	78 94       	sei
+    return eStatus;
+}
+     9e6:	1f 91       	pop	r17
+     9e8:	08 95       	ret
+
+000009ea <xMBRTUReceiveFSM>:
+
+BOOL
+xMBRTUReceiveFSM( void )
+{
+     9ea:	df 93       	push	r29
+     9ec:	cf 93       	push	r28
+     9ee:	0f 92       	push	r0
+     9f0:	cd b7       	in	r28, 0x3d	; 61
+     9f2:	de b7       	in	r29, 0x3e	; 62
+    UCHAR           ucByte;
+
+    assert( eSndState == STATE_TX_IDLE );
+
+    /* Always read the character. */
+    ( void )xMBPortSerialGetByte( ( CHAR * ) & ucByte );
+     9f4:	ce 01       	movw	r24, r28
+     9f6:	01 96       	adiw	r24, 0x01	; 1
+     9f8:	21 dd       	rcall	.-1470   	; 0x43c <xMBPortSerialGetByte>
+
+    switch ( eRcvState )
+     9fa:	80 91 43 01 	lds	r24, 0x0143
+     9fe:	81 30       	cpi	r24, 0x01	; 1
+     a00:	39 f0       	breq	.+14     	; 0xa10 <xMBRTUReceiveFSM+0x26>
+     a02:	81 30       	cpi	r24, 0x01	; 1
+     a04:	98 f1       	brcs	.+102    	; 0xa6c <xMBRTUReceiveFSM+0x82>
+     a06:	82 30       	cpi	r24, 0x02	; 2
+     a08:	b9 f0       	breq	.+46     	; 0xa38 <xMBRTUReceiveFSM+0x4e>
+     a0a:	83 30       	cpi	r24, 0x03	; 3
+     a0c:	81 f5       	brne	.+96     	; 0xa6e <xMBRTUReceiveFSM+0x84>
+     a0e:	2e c0       	rjmp	.+92     	; 0xa6c <xMBRTUReceiveFSM+0x82>
+        /* In the idle state we wait for a new character. If a character
+         * is received the t1.5 and t3.5 timers are started and the
+         * receiver is in the state STATE_RX_RECEIVCE.
+         */
+    case STATE_RX_IDLE:
+        usRcvBufferPos = 0;
+     a10:	10 92 4a 01 	sts	0x014A, r1
+     a14:	10 92 49 01 	sts	0x0149, r1
+        ucRTUBuf[usRcvBufferPos++] = ucByte;
+     a18:	80 91 49 01 	lds	r24, 0x0149
+     a1c:	90 91 4a 01 	lds	r25, 0x014A
+     a20:	29 81       	ldd	r18, Y+1	; 0x01
+     a22:	fc 01       	movw	r30, r24
+     a24:	ea 58       	subi	r30, 0x8A	; 138
+     a26:	fe 4f       	sbci	r31, 0xFE	; 254
+     a28:	20 83       	st	Z, r18
+     a2a:	01 96       	adiw	r24, 0x01	; 1
+     a2c:	90 93 4a 01 	sts	0x014A, r25
+     a30:	80 93 49 01 	sts	0x0149, r24
+        eRcvState = STATE_RX_RCV;
+     a34:	82 e0       	ldi	r24, 0x02	; 2
+     a36:	18 c0       	rjmp	.+48     	; 0xa68 <xMBRTUReceiveFSM+0x7e>
+         * every character received. If more than the maximum possible
+         * number of bytes in a modbus frame is received the frame is
+         * ignored.
+         */
+    case STATE_RX_RCV:
+        if( usRcvBufferPos < MB_SER_PDU_SIZE_MAX )
+     a38:	80 91 49 01 	lds	r24, 0x0149
+     a3c:	90 91 4a 01 	lds	r25, 0x014A
+     a40:	8f 3f       	cpi	r24, 0xFF	; 255
+     a42:	91 05       	cpc	r25, r1
+     a44:	09 f0       	breq	.+2      	; 0xa48 <xMBRTUReceiveFSM+0x5e>
+     a46:	78 f4       	brcc	.+30     	; 0xa66 <xMBRTUReceiveFSM+0x7c>
+        {
+            ucRTUBuf[usRcvBufferPos++] = ucByte;
+     a48:	80 91 49 01 	lds	r24, 0x0149
+     a4c:	90 91 4a 01 	lds	r25, 0x014A
+     a50:	29 81       	ldd	r18, Y+1	; 0x01
+     a52:	fc 01       	movw	r30, r24
+     a54:	ea 58       	subi	r30, 0x8A	; 138
+     a56:	fe 4f       	sbci	r31, 0xFE	; 254
+     a58:	20 83       	st	Z, r18
+     a5a:	01 96       	adiw	r24, 0x01	; 1
+     a5c:	90 93 4a 01 	sts	0x014A, r25
+     a60:	80 93 49 01 	sts	0x0149, r24
+     a64:	03 c0       	rjmp	.+6      	; 0xa6c <xMBRTUReceiveFSM+0x82>
+        }
+        else
+        {
+            eRcvState = STATE_RX_ERROR;
+     a66:	83 e0       	ldi	r24, 0x03	; 3
+     a68:	80 93 43 01 	sts	0x0143, r24
+        }
+        vMBPortTimersEnable(  );
+     a6c:	45 dd       	rcall	.-1398   	; 0x4f8 <vMBPortTimersEnable>
+        break;
+    }
+    return xTaskNeedSwitch;
+}
+     a6e:	80 e0       	ldi	r24, 0x00	; 0
+     a70:	0f 90       	pop	r0
+     a72:	cf 91       	pop	r28
+     a74:	df 91       	pop	r29
+     a76:	08 95       	ret
+
+00000a78 <xMBRTUTransmitFSM>:
+
+BOOL
+xMBRTUTransmitFSM( void )
+{
+     a78:	1f 93       	push	r17
+    BOOL            xNeedPoll = FALSE;
+
+    assert( eRcvState == STATE_RX_IDLE );
+
+    switch ( eSndState )
+     a7a:	80 91 44 01 	lds	r24, 0x0144
+     a7e:	88 23       	and	r24, r24
+     a80:	19 f0       	breq	.+6      	; 0xa88 <xMBRTUTransmitFSM+0x10>
+     a82:	81 30       	cpi	r24, 0x01	; 1
+     a84:	69 f5       	brne	.+90     	; 0xae0 <xMBRTUTransmitFSM+0x68>
+     a86:	04 c0       	rjmp	.+8      	; 0xa90 <xMBRTUTransmitFSM+0x18>
+    {
+        /* We should not get a transmitter event if the transmitter is in
+         * idle state.  */
+    case STATE_TX_IDLE:
+        /* enable receiver/disable transmitter. */
+        vMBPortSerialEnable( TRUE, FALSE );
+     a88:	81 e0       	ldi	r24, 0x01	; 1
+     a8a:	60 e0       	ldi	r22, 0x00	; 0
+     a8c:	88 dc       	rcall	.-1776   	; 0x39e <vMBPortSerialEnable>
+     a8e:	28 c0       	rjmp	.+80     	; 0xae0 <xMBRTUTransmitFSM+0x68>
+        break;
+
+    case STATE_TX_XMIT:
+        /* check if we are finished. */
+        if( usSndBufferCount != 0 )
+     a90:	80 91 45 01 	lds	r24, 0x0145
+     a94:	90 91 46 01 	lds	r25, 0x0146
+     a98:	00 97       	sbiw	r24, 0x00	; 0
+     a9a:	c9 f0       	breq	.+50     	; 0xace <xMBRTUTransmitFSM+0x56>
+        {
+            xMBPortSerialPutByte( ( CHAR )*pucSndBufferCur );
+     a9c:	e0 91 47 01 	lds	r30, 0x0147
+     aa0:	f0 91 48 01 	lds	r31, 0x0148
+     aa4:	80 81       	ld	r24, Z
+     aa6:	c7 dc       	rcall	.-1650   	; 0x436 <xMBPortSerialPutByte>
+            pucSndBufferCur++;  /* next byte in sendbuffer. */
+     aa8:	80 91 47 01 	lds	r24, 0x0147
+     aac:	90 91 48 01 	lds	r25, 0x0148
+     ab0:	01 96       	adiw	r24, 0x01	; 1
+     ab2:	90 93 48 01 	sts	0x0148, r25
+     ab6:	80 93 47 01 	sts	0x0147, r24
+            usSndBufferCount--;
+     aba:	80 91 45 01 	lds	r24, 0x0145
+     abe:	90 91 46 01 	lds	r25, 0x0146
+     ac2:	01 97       	sbiw	r24, 0x01	; 1
+     ac4:	90 93 46 01 	sts	0x0146, r25
+     ac8:	80 93 45 01 	sts	0x0145, r24
+     acc:	09 c0       	rjmp	.+18     	; 0xae0 <xMBRTUTransmitFSM+0x68>
+        }
+        else
+        {
+            xNeedPoll = xMBPortEventPost( EV_FRAME_SENT );
+     ace:	83 e0       	ldi	r24, 0x03	; 3
+     ad0:	51 dc       	rcall	.-1886   	; 0x374 <xMBPortEventPost>
+     ad2:	18 2f       	mov	r17, r24
+            /* Disable transmitter. This prevents another transmit buffer
+             * empty interrupt. */
+            vMBPortSerialEnable( TRUE, FALSE );
+     ad4:	81 e0       	ldi	r24, 0x01	; 1
+     ad6:	60 e0       	ldi	r22, 0x00	; 0
+     ad8:	62 dc       	rcall	.-1852   	; 0x39e <vMBPortSerialEnable>
+            eSndState = STATE_TX_IDLE;
+     ada:	10 92 44 01 	sts	0x0144, r1
+     ade:	01 c0       	rjmp	.+2      	; 0xae2 <xMBRTUTransmitFSM+0x6a>
+}
+
+BOOL
+xMBRTUTransmitFSM( void )
+{
+    BOOL            xNeedPoll = FALSE;
+     ae0:	10 e0       	ldi	r17, 0x00	; 0
+        }
+        break;
+    }
+
+    return xNeedPoll;
+}
+     ae2:	81 2f       	mov	r24, r17
+     ae4:	1f 91       	pop	r17
+     ae6:	08 95       	ret
+
+00000ae8 <xMBRTUTimerT35Expired>:
+
+BOOL
+xMBRTUTimerT35Expired( void )
+{
+     ae8:	df 93       	push	r29
+     aea:	cf 93       	push	r28
+     aec:	0f 92       	push	r0
+     aee:	cd b7       	in	r28, 0x3d	; 61
+     af0:	de b7       	in	r29, 0x3e	; 62
+    BOOL            xNeedPoll = FALSE;
+
+    switch ( eRcvState )
+     af2:	80 91 43 01 	lds	r24, 0x0143
+     af6:	88 23       	and	r24, r24
+     af8:	19 f0       	breq	.+6      	; 0xb00 <xMBRTUTimerT35Expired+0x18>
+     afa:	82 30       	cpi	r24, 0x02	; 2
+     afc:	31 f4       	brne	.+12     	; 0xb0a <xMBRTUTimerT35Expired+0x22>
+     afe:	02 c0       	rjmp	.+4      	; 0xb04 <xMBRTUTimerT35Expired+0x1c>
+    {
+        /* Timer t35 expired. Startup phase is finished. */
+    case STATE_RX_INIT:
+        xNeedPoll = xMBPortEventPost( EV_READY );
+     b00:	80 e0       	ldi	r24, 0x00	; 0
+     b02:	01 c0       	rjmp	.+2      	; 0xb06 <xMBRTUTimerT35Expired+0x1e>
+        break;
+
+        /* A frame was received and t35 expired. Notify the listener that
+         * a new frame was received. */
+    case STATE_RX_RCV:
+        xNeedPoll = xMBPortEventPost( EV_FRAME_RECEIVED );
+     b04:	81 e0       	ldi	r24, 0x01	; 1
+     b06:	36 dc       	rcall	.-1940   	; 0x374 <xMBPortEventPost>
+        break;
+     b08:	01 c0       	rjmp	.+2      	; 0xb0c <xMBRTUTimerT35Expired+0x24>
+}
+
+BOOL
+xMBRTUTimerT35Expired( void )
+{
+    BOOL            xNeedPoll = FALSE;
+     b0a:	80 e0       	ldi	r24, 0x00	; 0
+    default:
+        assert( ( eRcvState == STATE_RX_INIT ) ||
+                ( eRcvState == STATE_RX_RCV ) || ( eRcvState == STATE_RX_ERROR ) );
+    }
+
+    vMBPortTimersDisable(  );
+     b0c:	89 83       	std	Y+1, r24	; 0x01
+     b0e:	05 dd       	rcall	.-1526   	; 0x51a <vMBPortTimersDisable>
+    eRcvState = STATE_RX_IDLE;
+     b10:	91 e0       	ldi	r25, 0x01	; 1
+     b12:	90 93 43 01 	sts	0x0143, r25
+
+    return xNeedPoll;
+}
+     b16:	89 81       	ldd	r24, Y+1	; 0x01
+     b18:	0f 90       	pop	r0
+     b1a:	cf 91       	pop	r28
+     b1c:	df 91       	pop	r29
+     b1e:	08 95       	ret
+
+00000b20 <eMBFuncWriteHoldingRegister>:
+{
+    USHORT          usRegAddress;
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_WRITE_SIZE + MB_PDU_SIZE_MIN ) )
+     b20:	fb 01       	movw	r30, r22
+     b22:	20 81       	ld	r18, Z
+     b24:	31 81       	ldd	r19, Z+1	; 0x01
+     b26:	25 30       	cpi	r18, 0x05	; 5
+     b28:	31 05       	cpc	r19, r1
+     b2a:	91 f4       	brne	.+36     	; 0xb50 <eMBFuncWriteHoldingRegister+0x30>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_ADDR_OFF] << 8 );
+     b2c:	fc 01       	movw	r30, r24
+     b2e:	31 81       	ldd	r19, Z+1	; 0x01
+     b30:	20 e0       	ldi	r18, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_ADDR_OFF + 1] );
+     b32:	62 81       	ldd	r22, Z+2	; 0x02
+     b34:	70 e0       	ldi	r23, 0x00	; 0
+     b36:	62 2b       	or	r22, r18
+     b38:	73 2b       	or	r23, r19
+        usRegAddress++;
+     b3a:	6f 5f       	subi	r22, 0xFF	; 255
+     b3c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+        /* Make callback to update the value. */
+        eRegStatus = eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_WRITE_VALUE_OFF],
+     b3e:	03 96       	adiw	r24, 0x03	; 3
+     b40:	41 e0       	ldi	r20, 0x01	; 1
+     b42:	50 e0       	ldi	r21, 0x00	; 0
+     b44:	21 e0       	ldi	r18, 0x01	; 1
+     b46:	af db       	rcall	.-2210   	; 0x2a6 <eMBRegHoldingCB>
+                                      usRegAddress, 1, MB_REG_WRITE );
+
+        /* If an error occured convert it into a Modbus exception. */
+        if( eRegStatus != MB_ENOERR )
+     b48:	88 23       	and	r24, r24
+     b4a:	21 f0       	breq	.+8      	; 0xb54 <eMBFuncWriteHoldingRegister+0x34>
+        {
+            eStatus = prveMBError2Exception( eRegStatus );
+     b4c:	65 d1       	rcall	.+714    	; 0xe18 <prveMBError2Exception>
+     b4e:	08 95       	ret
+        }
+    }
+    else
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+     b50:	83 e0       	ldi	r24, 0x03	; 3
+     b52:	08 95       	ret
+
+eMBException
+eMBFuncWriteHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+    USHORT          usRegAddress;
+    eMBException    eStatus = MB_EX_NONE;
+     b54:	80 e0       	ldi	r24, 0x00	; 0
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+     b56:	08 95       	ret
+
+00000b58 <eMBFuncWriteMultipleHoldingRegister>:
+#endif
+
+#if MB_FUNC_WRITE_MULTIPLE_HOLDING_ENABLED > 0
+eMBException
+eMBFuncWriteMultipleHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+     b58:	cf 93       	push	r28
+     b5a:	df 93       	push	r29
+     b5c:	fc 01       	movw	r30, r24
+     b5e:	eb 01       	movw	r28, r22
+    UCHAR           ucRegByteCount;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_WRITE_MUL_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+     b60:	88 81       	ld	r24, Y
+     b62:	99 81       	ldd	r25, Y+1	; 0x01
+     b64:	86 30       	cpi	r24, 0x06	; 6
+     b66:	91 05       	cpc	r25, r1
+     b68:	38 f1       	brcs	.+78     	; 0xbb8 <eMBFuncWriteMultipleHoldingRegister+0x60>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF] << 8 );
+     b6a:	21 81       	ldd	r18, Z+1	; 0x01
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF + 1] );
+     b6c:	62 81       	ldd	r22, Z+2	; 0x02
+        usRegAddress++;
+
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF] << 8 );
+     b6e:	93 81       	ldd	r25, Z+3	; 0x03
+     b70:	80 e0       	ldi	r24, 0x00	; 0
+        usRegCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF + 1] );
+     b72:	44 81       	ldd	r20, Z+4	; 0x04
+     b74:	50 e0       	ldi	r21, 0x00	; 0
+     b76:	48 2b       	or	r20, r24
+     b78:	59 2b       	or	r21, r25
+
+        ucRegByteCount = pucFrame[MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF];
+     b7a:	35 81       	ldd	r19, Z+5	; 0x05
+
+        if( ( usRegCount >= 1 ) &&
+     b7c:	ca 01       	movw	r24, r20
+     b7e:	01 97       	sbiw	r24, 0x01	; 1
+     b80:	88 37       	cpi	r24, 0x78	; 120
+     b82:	91 05       	cpc	r25, r1
+     b84:	c8 f4       	brcc	.+50     	; 0xbb8 <eMBFuncWriteMultipleHoldingRegister+0x60>
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+            ( ucRegByteCount == ( UCHAR ) ( 2 * usRegCount ) ) )
+     b86:	84 2f       	mov	r24, r20
+     b88:	88 0f       	add	r24, r24
+        usRegCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF + 1] );
+
+        ucRegByteCount = pucFrame[MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF];
+
+        if( ( usRegCount >= 1 ) &&
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+     b8a:	38 17       	cp	r19, r24
+     b8c:	a9 f4       	brne	.+42     	; 0xbb8 <eMBFuncWriteMultipleHoldingRegister+0x60>
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_WRITE_MUL_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF] << 8 );
+     b8e:	92 2f       	mov	r25, r18
+     b90:	80 e0       	ldi	r24, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF + 1] );
+     b92:	70 e0       	ldi	r23, 0x00	; 0
+     b94:	68 2b       	or	r22, r24
+     b96:	79 2b       	or	r23, r25
+        usRegAddress++;
+     b98:	6f 5f       	subi	r22, 0xFF	; 255
+     b9a:	7f 4f       	sbci	r23, 0xFF	; 255
+        if( ( usRegCount >= 1 ) &&
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+            ( ucRegByteCount == ( UCHAR ) ( 2 * usRegCount ) ) )
+        {
+            /* Make callback to update the register values. */
+            eRegStatus =
+     b9c:	cf 01       	movw	r24, r30
+     b9e:	06 96       	adiw	r24, 0x06	; 6
+     ba0:	21 e0       	ldi	r18, 0x01	; 1
+     ba2:	81 db       	rcall	.-2302   	; 0x2a6 <eMBRegHoldingCB>
+                eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_WRITE_MUL_VALUES_OFF],
+                                 usRegAddress, usRegCount, MB_REG_WRITE );
+
+            /* If an error occured convert it into a Modbus exception. */
+            if( eRegStatus != MB_ENOERR )
+     ba4:	88 23       	and	r24, r24
+     ba6:	11 f0       	breq	.+4      	; 0xbac <eMBFuncWriteMultipleHoldingRegister+0x54>
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+     ba8:	37 d1       	rcall	.+622    	; 0xe18 <prveMBError2Exception>
+     baa:	07 c0       	rjmp	.+14     	; 0xbba <eMBFuncWriteMultipleHoldingRegister+0x62>
+            {
+                /* The response contains the function code, the starting
+                 * address and the quantity of registers. We reuse the
+                 * old values in the buffer because they are still valid.
+                 */
+                *usLen = MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF;
+     bac:	85 e0       	ldi	r24, 0x05	; 5
+     bae:	90 e0       	ldi	r25, 0x00	; 0
+     bb0:	99 83       	std	Y+1, r25	; 0x01
+     bb2:	88 83       	st	Y, r24
+{
+    USHORT          usRegAddress;
+    USHORT          usRegCount;
+    UCHAR           ucRegByteCount;
+
+    eMBException    eStatus = MB_EX_NONE;
+     bb4:	80 e0       	ldi	r24, 0x00	; 0
+     bb6:	01 c0       	rjmp	.+2      	; 0xbba <eMBFuncWriteMultipleHoldingRegister+0x62>
+                *usLen = MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF;
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+     bb8:	83 e0       	ldi	r24, 0x03	; 3
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+     bba:	df 91       	pop	r29
+     bbc:	cf 91       	pop	r28
+     bbe:	08 95       	ret
+
+00000bc0 <eMBFuncReadHoldingRegister>:
+
+#if MB_FUNC_READ_HOLDING_ENABLED > 0
+
+eMBException
+eMBFuncReadHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+     bc0:	0f 93       	push	r16
+     bc2:	1f 93       	push	r17
+     bc4:	cf 93       	push	r28
+     bc6:	df 93       	push	r29
+     bc8:	fc 01       	movw	r30, r24
+     bca:	eb 01       	movw	r28, r22
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_READ_SIZE + MB_PDU_SIZE_MIN ) )
+     bcc:	88 81       	ld	r24, Y
+     bce:	99 81       	ldd	r25, Y+1	; 0x01
+     bd0:	85 30       	cpi	r24, 0x05	; 5
+     bd2:	91 05       	cpc	r25, r1
+     bd4:	b9 f5       	brne	.+110    	; 0xc44 <eMBFuncReadHoldingRegister+0x84>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF] << 8 );
+     bd6:	cf 01       	movw	r24, r30
+     bd8:	01 96       	adiw	r24, 0x01	; 1
+     bda:	51 81       	ldd	r21, Z+1	; 0x01
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF + 1] );
+     bdc:	62 81       	ldd	r22, Z+2	; 0x02
+        usRegAddress++;
+
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_REGCNT_OFF] << 8 );
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_REGCNT_OFF + 1] );
+     bde:	44 81       	ldd	r20, Z+4	; 0x04
+     be0:	04 2f       	mov	r16, r20
+     be2:	10 e0       	ldi	r17, 0x00	; 0
+
+        /* Check if the number of registers to read is valid. If not
+         * return Modbus illegal data value exception. 
+         */
+        if( ( usRegCount >= 1 ) && ( usRegCount <= MB_PDU_FUNC_READ_REGCNT_MAX ) )
+     be4:	98 01       	movw	r18, r16
+     be6:	21 50       	subi	r18, 0x01	; 1
+     be8:	30 40       	sbci	r19, 0x00	; 0
+     bea:	2d 37       	cpi	r18, 0x7D	; 125
+     bec:	31 05       	cpc	r19, r1
+     bee:	50 f5       	brcc	.+84     	; 0xc44 <eMBFuncReadHoldingRegister+0x84>
+        {
+            /* Set the current PDU data pointer to the beginning. */
+            pucFrameCur = &pucFrame[MB_PDU_FUNC_OFF];
+            *usLen = MB_PDU_FUNC_OFF;
+     bf0:	19 82       	std	Y+1, r1	; 0x01
+     bf2:	18 82       	st	Y, r1
+
+            /* First byte contains the function code. */
+            *pucFrameCur++ = MB_FUNC_READ_HOLDING_REGISTER;
+     bf4:	23 e0       	ldi	r18, 0x03	; 3
+     bf6:	20 83       	st	Z, r18
+            *usLen += 1;
+     bf8:	28 81       	ld	r18, Y
+     bfa:	39 81       	ldd	r19, Y+1	; 0x01
+     bfc:	2f 5f       	subi	r18, 0xFF	; 255
+     bfe:	3f 4f       	sbci	r19, 0xFF	; 255
+     c00:	39 83       	std	Y+1, r19	; 0x01
+     c02:	28 83       	st	Y, r18
+
+            /* Second byte in the response contain the number of bytes. */
+            *pucFrameCur++ = ( UCHAR ) ( usRegCount * 2 );
+     c04:	44 0f       	add	r20, r20
+     c06:	41 83       	std	Z+1, r20	; 0x01
+            *usLen += 1;
+     c08:	28 81       	ld	r18, Y
+     c0a:	39 81       	ldd	r19, Y+1	; 0x01
+     c0c:	2f 5f       	subi	r18, 0xFF	; 255
+     c0e:	3f 4f       	sbci	r19, 0xFF	; 255
+     c10:	39 83       	std	Y+1, r19	; 0x01
+     c12:	28 83       	st	Y, r18
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_READ_SIZE + MB_PDU_SIZE_MIN ) )
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF] << 8 );
+     c14:	35 2f       	mov	r19, r21
+     c16:	20 e0       	ldi	r18, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF + 1] );
+     c18:	70 e0       	ldi	r23, 0x00	; 0
+     c1a:	62 2b       	or	r22, r18
+     c1c:	73 2b       	or	r23, r19
+        usRegAddress++;
+     c1e:	6f 5f       	subi	r22, 0xFF	; 255
+     c20:	7f 4f       	sbci	r23, 0xFF	; 255
+            /* Second byte in the response contain the number of bytes. */
+            *pucFrameCur++ = ( UCHAR ) ( usRegCount * 2 );
+            *usLen += 1;
+
+            /* Make callback to fill the buffer. */
+            eRegStatus = eMBRegHoldingCB( pucFrameCur, usRegAddress, usRegCount, MB_REG_READ );
+     c22:	01 96       	adiw	r24, 0x01	; 1
+     c24:	a8 01       	movw	r20, r16
+     c26:	3f db       	rcall	.-2434   	; 0x2a6 <eMBRegHoldingCB>
+            /* If an error occured convert it into a Modbus exception. */
+            if( eRegStatus != MB_ENOERR )
+     c28:	88 23       	and	r24, r24
+     c2a:	11 f0       	breq	.+4      	; 0xc30 <eMBFuncReadHoldingRegister+0x70>
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+     c2c:	f5 d0       	rcall	.+490    	; 0xe18 <prveMBError2Exception>
+     c2e:	0b c0       	rjmp	.+22     	; 0xc46 <eMBFuncReadHoldingRegister+0x86>
+            }
+            else
+            {
+                *usLen += usRegCount * 2;
+     c30:	00 0f       	add	r16, r16
+     c32:	11 1f       	adc	r17, r17
+     c34:	88 81       	ld	r24, Y
+     c36:	99 81       	ldd	r25, Y+1	; 0x01
+     c38:	80 0f       	add	r24, r16
+     c3a:	91 1f       	adc	r25, r17
+     c3c:	99 83       	std	Y+1, r25	; 0x01
+     c3e:	88 83       	st	Y, r24
+{
+    USHORT          usRegAddress;
+    USHORT          usRegCount;
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+     c40:	80 e0       	ldi	r24, 0x00	; 0
+     c42:	01 c0       	rjmp	.+2      	; 0xc46 <eMBFuncReadHoldingRegister+0x86>
+                *usLen += usRegCount * 2;
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+     c44:	83 e0       	ldi	r24, 0x03	; 3
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+     c46:	df 91       	pop	r29
+     c48:	cf 91       	pop	r28
+     c4a:	1f 91       	pop	r17
+     c4c:	0f 91       	pop	r16
+     c4e:	08 95       	ret
+
+00000c50 <eMBFuncReadWriteMultipleHoldingRegister>:
+
+#if MB_FUNC_READWRITE_HOLDING_ENABLED > 0
+
+eMBException
+eMBFuncReadWriteMultipleHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+     c50:	af 92       	push	r10
+     c52:	bf 92       	push	r11
+     c54:	cf 92       	push	r12
+     c56:	df 92       	push	r13
+     c58:	ef 92       	push	r14
+     c5a:	ff 92       	push	r15
+     c5c:	0f 93       	push	r16
+     c5e:	1f 93       	push	r17
+     c60:	cf 93       	push	r28
+     c62:	df 93       	push	r29
+     c64:	ec 01       	movw	r28, r24
+     c66:	8b 01       	movw	r16, r22
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_READWRITE_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+     c68:	fb 01       	movw	r30, r22
+     c6a:	80 81       	ld	r24, Z
+     c6c:	91 81       	ldd	r25, Z+1	; 0x01
+     c6e:	8a 30       	cpi	r24, 0x0A	; 10
+     c70:	91 05       	cpc	r25, r1
+     c72:	08 f4       	brcc	.+2      	; 0xc76 <eMBFuncReadWriteMultipleHoldingRegister+0x26>
+     c74:	66 c0       	rjmp	.+204    	; 0xd42 <eMBFuncReadWriteMultipleHoldingRegister+0xf2>
+    {
+        usRegReadAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF] << 8U );
+     c76:	6e 01       	movw	r12, r28
+     c78:	08 94       	sec
+     c7a:	c1 1c       	adc	r12, r1
+     c7c:	d1 1c       	adc	r13, r1
+     c7e:	b9 80       	ldd	r11, Y+1	; 0x01
+        usRegReadAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF + 1] );
+     c80:	aa 80       	ldd	r10, Y+2	; 0x02
+        usRegReadAddress++;
+
+        usRegReadCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF] << 8U );
+     c82:	9b 81       	ldd	r25, Y+3	; 0x03
+     c84:	80 e0       	ldi	r24, 0x00	; 0
+        usRegReadCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF + 1] );
+     c86:	ec 80       	ldd	r14, Y+4	; 0x04
+     c88:	ff 24       	eor	r15, r15
+     c8a:	e8 2a       	or	r14, r24
+     c8c:	f9 2a       	or	r15, r25
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+     c8e:	7d 81       	ldd	r23, Y+5	; 0x05
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+     c90:	6e 81       	ldd	r22, Y+6	; 0x06
+        usRegWriteAddress++;
+
+        usRegWriteCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF] << 8U );
+     c92:	9f 81       	ldd	r25, Y+7	; 0x07
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+     c94:	48 85       	ldd	r20, Y+8	; 0x08
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+     c96:	89 85       	ldd	r24, Y+9	; 0x09
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+     c98:	97 01       	movw	r18, r14
+     c9a:	21 50       	subi	r18, 0x01	; 1
+     c9c:	30 40       	sbci	r19, 0x00	; 0
+     c9e:	2d 37       	cpi	r18, 0x7D	; 125
+     ca0:	31 05       	cpc	r19, r1
+     ca2:	08 f0       	brcs	.+2      	; 0xca6 <eMBFuncReadWriteMultipleHoldingRegister+0x56>
+     ca4:	50 c0       	rjmp	.+160    	; 0xd46 <eMBFuncReadWriteMultipleHoldingRegister+0xf6>
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+        usRegWriteAddress++;
+
+        usRegWriteCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF] << 8U );
+     ca6:	39 2f       	mov	r19, r25
+     ca8:	20 e0       	ldi	r18, 0x00	; 0
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+     caa:	50 e0       	ldi	r21, 0x00	; 0
+     cac:	42 2b       	or	r20, r18
+     cae:	53 2b       	or	r21, r19
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+     cb0:	41 15       	cp	r20, r1
+     cb2:	51 05       	cpc	r21, r1
+     cb4:	09 f4       	brne	.+2      	; 0xcb8 <eMBFuncReadWriteMultipleHoldingRegister+0x68>
+     cb6:	47 c0       	rjmp	.+142    	; 0xd46 <eMBFuncReadWriteMultipleHoldingRegister+0xf6>
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+     cb8:	4a 37       	cpi	r20, 0x7A	; 122
+     cba:	51 05       	cpc	r21, r1
+     cbc:	08 f0       	brcs	.+2      	; 0xcc0 <eMBFuncReadWriteMultipleHoldingRegister+0x70>
+     cbe:	43 c0       	rjmp	.+134    	; 0xd46 <eMBFuncReadWriteMultipleHoldingRegister+0xf6>
+            ( ( 2 * usRegWriteCount ) == ucRegWriteByteCount ) )
+     cc0:	9a 01       	movw	r18, r20
+     cc2:	22 0f       	add	r18, r18
+     cc4:	33 1f       	adc	r19, r19
+     cc6:	90 e0       	ldi	r25, 0x00	; 0
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+     cc8:	28 17       	cp	r18, r24
+     cca:	39 07       	cpc	r19, r25
+     ccc:	e1 f5       	brne	.+120    	; 0xd46 <eMBFuncReadWriteMultipleHoldingRegister+0xf6>
+        usRegReadAddress++;
+
+        usRegReadCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF] << 8U );
+        usRegReadCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF + 1] );
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+     cce:	97 2f       	mov	r25, r23
+     cd0:	80 e0       	ldi	r24, 0x00	; 0
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+     cd2:	70 e0       	ldi	r23, 0x00	; 0
+     cd4:	68 2b       	or	r22, r24
+     cd6:	79 2b       	or	r23, r25
+        usRegWriteAddress++;
+     cd8:	6f 5f       	subi	r22, 0xFF	; 255
+     cda:	7f 4f       	sbci	r23, 0xFF	; 255
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+            ( ( 2 * usRegWriteCount ) == ucRegWriteByteCount ) )
+        {
+            /* Make callback to update the register values. */
+            eRegStatus = eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_READWRITE_WRITE_VALUES_OFF],
+     cdc:	ce 01       	movw	r24, r28
+     cde:	0a 96       	adiw	r24, 0x0a	; 10
+     ce0:	21 e0       	ldi	r18, 0x01	; 1
+     ce2:	e1 da       	rcall	.-2622   	; 0x2a6 <eMBRegHoldingCB>
+                                          usRegWriteAddress, usRegWriteCount, MB_REG_WRITE );
+
+            if( eRegStatus == MB_ENOERR )
+     ce4:	88 23       	and	r24, r24
+     ce6:	59 f5       	brne	.+86     	; 0xd3e <eMBFuncReadWriteMultipleHoldingRegister+0xee>
+            {
+                /* Set the current PDU data pointer to the beginning. */
+                pucFrameCur = &pucFrame[MB_PDU_FUNC_OFF];
+                *usLen = MB_PDU_FUNC_OFF;
+     ce8:	f8 01       	movw	r30, r16
+     cea:	11 82       	std	Z+1, r1	; 0x01
+     cec:	10 82       	st	Z, r1
+
+                /* First byte contains the function code. */
+                *pucFrameCur++ = MB_FUNC_READWRITE_MULTIPLE_REGISTERS;
+     cee:	87 e1       	ldi	r24, 0x17	; 23
+     cf0:	88 83       	st	Y, r24
+                *usLen += 1;
+     cf2:	80 81       	ld	r24, Z
+     cf4:	91 81       	ldd	r25, Z+1	; 0x01
+     cf6:	01 96       	adiw	r24, 0x01	; 1
+     cf8:	91 83       	std	Z+1, r25	; 0x01
+     cfa:	80 83       	st	Z, r24
+
+                /* Second byte in the response contain the number of bytes. */
+                *pucFrameCur++ = ( UCHAR ) ( usRegReadCount * 2 );
+     cfc:	8e 2d       	mov	r24, r14
+     cfe:	88 0f       	add	r24, r24
+     d00:	89 83       	std	Y+1, r24	; 0x01
+                *usLen += 1;
+     d02:	80 81       	ld	r24, Z
+     d04:	91 81       	ldd	r25, Z+1	; 0x01
+     d06:	01 96       	adiw	r24, 0x01	; 1
+     d08:	91 83       	std	Z+1, r25	; 0x01
+     d0a:	80 83       	st	Z, r24
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_READWRITE_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+    {
+        usRegReadAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF] << 8U );
+     d0c:	9b 2d       	mov	r25, r11
+     d0e:	80 e0       	ldi	r24, 0x00	; 0
+        usRegReadAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF + 1] );
+     d10:	6a 2d       	mov	r22, r10
+     d12:	70 e0       	ldi	r23, 0x00	; 0
+     d14:	68 2b       	or	r22, r24
+     d16:	79 2b       	or	r23, r25
+        usRegReadAddress++;
+     d18:	6f 5f       	subi	r22, 0xFF	; 255
+     d1a:	7f 4f       	sbci	r23, 0xFF	; 255
+                /* Second byte in the response contain the number of bytes. */
+                *pucFrameCur++ = ( UCHAR ) ( usRegReadCount * 2 );
+                *usLen += 1;
+
+                /* Make the read callback. */
+                eRegStatus =
+     d1c:	c6 01       	movw	r24, r12
+     d1e:	01 96       	adiw	r24, 0x01	; 1
+     d20:	a7 01       	movw	r20, r14
+     d22:	20 e0       	ldi	r18, 0x00	; 0
+     d24:	c0 da       	rcall	.-2688   	; 0x2a6 <eMBRegHoldingCB>
+                    eMBRegHoldingCB( pucFrameCur, usRegReadAddress, usRegReadCount, MB_REG_READ );
+                if( eRegStatus == MB_ENOERR )
+     d26:	88 23       	and	r24, r24
+     d28:	51 f4       	brne	.+20     	; 0xd3e <eMBFuncReadWriteMultipleHoldingRegister+0xee>
+                {
+                    *usLen += 2 * usRegReadCount;
+     d2a:	ee 0c       	add	r14, r14
+     d2c:	ff 1c       	adc	r15, r15
+     d2e:	f8 01       	movw	r30, r16
+     d30:	80 81       	ld	r24, Z
+     d32:	91 81       	ldd	r25, Z+1	; 0x01
+     d34:	8e 0d       	add	r24, r14
+     d36:	9f 1d       	adc	r25, r15
+     d38:	91 83       	std	Z+1, r25	; 0x01
+     d3a:	80 83       	st	Z, r24
+     d3c:	02 c0       	rjmp	.+4      	; 0xd42 <eMBFuncReadWriteMultipleHoldingRegister+0xf2>
+                }
+            }
+            if( eRegStatus != MB_ENOERR )
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+     d3e:	6c d0       	rcall	.+216    	; 0xe18 <prveMBError2Exception>
+     d40:	03 c0       	rjmp	.+6      	; 0xd48 <eMBFuncReadWriteMultipleHoldingRegister+0xf8>
+    USHORT          usRegWriteAddress;
+    USHORT          usRegWriteCount;
+    UCHAR           ucRegWriteByteCount;
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+     d42:	80 e0       	ldi	r24, 0x00	; 0
+     d44:	01 c0       	rjmp	.+2      	; 0xd48 <eMBFuncReadWriteMultipleHoldingRegister+0xf8>
+                eStatus = prveMBError2Exception( eRegStatus );
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+     d46:	83 e0       	ldi	r24, 0x03	; 3
+        }
+    }
+    return eStatus;
+}
+     d48:	df 91       	pop	r29
+     d4a:	cf 91       	pop	r28
+     d4c:	1f 91       	pop	r17
+     d4e:	0f 91       	pop	r16
+     d50:	ff 90       	pop	r15
+     d52:	ef 90       	pop	r14
+     d54:	df 90       	pop	r13
+     d56:	cf 90       	pop	r12
+     d58:	bf 90       	pop	r11
+     d5a:	af 90       	pop	r10
+     d5c:	08 95       	ret
+
+00000d5e <xMBUtilSetBits>:
+
+/* ----------------------- Start implementation -----------------------------*/
+void
+xMBUtilSetBits( UCHAR * ucByteBuf, USHORT usBitOffset, UCHAR ucNBits,
+                UCHAR ucValue )
+{
+     d5e:	cf 93       	push	r28
+     d60:	df 93       	push	r29
+    USHORT          usWordBuf;
+    USHORT          usMask;
+    USHORT          usByteOffset;
+    USHORT          usNPreBits;
+    USHORT          usValue = ucValue;
+     d62:	30 e0       	ldi	r19, 0x00	; 0
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+     d64:	eb 01       	movw	r28, r22
+     d66:	53 e0       	ldi	r21, 0x03	; 3
+     d68:	d6 95       	lsr	r29
+     d6a:	c7 95       	ror	r28
+     d6c:	5a 95       	dec	r21
+     d6e:	e1 f7       	brne	.-8      	; 0xd68 <xMBUtilSetBits+0xa>
+     d70:	67 70       	andi	r22, 0x07	; 7
+     d72:	70 70       	andi	r23, 0x00	; 0
+
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+     d74:	e1 e0       	ldi	r30, 0x01	; 1
+     d76:	f0 e0       	ldi	r31, 0x00	; 0
+     d78:	02 c0       	rjmp	.+4      	; 0xd7e <xMBUtilSetBits+0x20>
+     d7a:	ee 0f       	add	r30, r30
+     d7c:	ff 1f       	adc	r31, r31
+     d7e:	4a 95       	dec	r20
+     d80:	e2 f7       	brpl	.-8      	; 0xd7a <xMBUtilSetBits+0x1c>
+     d82:	31 97       	sbiw	r30, 0x01	; 1
+    usMask <<= usBitOffset - usByteOffset * BITS_UCHAR;
+
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+     d84:	dc 01       	movw	r26, r24
+     d86:	ac 0f       	add	r26, r28
+     d88:	bd 1f       	adc	r27, r29
+     d8a:	4c 91       	ld	r20, X
+     d8c:	50 e0       	ldi	r21, 0x00	; 0
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+     d8e:	21 96       	adiw	r28, 0x01	; 1
+     d90:	c8 0f       	add	r28, r24
+     d92:	d9 1f       	adc	r29, r25
+     d94:	98 81       	ld	r25, Y
+     d96:	80 e0       	ldi	r24, 0x00	; 0
+     d98:	48 2b       	or	r20, r24
+     d9a:	59 2b       	or	r21, r25
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+    usMask <<= usBitOffset - usByteOffset * BITS_UCHAR;
+     d9c:	06 2e       	mov	r0, r22
+     d9e:	02 c0       	rjmp	.+4      	; 0xda4 <xMBUtilSetBits+0x46>
+     da0:	ee 0f       	add	r30, r30
+     da2:	ff 1f       	adc	r31, r31
+     da4:	0a 94       	dec	r0
+     da6:	e2 f7       	brpl	.-8      	; 0xda0 <xMBUtilSetBits+0x42>
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* Zero out bit field bits and then or value bits into them. */
+    usWordBuf = ( USHORT )( ( usWordBuf & ( ~usMask ) ) | usValue );
+     da8:	e0 95       	com	r30
+     daa:	f0 95       	com	r31
+     dac:	4e 23       	and	r20, r30
+     dae:	5f 23       	and	r21, r31
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+     db0:	02 c0       	rjmp	.+4      	; 0xdb6 <xMBUtilSetBits+0x58>
+     db2:	22 0f       	add	r18, r18
+     db4:	33 1f       	adc	r19, r19
+     db6:	6a 95       	dec	r22
+     db8:	e2 f7       	brpl	.-8      	; 0xdb2 <xMBUtilSetBits+0x54>
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* Zero out bit field bits and then or value bits into them. */
+    usWordBuf = ( USHORT )( ( usWordBuf & ( ~usMask ) ) | usValue );
+     dba:	42 2b       	or	r20, r18
+     dbc:	53 2b       	or	r21, r19
+
+    /* move bits back into storage */
+    ucByteBuf[usByteOffset] = ( UCHAR )( usWordBuf & 0xFF );
+     dbe:	4c 93       	st	X, r20
+    ucByteBuf[usByteOffset + 1] = ( UCHAR )( usWordBuf >> BITS_UCHAR );
+     dc0:	58 83       	st	Y, r21
+}
+     dc2:	df 91       	pop	r29
+     dc4:	cf 91       	pop	r28
+     dc6:	08 95       	ret
+
+00000dc8 <xMBUtilGetBits>:
+    USHORT          usByteOffset;
+    USHORT          usNPreBits;
+
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+     dc8:	9b 01       	movw	r18, r22
+     dca:	f3 e0       	ldi	r31, 0x03	; 3
+     dcc:	36 95       	lsr	r19
+     dce:	27 95       	ror	r18
+     dd0:	fa 95       	dec	r31
+     dd2:	e1 f7       	brne	.-8      	; 0xdcc <xMBUtilGetBits+0x4>
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+     dd4:	dc 01       	movw	r26, r24
+     dd6:	a2 0f       	add	r26, r18
+     dd8:	b3 1f       	adc	r27, r19
+     dda:	8c 91       	ld	r24, X
+     ddc:	90 e0       	ldi	r25, 0x00	; 0
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+     dde:	11 96       	adiw	r26, 0x01	; 1
+     de0:	fc 91       	ld	r31, X
+     de2:	11 97       	sbiw	r26, 0x01	; 1
+     de4:	e0 e0       	ldi	r30, 0x00	; 0
+     de6:	8e 2b       	or	r24, r30
+     de8:	9f 2b       	or	r25, r31
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+     dea:	e3 e0       	ldi	r30, 0x03	; 3
+     dec:	22 0f       	add	r18, r18
+     dee:	33 1f       	adc	r19, r19
+     df0:	ea 95       	dec	r30
+     df2:	e1 f7       	brne	.-8      	; 0xdec <xMBUtilGetBits+0x24>
+     df4:	62 1b       	sub	r22, r18
+     df6:	73 0b       	sbc	r23, r19
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* throw away unneeded bits. */
+    usWordBuf >>= usNPreBits;
+     df8:	02 c0       	rjmp	.+4      	; 0xdfe <xMBUtilGetBits+0x36>
+     dfa:	96 95       	lsr	r25
+     dfc:	87 95       	ror	r24
+     dfe:	6a 95       	dec	r22
+     e00:	e2 f7       	brpl	.-8      	; 0xdfa <xMBUtilGetBits+0x32>
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+     e02:	21 e0       	ldi	r18, 0x01	; 1
+     e04:	30 e0       	ldi	r19, 0x00	; 0
+     e06:	02 c0       	rjmp	.+4      	; 0xe0c <xMBUtilGetBits+0x44>
+     e08:	22 0f       	add	r18, r18
+     e0a:	33 1f       	adc	r19, r19
+     e0c:	4a 95       	dec	r20
+     e0e:	e2 f7       	brpl	.-8      	; 0xe08 <xMBUtilGetBits+0x40>
+     e10:	21 50       	subi	r18, 0x01	; 1
+     e12:	30 40       	sbci	r19, 0x00	; 0
+
+    /* mask away bits above the requested bitfield. */
+    usWordBuf &= usMask;
+
+    return ( UCHAR ) usWordBuf;
+}
+     e14:	82 23       	and	r24, r18
+     e16:	08 95       	ret
+
+00000e18 <prveMBError2Exception>:
+
+eMBException
+prveMBError2Exception( eMBErrorCode eErrorCode )
+{
+     e18:	88 30       	cpi	r24, 0x08	; 8
+     e1a:	30 f4       	brcc	.+12     	; 0xe28 <prveMBError2Exception+0x10>
+     e1c:	e8 2f       	mov	r30, r24
+     e1e:	f0 e0       	ldi	r31, 0x00	; 0
+     e20:	ec 56       	subi	r30, 0x6C	; 108
+     e22:	ff 4f       	sbci	r31, 0xFF	; 255
+     e24:	80 81       	ld	r24, Z
+     e26:	08 95       	ret
+     e28:	84 e0       	ldi	r24, 0x04	; 4
+            eStatus = MB_EX_SLAVE_DEVICE_FAILURE;
+            break;
+    }
+
+    return eStatus;
+}
+     e2a:	08 95       	ret
+
+00000e2c <__vector_9>:
+#else 
+   #define TIM0_OVF_VECTOR   TIMER0_OVF_vect
+#endif
+
+ISR(TIM0_OVF_VECTOR)
+{
+     e2c:	1f 92       	push	r1
+     e2e:	0f 92       	push	r0
+     e30:	0f b6       	in	r0, 0x3f	; 63
+     e32:	0f 92       	push	r0
+     e34:	11 24       	eor	r1, r1
+     e36:	2f 93       	push	r18
+     e38:	3f 93       	push	r19
+     e3a:	8f 93       	push	r24
+     e3c:	9f 93       	push	r25
+     e3e:	ef 93       	push	r30
+     e40:	ff 93       	push	r31
+   uint8_t   start_bit, flag_in;
+   uint8_t rx_data; 
+   static uint16_t  internal_rx_buffer;
+   
+   TCNT0 += TIMER_TCNT_VALUE;
+     e42:	82 b7       	in	r24, 0x32	; 50
+     e44:	80 52       	subi	r24, 0x20	; 32
+     e46:	82 bf       	out	0x32, r24	; 50
+
+   g_timer_timeout--;
+     e48:	80 91 53 01 	lds	r24, 0x0153
+     e4c:	90 91 54 01 	lds	r25, 0x0154
+     e50:	01 97       	sbiw	r24, 0x01	; 1
+     e52:	90 93 54 01 	sts	0x0154, r25
+     e56:	80 93 53 01 	sts	0x0153, r24
+   
+/* Transmitter Section */
+   if (flag_tx_busy){
+     e5a:	80 91 4b 01 	lds	r24, 0x014B
+     e5e:	88 23       	and	r24, r24
+     e60:	59 f1       	breq	.+86     	; 0xeb8 <__vector_9+0x8c>
+      --timer_tx_ctr;
+     e62:	80 91 4c 01 	lds	r24, 0x014C
+     e66:	81 50       	subi	r24, 0x01	; 1
+     e68:	80 93 4c 01 	sts	0x014C, r24
+      if (!timer_tx_ctr){
+     e6c:	80 91 4c 01 	lds	r24, 0x014C
+     e70:	88 23       	and	r24, r24
+     e72:	11 f5       	brne	.+68     	; 0xeb8 <__vector_9+0x8c>
+         if (internal_tx_buffer & 0x01){
+     e74:	80 91 4e 01 	lds	r24, 0x014E
+     e78:	90 91 4f 01 	lds	r25, 0x014F
+     e7c:	80 ff       	sbrs	r24, 0
+     e7e:	02 c0       	rjmp	.+4      	; 0xe84 <__vector_9+0x58>
+            set_tx_pin_high();
+     e80:	c0 9a       	sbi	0x18, 0	; 24
+     e82:	01 c0       	rjmp	.+2      	; 0xe86 <__vector_9+0x5a>
+         }
+         else{
+            set_tx_pin_low();
+     e84:	c0 98       	cbi	0x18, 0	; 24
+         }
+         internal_tx_buffer >>= 1;
+     e86:	80 91 4e 01 	lds	r24, 0x014E
+     e8a:	90 91 4f 01 	lds	r25, 0x014F
+     e8e:	96 95       	lsr	r25
+     e90:	87 95       	ror	r24
+     e92:	90 93 4f 01 	sts	0x014F, r25
+     e96:	80 93 4e 01 	sts	0x014E, r24
+         timer_tx_ctr = NUM_OF_CYCLES;
+     e9a:	83 e0       	ldi	r24, 0x03	; 3
+     e9c:	80 93 4c 01 	sts	0x014C, r24
+         --bits_left_in_tx;
+     ea0:	80 91 4d 01 	lds	r24, 0x014D
+     ea4:	81 50       	subi	r24, 0x01	; 1
+     ea6:	80 93 4d 01 	sts	0x014D, r24
+         if (!bits_left_in_tx){
+     eaa:	80 91 4d 01 	lds	r24, 0x014D
+     eae:	88 23       	and	r24, r24
+     eb0:	19 f4       	brne	.+6      	; 0xeb8 <__vector_9+0x8c>
+            flag_tx_busy = FALSE;
+     eb2:	10 92 4b 01 	sts	0x014B, r1
+            set_tx_pin_high();
+     eb6:	c0 9a       	sbi	0x18, 0	; 24
+         }
+      }
+   }
+/* Receiver Section */
+   if (flag_rx_off == FALSE){
+     eb8:	80 91 50 01 	lds	r24, 0x0150
+     ebc:	88 23       	and	r24, r24
+     ebe:	09 f0       	breq	.+2      	; 0xec2 <__vector_9+0x96>
+     ec0:	68 c0       	rjmp	.+208    	; 0xf92 <__vector_9+0x166>
+      if (flag_rx_waiting_for_stop_bit){
+     ec2:	80 91 66 01 	lds	r24, 0x0166
+     ec6:	88 23       	and	r24, r24
+     ec8:	21 f1       	breq	.+72     	; 0xf12 <__vector_9+0xe6>
+         if ( --timer_rx_ctr == 0 ){
+     eca:	80 91 67 01 	lds	r24, 0x0167
+     ece:	81 50       	subi	r24, 0x01	; 1
+     ed0:	80 93 67 01 	sts	0x0167, r24
+     ed4:	88 23       	and	r24, r24
+     ed6:	09 f0       	breq	.+2      	; 0xeda <__vector_9+0xae>
+     ed8:	5c c0       	rjmp	.+184    	; 0xf92 <__vector_9+0x166>
+            flag_rx_waiting_for_stop_bit = FALSE;
+     eda:	10 92 66 01 	sts	0x0166, r1
+            flag_rx_ready = FALSE;
+     ede:	10 92 65 01 	sts	0x0165, r1
+            rx_data = (uint8_t)internal_rx_buffer;
+     ee2:	80 91 6a 01 	lds	r24, 0x016A
+            if ( rx_data != 0xC2 ){
+     ee6:	82 3c       	cpi	r24, 0xC2	; 194
+     ee8:	09 f4       	brne	.+2      	; 0xeec <__vector_9+0xc0>
+     eea:	53 c0       	rjmp	.+166    	; 0xf92 <__vector_9+0x166>
+               inbuf[qin] = rx_data;
+     eec:	e0 91 52 01 	lds	r30, 0x0152
+     ef0:	f0 e0       	ldi	r31, 0x00	; 0
+     ef2:	eb 5a       	subi	r30, 0xAB	; 171
+     ef4:	fe 4f       	sbci	r31, 0xFE	; 254
+     ef6:	80 83       	st	Z, r24
+               if ( ++qin >= SUART_BUF_SIZE ){
+     ef8:	80 91 52 01 	lds	r24, 0x0152
+     efc:	8f 5f       	subi	r24, 0xFF	; 255
+     efe:	80 93 52 01 	sts	0x0152, r24
+     f02:	80 91 52 01 	lds	r24, 0x0152
+     f06:	80 31       	cpi	r24, 0x10	; 16
+     f08:	08 f4       	brcc	.+2      	; 0xf0c <__vector_9+0xe0>
+     f0a:	43 c0       	rjmp	.+134    	; 0xf92 <__vector_9+0x166>
+                  qin = 0;
+     f0c:	10 92 52 01 	sts	0x0152, r1
+     f10:	40 c0       	rjmp	.+128    	; 0xf92 <__vector_9+0x166>
+               }
+            }
+         }
+      }
+      else{   // rx_test_busy
+         if ( flag_rx_ready == FALSE ){
+     f12:	80 91 65 01 	lds	r24, 0x0165
+     f16:	88 23       	and	r24, r24
+     f18:	99 f4       	brne	.+38     	; 0xf40 <__vector_9+0x114>
+            start_bit = get_rx_pin_status();
+     f1a:	86 b3       	in	r24, 0x16	; 22
+            if ( start_bit == 0 ){
+     f1c:	81 fd       	sbrc	r24, 1
+     f1e:	39 c0       	rjmp	.+114    	; 0xf92 <__vector_9+0x166>
+               flag_rx_ready = TRUE;
+     f20:	81 e0       	ldi	r24, 0x01	; 1
+     f22:	80 93 65 01 	sts	0x0165, r24
+               internal_rx_buffer = 0;
+     f26:	10 92 6b 01 	sts	0x016B, r1
+     f2a:	10 92 6a 01 	sts	0x016A, r1
+               timer_rx_ctr = NUM_OF_CYCLES + 1;
+     f2e:	94 e0       	ldi	r25, 0x04	; 4
+     f30:	90 93 67 01 	sts	0x0167, r25
+               bits_left_in_rx = RX_NUM_OF_BITS;
+     f34:	9a e0       	ldi	r25, 0x0A	; 10
+     f36:	90 93 68 01 	sts	0x0168, r25
+               rx_mask = 1;
+     f3a:	80 93 69 01 	sts	0x0169, r24
+     f3e:	29 c0       	rjmp	.+82     	; 0xf92 <__vector_9+0x166>
+            }
+         }
+         else{	// rx_busy
+            if ( --timer_rx_ctr == 0 ){				
+     f40:	80 91 67 01 	lds	r24, 0x0167
+     f44:	81 50       	subi	r24, 0x01	; 1
+     f46:	80 93 67 01 	sts	0x0167, r24
+     f4a:	88 23       	and	r24, r24
+     f4c:	11 f5       	brne	.+68     	; 0xf92 <__vector_9+0x166>
+               timer_rx_ctr = NUM_OF_CYCLES;
+     f4e:	83 e0       	ldi	r24, 0x03	; 3
+     f50:	80 93 67 01 	sts	0x0167, r24
+               flag_in = get_rx_pin_status();
+     f54:	86 b3       	in	r24, 0x16	; 22
+               if ( flag_in ){
+     f56:	81 ff       	sbrs	r24, 1
+     f58:	0d c0       	rjmp	.+26     	; 0xf74 <__vector_9+0x148>
+                  internal_rx_buffer |= rx_mask;
+     f5a:	20 91 69 01 	lds	r18, 0x0169
+     f5e:	30 e0       	ldi	r19, 0x00	; 0
+     f60:	80 91 6a 01 	lds	r24, 0x016A
+     f64:	90 91 6b 01 	lds	r25, 0x016B
+     f68:	82 2b       	or	r24, r18
+     f6a:	93 2b       	or	r25, r19
+     f6c:	90 93 6b 01 	sts	0x016B, r25
+     f70:	80 93 6a 01 	sts	0x016A, r24
+               }
+               rx_mask <<= 1;
+     f74:	80 91 69 01 	lds	r24, 0x0169
+     f78:	88 0f       	add	r24, r24
+     f7a:	80 93 69 01 	sts	0x0169, r24
+               if ( --bits_left_in_rx == 0 ){
+     f7e:	80 91 68 01 	lds	r24, 0x0168
+     f82:	81 50       	subi	r24, 0x01	; 1
+     f84:	80 93 68 01 	sts	0x0168, r24
+     f88:	88 23       	and	r24, r24
+     f8a:	19 f4       	brne	.+6      	; 0xf92 <__vector_9+0x166>
+                  flag_rx_waiting_for_stop_bit = TRUE;
+     f8c:	81 e0       	ldi	r24, 0x01	; 1
+     f8e:	80 93 66 01 	sts	0x0166, r24
+            }
+         }
+       }
+   }
+	
+}
+     f92:	ff 91       	pop	r31
+     f94:	ef 91       	pop	r30
+     f96:	9f 91       	pop	r25
+     f98:	8f 91       	pop	r24
+     f9a:	3f 91       	pop	r19
+     f9c:	2f 91       	pop	r18
+     f9e:	0f 90       	pop	r0
+     fa0:	0f be       	out	0x3f, r0	; 63
+     fa2:	0f 90       	pop	r0
+     fa4:	1f 90       	pop	r1
+     fa6:	18 95       	reti
+
+00000fa8 <SUART_Init>:
+
+
+void SUART_Init(void)
+{
+   /*инициализация флагов*/   
+   flag_tx_busy = FALSE;
+     fa8:	10 92 4b 01 	sts	0x014B, r1
+   flag_rx_ready = FALSE;
+     fac:	10 92 65 01 	sts	0x0165, r1
+   flag_rx_waiting_for_stop_bit = FALSE;
+     fb0:	10 92 66 01 	sts	0x0166, r1
+   flag_rx_off = FALSE;
+     fb4:	10 92 50 01 	sts	0x0150, r1
+   
+   /*настройка выводв*/
+   RX_DDRX &= ~(1<<RX_PIN);
+     fb8:	b9 98       	cbi	0x17, 1	; 23
+   RX_PORTX |= (1<<RX_PIN);
+     fba:	c1 9a       	sbi	0x18, 1	; 24
+   TX_DDRX |= (1<<TX_PIN);
+     fbc:	b8 9a       	sbi	0x17, 0	; 23
+   TX_PORTX |= (1<<TX_PIN);
+     fbe:	c0 9a       	sbi	0x18, 0	; 24
+        
+   /*настройка таймера Т0*/
+   TCCR0 = CSXX;  
+     fc0:	82 e0       	ldi	r24, 0x02	; 2
+     fc2:	83 bf       	out	0x33, r24	; 51
+   TCNT0 = TIMER_TCNT_VALUE;
+     fc4:	80 ee       	ldi	r24, 0xE0	; 224
+     fc6:	82 bf       	out	0x32, r24	; 50
+   TIMSK |= (1<<TOIE0);
+     fc8:	89 b7       	in	r24, 0x39	; 57
+     fca:	81 60       	ori	r24, 0x01	; 1
+     fcc:	89 bf       	out	0x39, r24	; 57
+}
+     fce:	08 95       	ret
+
+00000fd0 <SUART_GetChar>:
+
+char SUART_GetChar(int * timeout)
+{
+     fd0:	fc 01       	movw	r30, r24
+	g_timer_timeout = *timeout;
+     fd2:	80 81       	ld	r24, Z
+     fd4:	91 81       	ldd	r25, Z+1	; 0x01
+     fd6:	90 93 54 01 	sts	0x0154, r25
+     fda:	80 93 53 01 	sts	0x0153, r24
+     fde:	0e c0       	rjmp	.+28     	; 0xffc <SUART_GetChar+0x2c>
+   do{
+      tmp = qin;  
+      while (qout == tmp){
+         SUART_Idle();
+
+		 if (g_timer_timeout-- == 1){
+     fe0:	80 91 53 01 	lds	r24, 0x0153
+     fe4:	90 91 54 01 	lds	r25, 0x0154
+     fe8:	9c 01       	movw	r18, r24
+     fea:	21 50       	subi	r18, 0x01	; 1
+     fec:	30 40       	sbci	r19, 0x00	; 0
+     fee:	30 93 54 01 	sts	0x0154, r19
+     ff2:	20 93 53 01 	sts	0x0153, r18
+     ff6:	81 30       	cpi	r24, 0x01	; 1
+     ff8:	91 05       	cpc	r25, r1
+     ffa:	29 f1       	breq	.+74     	; 0x1046 <SUART_GetChar+0x76>
+		 	*timeout = 0;
+		 	return 0;
+		 }
+		 	
+         tmp = qin;
+     ffc:	80 91 52 01 	lds	r24, 0x0152
+   uint8_t tmp;  
+   char ch;
+   
+   do{
+      tmp = qin;  
+      while (qout == tmp){
+    1000:	90 91 51 01 	lds	r25, 0x0151
+    1004:	98 17       	cp	r25, r24
+    1006:	61 f3       	breq	.-40     	; 0xfe0 <SUART_GetChar+0x10>
+		 	return 0;
+		 }
+		 	
+         tmp = qin;
+      }
+      ch = inbuf[qout];
+    1008:	a0 91 51 01 	lds	r26, 0x0151
+    100c:	b0 e0       	ldi	r27, 0x00	; 0
+    100e:	ab 5a       	subi	r26, 0xAB	; 171
+    1010:	be 4f       	sbci	r27, 0xFE	; 254
+    1012:	8c 91       	ld	r24, X
+      if ( ++qout >= SUART_BUF_SIZE ){
+    1014:	90 91 51 01 	lds	r25, 0x0151
+    1018:	9f 5f       	subi	r25, 0xFF	; 255
+    101a:	90 93 51 01 	sts	0x0151, r25
+    101e:	90 91 51 01 	lds	r25, 0x0151
+    1022:	90 31       	cpi	r25, 0x10	; 16
+    1024:	10 f0       	brcs	.+4      	; 0x102a <SUART_GetChar+0x5a>
+         qout = 0;
+    1026:	10 92 51 01 	sts	0x0151, r1
+      }
+
+	  if (g_timer_timeout-- == 1){
+    102a:	20 91 53 01 	lds	r18, 0x0153
+    102e:	30 91 54 01 	lds	r19, 0x0154
+    1032:	a9 01       	movw	r20, r18
+    1034:	41 50       	subi	r20, 0x01	; 1
+    1036:	50 40       	sbci	r21, 0x00	; 0
+    1038:	50 93 54 01 	sts	0x0154, r21
+    103c:	40 93 53 01 	sts	0x0153, r20
+    1040:	21 30       	cpi	r18, 0x01	; 1
+    1042:	31 05       	cpc	r19, r1
+    1044:	21 f4       	brne	.+8      	; 0x104e <SUART_GetChar+0x7e>
+	  	 *timeout = 0;
+    1046:	11 82       	std	Z+1, r1	; 0x01
+    1048:	10 82       	st	Z, r1
+	 	 return 0;
+    104a:	80 e0       	ldi	r24, 0x00	; 0
+    104c:	08 95       	ret
+	  }
+   }while ((ch == 0x0A) || (ch == 0xC2));
+    104e:	8a 30       	cpi	r24, 0x0A	; 10
+    1050:	a9 f2       	breq	.-86     	; 0xffc <SUART_GetChar+0x2c>
+    1052:	82 3c       	cpi	r24, 0xC2	; 194
+    1054:	99 f2       	breq	.-90     	; 0xffc <SUART_GetChar+0x2c>
+   
+   return ch;
+}
+    1056:	08 95       	ret
+
+00001058 <SUART_FlushInBuf>:
+
+void SUART_FlushInBuf(void)
+{
+   qin = 0;
+    1058:	10 92 52 01 	sts	0x0152, r1
+   qout = 0;
+    105c:	10 92 51 01 	sts	0x0151, r1
+}
+    1060:	08 95       	ret
+
+00001062 <SUART_Kbhit>:
+
+char SUART_Kbhit(void)
+{
+   uint8_t tmp = qout;
+    1062:	90 91 51 01 	lds	r25, 0x0151
+   return( qin!=tmp );
+    1066:	20 91 52 01 	lds	r18, 0x0152
+    106a:	81 e0       	ldi	r24, 0x01	; 1
+    106c:	29 17       	cp	r18, r25
+    106e:	09 f4       	brne	.+2      	; 0x1072 <SUART_Kbhit+0x10>
+    1070:	80 e0       	ldi	r24, 0x00	; 0
+}
+    1072:	08 95       	ret
+
+00001074 <SUART_TurnRxOn>:
+
+void SUART_TurnRxOn(void)
+{
+   flag_rx_off = FALSE;
+    1074:	10 92 50 01 	sts	0x0150, r1
+}
+    1078:	08 95       	ret
+
+0000107a <SUART_TurnRxOff>:
+
+void SUART_TurnRxOff(void)
+{
+   flag_rx_off = TRUE;
+    107a:	81 e0       	ldi	r24, 0x01	; 1
+    107c:	80 93 50 01 	sts	0x0150, r24
+}
+    1080:	08 95       	ret
+
+00001082 <SUART_PutChar>:
+
+void SUART_PutChar(char ch)
+{
+   while(flag_tx_busy){};
+    1082:	90 91 4b 01 	lds	r25, 0x014B
+    1086:	99 23       	and	r25, r25
+    1088:	e1 f7       	brne	.-8      	; 0x1082 <SUART_PutChar>
+   timer_tx_ctr = NUM_OF_CYCLES;
+    108a:	93 e0       	ldi	r25, 0x03	; 3
+    108c:	90 93 4c 01 	sts	0x014C, r25
+   bits_left_in_tx = TX_NUM_OF_BITS;
+    1090:	9a e0       	ldi	r25, 0x0A	; 10
+    1092:	90 93 4d 01 	sts	0x014D, r25
+   internal_tx_buffer = ((uint16_t)ch<<1) | 0x200;
+    1096:	90 e0       	ldi	r25, 0x00	; 0
+    1098:	88 0f       	add	r24, r24
+    109a:	99 1f       	adc	r25, r25
+    109c:	92 60       	ori	r25, 0x02	; 2
+    109e:	90 93 4f 01 	sts	0x014F, r25
+    10a2:	80 93 4e 01 	sts	0x014E, r24
+   flag_tx_busy = TRUE;
+    10a6:	81 e0       	ldi	r24, 0x01	; 1
+    10a8:	80 93 4b 01 	sts	0x014B, r24
+}
+    10ac:	08 95       	ret
+
+000010ae <SUART_PutStr>:
+
+void SUART_PutStr(char *str)
+{  
+    10ae:	ef 92       	push	r14
+    10b0:	ff 92       	push	r15
+    10b2:	cf 93       	push	r28
+    10b4:	df 93       	push	r29
+    10b6:	e8 2e       	mov	r14, r24
+    10b8:	e7 01       	movw	r28, r14
+    10ba:	7e 01       	movw	r14, r28
+    10bc:	f9 2e       	mov	r15, r25
+    10be:	e7 01       	movw	r28, r14
+   char ch;
+   while (*str){
+    10c0:	01 c0       	rjmp	.+2      	; 0x10c4 <SUART_PutStr+0x16>
+      ch = *str++;
+      SUART_PutChar(ch);
+    10c2:	df df       	rcall	.-66     	; 0x1082 <SUART_PutChar>
+}
+
+void SUART_PutStr(char *str)
+{  
+   char ch;
+   while (*str){
+    10c4:	89 91       	ld	r24, Y+
+    10c6:	88 23       	and	r24, r24
+    10c8:	e1 f7       	brne	.-8      	; 0x10c2 <SUART_PutStr+0x14>
+      ch = *str++;
+      SUART_PutChar(ch);
+   }
+}
+    10ca:	df 91       	pop	r29
+    10cc:	cf 91       	pop	r28
+    10ce:	ff 90       	pop	r15
+    10d0:	ef 90       	pop	r14
+    10d2:	08 95       	ret
+
+000010d4 <mp3_set_reply>:
+
+static char is_reply = 1;
+
+//
+void mp3_set_reply (char state) {
+	is_reply = state;
+    10d4:	80 93 aa 00 	sts	0x00AA, r24
+	send_buf[4] = is_reply;
+    10d8:	80 93 a4 00 	sts	0x00A4, r24
+}
+    10dc:	08 95       	ret
+
+000010de <mp3_get_checksum>:
+	*(thebuf+1) =	(unsigned char)data;
+}
+
+
+//calc checksum (1~6 byte)
+unsigned short mp3_get_checksum (unsigned char *thebuf) {
+    10de:	fc 01       	movw	r30, r24
+    10e0:	31 96       	adiw	r30, 0x01	; 1
+    10e2:	86 e0       	ldi	r24, 0x06	; 6
+	unsigned short sum = 0;
+    10e4:	20 e0       	ldi	r18, 0x00	; 0
+    10e6:	30 e0       	ldi	r19, 0x00	; 0
+    char i;
+	for (i=1; i<7; i++) {
+		sum += thebuf[i];
+    10e8:	91 91       	ld	r25, Z+
+    10ea:	29 0f       	add	r18, r25
+    10ec:	31 1d       	adc	r19, r1
+    10ee:	81 50       	subi	r24, 0x01	; 1
+
+//calc checksum (1~6 byte)
+unsigned short mp3_get_checksum (unsigned char *thebuf) {
+	unsigned short sum = 0;
+    char i;
+	for (i=1; i<7; i++) {
+    10f0:	d9 f7       	brne	.-10     	; 0x10e8 <mp3_get_checksum+0xa>
+		sum += thebuf[i];
+	}
+	return -sum;
+    10f2:	30 95       	com	r19
+    10f4:	21 95       	neg	r18
+    10f6:	3f 4f       	sbci	r19, 0xFF	; 255
+}
+    10f8:	c9 01       	movw	r24, r18
+    10fa:	08 95       	ret
+
+000010fc <mp3_fill_checksum>:
+
+//fill checksum to send_buf (7~8 byte)
+void mp3_fill_checksum () {
+	unsigned short checksum = mp3_get_checksum (send_buf);
+    10fc:	80 ea       	ldi	r24, 0xA0	; 160
+    10fe:	90 e0       	ldi	r25, 0x00	; 0
+    1100:	ee df       	rcall	.-36     	; 0x10de <mp3_get_checksum>
+	send_buf[4] = is_reply;
+}
+
+//
+static void fill_uint16_bigend (unsigned char *thebuf, unsigned short data) {
+	*thebuf =	(unsigned char)(data>>8);
+    1102:	90 93 a7 00 	sts	0x00A7, r25
+	*(thebuf+1) =	(unsigned char)data;
+    1106:	80 93 a8 00 	sts	0x00A8, r24
+
+//fill checksum to send_buf (7~8 byte)
+void mp3_fill_checksum () {
+	unsigned short checksum = mp3_get_checksum (send_buf);
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+    110a:	08 95       	ret
+
+0000110c <h_send_func>:
+
+//
+void h_send_func () {
+    110c:	0f 93       	push	r16
+    110e:	1f 93       	push	r17
+    1110:	cf 93       	push	r28
+    1112:	df 93       	push	r29
+    1114:	c0 ea       	ldi	r28, 0xA0	; 160
+    1116:	d0 e0       	ldi	r29, 0x00	; 0
+    char i;
+	for (i=0; i<10; i++) {
+		printf ("%x ", send_buf[i]);
+    1118:	0c e9       	ldi	r16, 0x9C	; 156
+    111a:	10 e0       	ldi	r17, 0x00	; 0
+    111c:	89 91       	ld	r24, Y+
+    111e:	00 d0       	rcall	.+0      	; 0x1120 <h_send_func+0x14>
+    1120:	00 d0       	rcall	.+0      	; 0x1122 <h_send_func+0x16>
+    1122:	ed b7       	in	r30, 0x3d	; 61
+    1124:	fe b7       	in	r31, 0x3e	; 62
+    1126:	31 96       	adiw	r30, 0x01	; 1
+    1128:	ad b7       	in	r26, 0x3d	; 61
+    112a:	be b7       	in	r27, 0x3e	; 62
+    112c:	12 96       	adiw	r26, 0x02	; 2
+    112e:	1c 93       	st	X, r17
+    1130:	0e 93       	st	-X, r16
+    1132:	11 97       	sbiw	r26, 0x01	; 1
+    1134:	82 83       	std	Z+2, r24	; 0x02
+    1136:	13 82       	std	Z+3, r1	; 0x03
+    1138:	b4 d0       	rcall	.+360    	; 0x12a2 <printf>
+}
+
+//
+void h_send_func () {
+    char i;
+	for (i=0; i<10; i++) {
+    113a:	0f 90       	pop	r0
+    113c:	0f 90       	pop	r0
+    113e:	0f 90       	pop	r0
+    1140:	0f 90       	pop	r0
+    1142:	b0 e0       	ldi	r27, 0x00	; 0
+    1144:	ca 3a       	cpi	r28, 0xAA	; 170
+    1146:	db 07       	cpc	r29, r27
+    1148:	49 f7       	brne	.-46     	; 0x111c <h_send_func+0x10>
+		printf ("%x ", send_buf[i]);
+	}
+}
+    114a:	df 91       	pop	r29
+    114c:	cf 91       	pop	r28
+    114e:	1f 91       	pop	r17
+    1150:	0f 91       	pop	r16
+    1152:	08 95       	ret
+
+00001154 <s_send_func>:
+
+//
+void s_send_func () {
+    1154:	cf 93       	push	r28
+    1156:	df 93       	push	r29
+    1158:	c0 ea       	ldi	r28, 0xA0	; 160
+    115a:	d0 e0       	ldi	r29, 0x00	; 0
+    char i;
+	for (i=0; i<10; i++) {
+		SUART_PutChar(send_buf[i]);
+    115c:	89 91       	ld	r24, Y+
+    115e:	91 df       	rcall	.-222    	; 0x1082 <SUART_PutChar>
+}
+
+//
+void s_send_func () {
+    char i;
+	for (i=0; i<10; i++) {
+    1160:	80 e0       	ldi	r24, 0x00	; 0
+    1162:	ca 3a       	cpi	r28, 0xAA	; 170
+    1164:	d8 07       	cpc	r29, r24
+    1166:	d1 f7       	brne	.-12     	; 0x115c <s_send_func+0x8>
+		SUART_PutChar(send_buf[i]);
+
+	}
+}
+    1168:	df 91       	pop	r29
+    116a:	cf 91       	pop	r28
+    116c:	08 95       	ret
+
+0000116e <mp3_send_cmd_arg>:
+
+//
+
+//
+void mp3_send_cmd_arg (unsigned char cmd, unsigned short arg) {
+	send_buf[3] = cmd;
+    116e:	80 93 a3 00 	sts	0x00A3, r24
+	send_buf[4] = is_reply;
+}
+
+//
+static void fill_uint16_bigend (unsigned char *thebuf, unsigned short data) {
+	*thebuf =	(unsigned char)(data>>8);
+    1172:	70 93 a5 00 	sts	0x00A5, r23
+	*(thebuf+1) =	(unsigned char)data;
+    1176:	60 93 a6 00 	sts	0x00A6, r22
+
+//
+void mp3_send_cmd_arg (unsigned char cmd, unsigned short arg) {
+	send_buf[3] = cmd;
+	fill_uint16_bigend ((send_buf+5), arg);
+	mp3_fill_checksum ();
+    117a:	c0 df       	rcall	.-128    	; 0x10fc <mp3_fill_checksum>
+
+    s_send_func();
+    117c:	eb df       	rcall	.-42     	; 0x1154 <s_send_func>
+}
+    117e:	08 95       	ret
+
+00001180 <mp3_send_cmd>:
+
+//
+void mp3_send_cmd (unsigned char cmd) {
+	send_buf[3] = cmd;
+    1180:	80 93 a3 00 	sts	0x00A3, r24
+	send_buf[4] = is_reply;
+}
+
+//
+static void fill_uint16_bigend (unsigned char *thebuf, unsigned short data) {
+	*thebuf =	(unsigned char)(data>>8);
+    1184:	10 92 a5 00 	sts	0x00A5, r1
+	*(thebuf+1) =	(unsigned char)data;
+    1188:	10 92 a6 00 	sts	0x00A6, r1
+
+//
+void mp3_send_cmd (unsigned char cmd) {
+	send_buf[3] = cmd;
+	fill_uint16_bigend ((send_buf+5), 0);
+	mp3_fill_checksum ();
+    118c:	b7 df       	rcall	.-146    	; 0x10fc <mp3_fill_checksum>
+
+    s_send_func();
+    118e:	e2 df       	rcall	.-60     	; 0x1154 <s_send_func>
+}
+    1190:	08 95       	ret
+
+00001192 <mp3_set_play_mode>:
+
+
+//
+void mp3_set_play_mode(unsigned char mode){
+    1192:	68 2f       	mov	r22, r24
+	mp3_send_cmd_arg (0x08, mode);
+    1194:	88 e0       	ldi	r24, 0x08	; 8
+    1196:	70 e0       	ldi	r23, 0x00	; 0
+    1198:	ea df       	rcall	.-44     	; 0x116e <mp3_send_cmd_arg>
+}
+    119a:	08 95       	ret
+
+0000119c <mp3_play_physical_arg>:
+
+void mp3_play_physical_arg (unsigned short num) {
+    119c:	bc 01       	movw	r22, r24
+	mp3_send_cmd_arg (0x03, num);
+    119e:	83 e0       	ldi	r24, 0x03	; 3
+    11a0:	e6 df       	rcall	.-52     	; 0x116e <mp3_send_cmd_arg>
+}
+    11a2:	08 95       	ret
+
+000011a4 <mp3_play_physical>:
+
+//
+void mp3_play_physical () {
+	mp3_send_cmd (0x03);
+    11a4:	83 e0       	ldi	r24, 0x03	; 3
+    11a6:	ec df       	rcall	.-40     	; 0x1180 <mp3_send_cmd>
+}
+    11a8:	08 95       	ret
+
+000011aa <mp3_next>:
+
+//
+void mp3_next () {
+	mp3_send_cmd (0x01);
+    11aa:	81 e0       	ldi	r24, 0x01	; 1
+    11ac:	e9 df       	rcall	.-46     	; 0x1180 <mp3_send_cmd>
+}
+    11ae:	08 95       	ret
+
+000011b0 <mp3_prev>:
+
+//
+void mp3_prev () {
+	mp3_send_cmd (0x02);
+    11b0:	82 e0       	ldi	r24, 0x02	; 2
+    11b2:	e6 df       	rcall	.-52     	; 0x1180 <mp3_send_cmd>
+}
+    11b4:	08 95       	ret
+
+000011b6 <mp3_set_volume>:
+
+//0x06 set volume 0-30
+void mp3_set_volume (unsigned short volume) {
+    11b6:	bc 01       	movw	r22, r24
+	mp3_send_cmd_arg (0x06, volume);
+    11b8:	86 e0       	ldi	r24, 0x06	; 6
+    11ba:	d9 df       	rcall	.-78     	; 0x116e <mp3_send_cmd_arg>
+}
+    11bc:	08 95       	ret
+
+000011be <mp3_set_EQ>:
+
+//0x07 set EQ0/1/2/3/4/5    Normal/Pop/Rock/Jazz/Classic/Bass
+void mp3_set_EQ (unsigned short eq) {
+    11be:	bc 01       	movw	r22, r24
+	mp3_send_cmd_arg (0x07, eq);
+    11c0:	87 e0       	ldi	r24, 0x07	; 7
+    11c2:	d5 df       	rcall	.-86     	; 0x116e <mp3_send_cmd_arg>
+}
+    11c4:	08 95       	ret
+
+000011c6 <mp3_set_device>:
+
+//0x09 set device 1/2/3/4/5 U/SD/AUX/SLEEP/FLASH
+void mp3_set_device (unsigned short device) {
+    11c6:	bc 01       	movw	r22, r24
+	mp3_send_cmd_arg (0x09, device);
+    11c8:	89 e0       	ldi	r24, 0x09	; 9
+    11ca:	d1 df       	rcall	.-94     	; 0x116e <mp3_send_cmd_arg>
+}
+    11cc:	08 95       	ret
+
+000011ce <mp3_sleep>:
+
+//
+void mp3_sleep () {
+	mp3_send_cmd (0x0a);
+    11ce:	8a e0       	ldi	r24, 0x0A	; 10
+    11d0:	d7 df       	rcall	.-82     	; 0x1180 <mp3_send_cmd>
+}
+    11d2:	08 95       	ret
+
+000011d4 <mp3_reset>:
+
+//
+void mp3_reset () {
+	mp3_send_cmd (0x0c);
+    11d4:	8c e0       	ldi	r24, 0x0C	; 12
+    11d6:	d4 df       	rcall	.-88     	; 0x1180 <mp3_send_cmd>
+}
+    11d8:	08 95       	ret
+
+000011da <mp3_play>:
+
+//
+void mp3_play () {
+	mp3_send_cmd (0x0d);
+    11da:	8d e0       	ldi	r24, 0x0D	; 13
+    11dc:	d1 df       	rcall	.-94     	; 0x1180 <mp3_send_cmd>
+}
+    11de:	08 95       	ret
+
+000011e0 <mp3_pause>:
+
+//
+void mp3_pause () {
+	mp3_send_cmd (0x0e);
+    11e0:	8e e0       	ldi	r24, 0x0E	; 14
+    11e2:	ce df       	rcall	.-100    	; 0x1180 <mp3_send_cmd>
+}
+    11e4:	08 95       	ret
+
+000011e6 <mp3_stop>:
+
+//
+void mp3_stop () {
+	mp3_send_cmd (0x16);
+    11e6:	86 e1       	ldi	r24, 0x16	; 22
+    11e8:	cb df       	rcall	.-106    	; 0x1180 <mp3_send_cmd>
+}
+    11ea:	08 95       	ret
+
+000011ec <mp3_play_arg>:
+
+//play mp3 file in mp3 folder in your tf card
+void mp3_play_arg (unsigned short num) {
+    11ec:	bc 01       	movw	r22, r24
+	mp3_send_cmd_arg (0x12, num);
+    11ee:	82 e1       	ldi	r24, 0x12	; 18
+    11f0:	be df       	rcall	.-132    	; 0x116e <mp3_send_cmd_arg>
+}
+    11f2:	08 95       	ret
+
+000011f4 <mp3_single_loop>:
+
+
+
+//
+void mp3_single_loop (char state) {
+	mp3_send_cmd_arg (0x19, !state);
+    11f4:	61 e0       	ldi	r22, 0x01	; 1
+    11f6:	70 e0       	ldi	r23, 0x00	; 0
+    11f8:	88 23       	and	r24, r24
+    11fa:	11 f0       	breq	.+4      	; 0x1200 <mp3_single_loop+0xc>
+    11fc:	60 e0       	ldi	r22, 0x00	; 0
+    11fe:	70 e0       	ldi	r23, 0x00	; 0
+    1200:	89 e1       	ldi	r24, 0x19	; 25
+    1202:	b5 df       	rcall	.-150    	; 0x116e <mp3_send_cmd_arg>
+}
+    1204:	08 95       	ret
+
+00001206 <mp3_loop>:
+
+void mp3_loop (char state) {
+	mp3_send_cmd_arg (0x11, !state);
+    1206:	61 e0       	ldi	r22, 0x01	; 1
+    1208:	70 e0       	ldi	r23, 0x00	; 0
+    120a:	88 23       	and	r24, r24
+    120c:	11 f0       	breq	.+4      	; 0x1212 <mp3_loop+0xc>
+    120e:	60 e0       	ldi	r22, 0x00	; 0
+    1210:	70 e0       	ldi	r23, 0x00	; 0
+    1212:	81 e1       	ldi	r24, 0x11	; 17
+    1214:	ac df       	rcall	.-168    	; 0x116e <mp3_send_cmd_arg>
+}
+    1216:	08 95       	ret
+
+00001218 <mp3_single_play>:
+
+//add 
+void mp3_single_play (unsigned short num) {
+	unsigned char i;
+	mp3_play (num);
+    1218:	e0 df       	rcall	.-64     	; 0x11da <mp3_play>
+    for (i = 0;i++<255;);
+	mp3_single_loop (1);
+    121a:	81 e0       	ldi	r24, 0x01	; 1
+    121c:	eb df       	rcall	.-42     	; 0x11f4 <mp3_single_loop>
+	//mp3_send_cmd (0x19, !state);
+}
+    121e:	08 95       	ret
+
+00001220 <__mulsi3>:
+    1220:	62 9f       	mul	r22, r18
+    1222:	d0 01       	movw	r26, r0
+    1224:	73 9f       	mul	r23, r19
+    1226:	f0 01       	movw	r30, r0
+    1228:	82 9f       	mul	r24, r18
+    122a:	e0 0d       	add	r30, r0
+    122c:	f1 1d       	adc	r31, r1
+    122e:	64 9f       	mul	r22, r20
+    1230:	e0 0d       	add	r30, r0
+    1232:	f1 1d       	adc	r31, r1
+    1234:	92 9f       	mul	r25, r18
+    1236:	f0 0d       	add	r31, r0
+    1238:	83 9f       	mul	r24, r19
+    123a:	f0 0d       	add	r31, r0
+    123c:	74 9f       	mul	r23, r20
+    123e:	f0 0d       	add	r31, r0
+    1240:	65 9f       	mul	r22, r21
+    1242:	f0 0d       	add	r31, r0
+    1244:	99 27       	eor	r25, r25
+    1246:	72 9f       	mul	r23, r18
+    1248:	b0 0d       	add	r27, r0
+    124a:	e1 1d       	adc	r30, r1
+    124c:	f9 1f       	adc	r31, r25
+    124e:	63 9f       	mul	r22, r19
+    1250:	b0 0d       	add	r27, r0
+    1252:	e1 1d       	adc	r30, r1
+    1254:	f9 1f       	adc	r31, r25
+    1256:	bd 01       	movw	r22, r26
+    1258:	cf 01       	movw	r24, r30
+    125a:	11 24       	eor	r1, r1
+    125c:	08 95       	ret
+
+0000125e <__udivmodsi4>:
+    125e:	a1 e2       	ldi	r26, 0x21	; 33
+    1260:	1a 2e       	mov	r1, r26
+    1262:	aa 1b       	sub	r26, r26
+    1264:	bb 1b       	sub	r27, r27
+    1266:	fd 01       	movw	r30, r26
+    1268:	0d c0       	rjmp	.+26     	; 0x1284 <__udivmodsi4_ep>
+
+0000126a <__udivmodsi4_loop>:
+    126a:	aa 1f       	adc	r26, r26
+    126c:	bb 1f       	adc	r27, r27
+    126e:	ee 1f       	adc	r30, r30
+    1270:	ff 1f       	adc	r31, r31
+    1272:	a2 17       	cp	r26, r18
+    1274:	b3 07       	cpc	r27, r19
+    1276:	e4 07       	cpc	r30, r20
+    1278:	f5 07       	cpc	r31, r21
+    127a:	20 f0       	brcs	.+8      	; 0x1284 <__udivmodsi4_ep>
+    127c:	a2 1b       	sub	r26, r18
+    127e:	b3 0b       	sbc	r27, r19
+    1280:	e4 0b       	sbc	r30, r20
+    1282:	f5 0b       	sbc	r31, r21
+
+00001284 <__udivmodsi4_ep>:
+    1284:	66 1f       	adc	r22, r22
+    1286:	77 1f       	adc	r23, r23
+    1288:	88 1f       	adc	r24, r24
+    128a:	99 1f       	adc	r25, r25
+    128c:	1a 94       	dec	r1
+    128e:	69 f7       	brne	.-38     	; 0x126a <__udivmodsi4_loop>
+    1290:	60 95       	com	r22
+    1292:	70 95       	com	r23
+    1294:	80 95       	com	r24
+    1296:	90 95       	com	r25
+    1298:	9b 01       	movw	r18, r22
+    129a:	ac 01       	movw	r20, r24
+    129c:	bd 01       	movw	r22, r26
+    129e:	cf 01       	movw	r24, r30
+    12a0:	08 95       	ret
+
+000012a2 <printf>:
+    12a2:	a0 e0       	ldi	r26, 0x00	; 0
+    12a4:	b0 e0       	ldi	r27, 0x00	; 0
+    12a6:	e6 e5       	ldi	r30, 0x56	; 86
+    12a8:	f9 e0       	ldi	r31, 0x09	; 9
+    12aa:	95 c2       	rjmp	.+1322   	; 0x17d6 <__prologue_saves__+0x20>
+    12ac:	fe 01       	movw	r30, r28
+    12ae:	35 96       	adiw	r30, 0x05	; 5
+    12b0:	61 91       	ld	r22, Z+
+    12b2:	71 91       	ld	r23, Z+
+    12b4:	80 91 78 02 	lds	r24, 0x0278
+    12b8:	90 91 79 02 	lds	r25, 0x0279
+    12bc:	af 01       	movw	r20, r30
+    12be:	03 d0       	rcall	.+6      	; 0x12c6 <vfprintf>
+    12c0:	20 96       	adiw	r28, 0x00	; 0
+    12c2:	e2 e0       	ldi	r30, 0x02	; 2
+    12c4:	a4 c2       	rjmp	.+1352   	; 0x180e <__epilogue_restores__+0x20>
+
+000012c6 <vfprintf>:
+    12c6:	ac e0       	ldi	r26, 0x0C	; 12
+    12c8:	b0 e0       	ldi	r27, 0x00	; 0
+    12ca:	e8 e6       	ldi	r30, 0x68	; 104
+    12cc:	f9 e0       	ldi	r31, 0x09	; 9
+    12ce:	73 c2       	rjmp	.+1254   	; 0x17b6 <__prologue_saves__>
+    12d0:	6c 01       	movw	r12, r24
+    12d2:	1b 01       	movw	r2, r22
+    12d4:	8a 01       	movw	r16, r20
+    12d6:	fc 01       	movw	r30, r24
+    12d8:	17 82       	std	Z+7, r1	; 0x07
+    12da:	16 82       	std	Z+6, r1	; 0x06
+    12dc:	83 81       	ldd	r24, Z+3	; 0x03
+    12de:	81 ff       	sbrs	r24, 1
+    12e0:	c4 c1       	rjmp	.+904    	; 0x166a <vfprintf+0x3a4>
+    12e2:	2e 01       	movw	r4, r28
+    12e4:	08 94       	sec
+    12e6:	41 1c       	adc	r4, r1
+    12e8:	51 1c       	adc	r5, r1
+    12ea:	f6 01       	movw	r30, r12
+    12ec:	93 81       	ldd	r25, Z+3	; 0x03
+    12ee:	f1 01       	movw	r30, r2
+    12f0:	93 fd       	sbrc	r25, 3
+    12f2:	85 91       	lpm	r24, Z+
+    12f4:	93 ff       	sbrs	r25, 3
+    12f6:	81 91       	ld	r24, Z+
+    12f8:	1f 01       	movw	r2, r30
+    12fa:	88 23       	and	r24, r24
+    12fc:	09 f4       	brne	.+2      	; 0x1300 <vfprintf+0x3a>
+    12fe:	b1 c1       	rjmp	.+866    	; 0x1662 <vfprintf+0x39c>
+    1300:	85 32       	cpi	r24, 0x25	; 37
+    1302:	39 f4       	brne	.+14     	; 0x1312 <vfprintf+0x4c>
+    1304:	93 fd       	sbrc	r25, 3
+    1306:	85 91       	lpm	r24, Z+
+    1308:	93 ff       	sbrs	r25, 3
+    130a:	81 91       	ld	r24, Z+
+    130c:	1f 01       	movw	r2, r30
+    130e:	85 32       	cpi	r24, 0x25	; 37
+    1310:	21 f4       	brne	.+8      	; 0x131a <vfprintf+0x54>
+    1312:	90 e0       	ldi	r25, 0x00	; 0
+    1314:	b6 01       	movw	r22, r12
+    1316:	c5 d1       	rcall	.+906    	; 0x16a2 <fputc>
+    1318:	e8 cf       	rjmp	.-48     	; 0x12ea <vfprintf+0x24>
+    131a:	ee 24       	eor	r14, r14
+    131c:	ff 24       	eor	r15, r15
+    131e:	20 e0       	ldi	r18, 0x00	; 0
+    1320:	20 32       	cpi	r18, 0x20	; 32
+    1322:	b0 f4       	brcc	.+44     	; 0x1350 <vfprintf+0x8a>
+    1324:	8b 32       	cpi	r24, 0x2B	; 43
+    1326:	69 f0       	breq	.+26     	; 0x1342 <vfprintf+0x7c>
+    1328:	8c 32       	cpi	r24, 0x2C	; 44
+    132a:	28 f4       	brcc	.+10     	; 0x1336 <vfprintf+0x70>
+    132c:	80 32       	cpi	r24, 0x20	; 32
+    132e:	51 f0       	breq	.+20     	; 0x1344 <vfprintf+0x7e>
+    1330:	83 32       	cpi	r24, 0x23	; 35
+    1332:	71 f4       	brne	.+28     	; 0x1350 <vfprintf+0x8a>
+    1334:	0b c0       	rjmp	.+22     	; 0x134c <vfprintf+0x86>
+    1336:	8d 32       	cpi	r24, 0x2D	; 45
+    1338:	39 f0       	breq	.+14     	; 0x1348 <vfprintf+0x82>
+    133a:	80 33       	cpi	r24, 0x30	; 48
+    133c:	49 f4       	brne	.+18     	; 0x1350 <vfprintf+0x8a>
+    133e:	21 60       	ori	r18, 0x01	; 1
+    1340:	2c c0       	rjmp	.+88     	; 0x139a <vfprintf+0xd4>
+    1342:	22 60       	ori	r18, 0x02	; 2
+    1344:	24 60       	ori	r18, 0x04	; 4
+    1346:	29 c0       	rjmp	.+82     	; 0x139a <vfprintf+0xd4>
+    1348:	28 60       	ori	r18, 0x08	; 8
+    134a:	27 c0       	rjmp	.+78     	; 0x139a <vfprintf+0xd4>
+    134c:	20 61       	ori	r18, 0x10	; 16
+    134e:	25 c0       	rjmp	.+74     	; 0x139a <vfprintf+0xd4>
+    1350:	27 fd       	sbrc	r18, 7
+    1352:	2c c0       	rjmp	.+88     	; 0x13ac <vfprintf+0xe6>
+    1354:	38 2f       	mov	r19, r24
+    1356:	30 53       	subi	r19, 0x30	; 48
+    1358:	3a 30       	cpi	r19, 0x0A	; 10
+    135a:	98 f4       	brcc	.+38     	; 0x1382 <vfprintf+0xbc>
+    135c:	26 ff       	sbrs	r18, 6
+    135e:	08 c0       	rjmp	.+16     	; 0x1370 <vfprintf+0xaa>
+    1360:	8e 2d       	mov	r24, r14
+    1362:	88 0f       	add	r24, r24
+    1364:	e8 2e       	mov	r14, r24
+    1366:	ee 0c       	add	r14, r14
+    1368:	ee 0c       	add	r14, r14
+    136a:	e8 0e       	add	r14, r24
+    136c:	e3 0e       	add	r14, r19
+    136e:	15 c0       	rjmp	.+42     	; 0x139a <vfprintf+0xd4>
+    1370:	8f 2d       	mov	r24, r15
+    1372:	88 0f       	add	r24, r24
+    1374:	f8 2e       	mov	r15, r24
+    1376:	ff 0c       	add	r15, r15
+    1378:	ff 0c       	add	r15, r15
+    137a:	f8 0e       	add	r15, r24
+    137c:	f3 0e       	add	r15, r19
+    137e:	20 62       	ori	r18, 0x20	; 32
+    1380:	0c c0       	rjmp	.+24     	; 0x139a <vfprintf+0xd4>
+    1382:	8e 32       	cpi	r24, 0x2E	; 46
+    1384:	21 f4       	brne	.+8      	; 0x138e <vfprintf+0xc8>
+    1386:	26 fd       	sbrc	r18, 6
+    1388:	6c c1       	rjmp	.+728    	; 0x1662 <vfprintf+0x39c>
+    138a:	20 64       	ori	r18, 0x40	; 64
+    138c:	06 c0       	rjmp	.+12     	; 0x139a <vfprintf+0xd4>
+    138e:	8c 36       	cpi	r24, 0x6C	; 108
+    1390:	11 f4       	brne	.+4      	; 0x1396 <vfprintf+0xd0>
+    1392:	20 68       	ori	r18, 0x80	; 128
+    1394:	02 c0       	rjmp	.+4      	; 0x139a <vfprintf+0xd4>
+    1396:	88 36       	cpi	r24, 0x68	; 104
+    1398:	49 f4       	brne	.+18     	; 0x13ac <vfprintf+0xe6>
+    139a:	f1 01       	movw	r30, r2
+    139c:	93 fd       	sbrc	r25, 3
+    139e:	85 91       	lpm	r24, Z+
+    13a0:	93 ff       	sbrs	r25, 3
+    13a2:	81 91       	ld	r24, Z+
+    13a4:	1f 01       	movw	r2, r30
+    13a6:	88 23       	and	r24, r24
+    13a8:	09 f0       	breq	.+2      	; 0x13ac <vfprintf+0xe6>
+    13aa:	ba cf       	rjmp	.-140    	; 0x1320 <vfprintf+0x5a>
+    13ac:	98 2f       	mov	r25, r24
+    13ae:	95 54       	subi	r25, 0x45	; 69
+    13b0:	93 30       	cpi	r25, 0x03	; 3
+    13b2:	18 f0       	brcs	.+6      	; 0x13ba <vfprintf+0xf4>
+    13b4:	90 52       	subi	r25, 0x20	; 32
+    13b6:	93 30       	cpi	r25, 0x03	; 3
+    13b8:	28 f4       	brcc	.+10     	; 0x13c4 <vfprintf+0xfe>
+    13ba:	0c 5f       	subi	r16, 0xFC	; 252
+    13bc:	1f 4f       	sbci	r17, 0xFF	; 255
+    13be:	ff e3       	ldi	r31, 0x3F	; 63
+    13c0:	f9 83       	std	Y+1, r31	; 0x01
+    13c2:	0d c0       	rjmp	.+26     	; 0x13de <vfprintf+0x118>
+    13c4:	83 36       	cpi	r24, 0x63	; 99
+    13c6:	31 f0       	breq	.+12     	; 0x13d4 <vfprintf+0x10e>
+    13c8:	83 37       	cpi	r24, 0x73	; 115
+    13ca:	71 f0       	breq	.+28     	; 0x13e8 <vfprintf+0x122>
+    13cc:	83 35       	cpi	r24, 0x53	; 83
+    13ce:	09 f0       	breq	.+2      	; 0x13d2 <vfprintf+0x10c>
+    13d0:	5c c0       	rjmp	.+184    	; 0x148a <vfprintf+0x1c4>
+    13d2:	21 c0       	rjmp	.+66     	; 0x1416 <vfprintf+0x150>
+    13d4:	f8 01       	movw	r30, r16
+    13d6:	80 81       	ld	r24, Z
+    13d8:	89 83       	std	Y+1, r24	; 0x01
+    13da:	0e 5f       	subi	r16, 0xFE	; 254
+    13dc:	1f 4f       	sbci	r17, 0xFF	; 255
+    13de:	42 01       	movw	r8, r4
+    13e0:	71 e0       	ldi	r23, 0x01	; 1
+    13e2:	a7 2e       	mov	r10, r23
+    13e4:	b1 2c       	mov	r11, r1
+    13e6:	15 c0       	rjmp	.+42     	; 0x1412 <vfprintf+0x14c>
+    13e8:	62 e0       	ldi	r22, 0x02	; 2
+    13ea:	66 2e       	mov	r6, r22
+    13ec:	71 2c       	mov	r7, r1
+    13ee:	60 0e       	add	r6, r16
+    13f0:	71 1e       	adc	r7, r17
+    13f2:	f8 01       	movw	r30, r16
+    13f4:	80 80       	ld	r8, Z
+    13f6:	91 80       	ldd	r9, Z+1	; 0x01
+    13f8:	26 ff       	sbrs	r18, 6
+    13fa:	03 c0       	rjmp	.+6      	; 0x1402 <vfprintf+0x13c>
+    13fc:	6e 2d       	mov	r22, r14
+    13fe:	70 e0       	ldi	r23, 0x00	; 0
+    1400:	02 c0       	rjmp	.+4      	; 0x1406 <vfprintf+0x140>
+    1402:	6f ef       	ldi	r22, 0xFF	; 255
+    1404:	7f ef       	ldi	r23, 0xFF	; 255
+    1406:	c4 01       	movw	r24, r8
+    1408:	2c 87       	std	Y+12, r18	; 0x0c
+    140a:	40 d1       	rcall	.+640    	; 0x168c <strnlen>
+    140c:	5c 01       	movw	r10, r24
+    140e:	83 01       	movw	r16, r6
+    1410:	2c 85       	ldd	r18, Y+12	; 0x0c
+    1412:	2f 77       	andi	r18, 0x7F	; 127
+    1414:	16 c0       	rjmp	.+44     	; 0x1442 <vfprintf+0x17c>
+    1416:	52 e0       	ldi	r21, 0x02	; 2
+    1418:	65 2e       	mov	r6, r21
+    141a:	71 2c       	mov	r7, r1
+    141c:	60 0e       	add	r6, r16
+    141e:	71 1e       	adc	r7, r17
+    1420:	f8 01       	movw	r30, r16
+    1422:	80 80       	ld	r8, Z
+    1424:	91 80       	ldd	r9, Z+1	; 0x01
+    1426:	26 ff       	sbrs	r18, 6
+    1428:	03 c0       	rjmp	.+6      	; 0x1430 <vfprintf+0x16a>
+    142a:	6e 2d       	mov	r22, r14
+    142c:	70 e0       	ldi	r23, 0x00	; 0
+    142e:	02 c0       	rjmp	.+4      	; 0x1434 <vfprintf+0x16e>
+    1430:	6f ef       	ldi	r22, 0xFF	; 255
+    1432:	7f ef       	ldi	r23, 0xFF	; 255
+    1434:	c4 01       	movw	r24, r8
+    1436:	2c 87       	std	Y+12, r18	; 0x0c
+    1438:	1e d1       	rcall	.+572    	; 0x1676 <strnlen_P>
+    143a:	5c 01       	movw	r10, r24
+    143c:	2c 85       	ldd	r18, Y+12	; 0x0c
+    143e:	20 68       	ori	r18, 0x80	; 128
+    1440:	83 01       	movw	r16, r6
+    1442:	23 fd       	sbrc	r18, 3
+    1444:	1e c0       	rjmp	.+60     	; 0x1482 <vfprintf+0x1bc>
+    1446:	07 c0       	rjmp	.+14     	; 0x1456 <vfprintf+0x190>
+    1448:	80 e2       	ldi	r24, 0x20	; 32
+    144a:	90 e0       	ldi	r25, 0x00	; 0
+    144c:	b6 01       	movw	r22, r12
+    144e:	2c 87       	std	Y+12, r18	; 0x0c
+    1450:	28 d1       	rcall	.+592    	; 0x16a2 <fputc>
+    1452:	fa 94       	dec	r15
+    1454:	2c 85       	ldd	r18, Y+12	; 0x0c
+    1456:	8f 2d       	mov	r24, r15
+    1458:	90 e0       	ldi	r25, 0x00	; 0
+    145a:	a8 16       	cp	r10, r24
+    145c:	b9 06       	cpc	r11, r25
+    145e:	a0 f3       	brcs	.-24     	; 0x1448 <vfprintf+0x182>
+    1460:	10 c0       	rjmp	.+32     	; 0x1482 <vfprintf+0x1bc>
+    1462:	f4 01       	movw	r30, r8
+    1464:	27 fd       	sbrc	r18, 7
+    1466:	85 91       	lpm	r24, Z+
+    1468:	27 ff       	sbrs	r18, 7
+    146a:	81 91       	ld	r24, Z+
+    146c:	4f 01       	movw	r8, r30
+    146e:	90 e0       	ldi	r25, 0x00	; 0
+    1470:	b6 01       	movw	r22, r12
+    1472:	2c 87       	std	Y+12, r18	; 0x0c
+    1474:	16 d1       	rcall	.+556    	; 0x16a2 <fputc>
+    1476:	2c 85       	ldd	r18, Y+12	; 0x0c
+    1478:	f1 10       	cpse	r15, r1
+    147a:	fa 94       	dec	r15
+    147c:	08 94       	sec
+    147e:	a1 08       	sbc	r10, r1
+    1480:	b1 08       	sbc	r11, r1
+    1482:	a1 14       	cp	r10, r1
+    1484:	b1 04       	cpc	r11, r1
+    1486:	69 f7       	brne	.-38     	; 0x1462 <vfprintf+0x19c>
+    1488:	e9 c0       	rjmp	.+466    	; 0x165c <vfprintf+0x396>
+    148a:	84 36       	cpi	r24, 0x64	; 100
+    148c:	11 f0       	breq	.+4      	; 0x1492 <vfprintf+0x1cc>
+    148e:	89 36       	cpi	r24, 0x69	; 105
+    1490:	41 f5       	brne	.+80     	; 0x14e2 <vfprintf+0x21c>
+    1492:	27 ff       	sbrs	r18, 7
+    1494:	08 c0       	rjmp	.+16     	; 0x14a6 <vfprintf+0x1e0>
+    1496:	f8 01       	movw	r30, r16
+    1498:	60 81       	ld	r22, Z
+    149a:	71 81       	ldd	r23, Z+1	; 0x01
+    149c:	82 81       	ldd	r24, Z+2	; 0x02
+    149e:	93 81       	ldd	r25, Z+3	; 0x03
+    14a0:	0c 5f       	subi	r16, 0xFC	; 252
+    14a2:	1f 4f       	sbci	r17, 0xFF	; 255
+    14a4:	09 c0       	rjmp	.+18     	; 0x14b8 <vfprintf+0x1f2>
+    14a6:	f8 01       	movw	r30, r16
+    14a8:	60 81       	ld	r22, Z
+    14aa:	71 81       	ldd	r23, Z+1	; 0x01
+    14ac:	88 27       	eor	r24, r24
+    14ae:	77 fd       	sbrc	r23, 7
+    14b0:	80 95       	com	r24
+    14b2:	98 2f       	mov	r25, r24
+    14b4:	0e 5f       	subi	r16, 0xFE	; 254
+    14b6:	1f 4f       	sbci	r17, 0xFF	; 255
+    14b8:	4f e6       	ldi	r20, 0x6F	; 111
+    14ba:	b4 2e       	mov	r11, r20
+    14bc:	b2 22       	and	r11, r18
+    14be:	97 ff       	sbrs	r25, 7
+    14c0:	09 c0       	rjmp	.+18     	; 0x14d4 <vfprintf+0x20e>
+    14c2:	90 95       	com	r25
+    14c4:	80 95       	com	r24
+    14c6:	70 95       	com	r23
+    14c8:	61 95       	neg	r22
+    14ca:	7f 4f       	sbci	r23, 0xFF	; 255
+    14cc:	8f 4f       	sbci	r24, 0xFF	; 255
+    14ce:	9f 4f       	sbci	r25, 0xFF	; 255
+    14d0:	f0 e8       	ldi	r31, 0x80	; 128
+    14d2:	bf 2a       	or	r11, r31
+    14d4:	a2 01       	movw	r20, r4
+    14d6:	2a e0       	ldi	r18, 0x0A	; 10
+    14d8:	30 e0       	ldi	r19, 0x00	; 0
+    14da:	0f d1       	rcall	.+542    	; 0x16fa <__ultoa_invert>
+    14dc:	78 2e       	mov	r7, r24
+    14de:	74 18       	sub	r7, r4
+    14e0:	44 c0       	rjmp	.+136    	; 0x156a <vfprintf+0x2a4>
+    14e2:	85 37       	cpi	r24, 0x75	; 117
+    14e4:	31 f4       	brne	.+12     	; 0x14f2 <vfprintf+0x22c>
+    14e6:	3f ee       	ldi	r19, 0xEF	; 239
+    14e8:	b3 2e       	mov	r11, r19
+    14ea:	b2 22       	and	r11, r18
+    14ec:	2a e0       	ldi	r18, 0x0A	; 10
+    14ee:	30 e0       	ldi	r19, 0x00	; 0
+    14f0:	25 c0       	rjmp	.+74     	; 0x153c <vfprintf+0x276>
+    14f2:	99 ef       	ldi	r25, 0xF9	; 249
+    14f4:	b9 2e       	mov	r11, r25
+    14f6:	b2 22       	and	r11, r18
+    14f8:	8f 36       	cpi	r24, 0x6F	; 111
+    14fa:	c1 f0       	breq	.+48     	; 0x152c <vfprintf+0x266>
+    14fc:	80 37       	cpi	r24, 0x70	; 112
+    14fe:	20 f4       	brcc	.+8      	; 0x1508 <vfprintf+0x242>
+    1500:	88 35       	cpi	r24, 0x58	; 88
+    1502:	09 f0       	breq	.+2      	; 0x1506 <vfprintf+0x240>
+    1504:	ae c0       	rjmp	.+348    	; 0x1662 <vfprintf+0x39c>
+    1506:	0d c0       	rjmp	.+26     	; 0x1522 <vfprintf+0x25c>
+    1508:	80 37       	cpi	r24, 0x70	; 112
+    150a:	21 f0       	breq	.+8      	; 0x1514 <vfprintf+0x24e>
+    150c:	88 37       	cpi	r24, 0x78	; 120
+    150e:	09 f0       	breq	.+2      	; 0x1512 <vfprintf+0x24c>
+    1510:	a8 c0       	rjmp	.+336    	; 0x1662 <vfprintf+0x39c>
+    1512:	02 c0       	rjmp	.+4      	; 0x1518 <vfprintf+0x252>
+    1514:	20 e1       	ldi	r18, 0x10	; 16
+    1516:	b2 2a       	or	r11, r18
+    1518:	b4 fe       	sbrs	r11, 4
+    151a:	0b c0       	rjmp	.+22     	; 0x1532 <vfprintf+0x26c>
+    151c:	84 e0       	ldi	r24, 0x04	; 4
+    151e:	b8 2a       	or	r11, r24
+    1520:	08 c0       	rjmp	.+16     	; 0x1532 <vfprintf+0x26c>
+    1522:	b4 fe       	sbrs	r11, 4
+    1524:	09 c0       	rjmp	.+18     	; 0x1538 <vfprintf+0x272>
+    1526:	e6 e0       	ldi	r30, 0x06	; 6
+    1528:	be 2a       	or	r11, r30
+    152a:	06 c0       	rjmp	.+12     	; 0x1538 <vfprintf+0x272>
+    152c:	28 e0       	ldi	r18, 0x08	; 8
+    152e:	30 e0       	ldi	r19, 0x00	; 0
+    1530:	05 c0       	rjmp	.+10     	; 0x153c <vfprintf+0x276>
+    1532:	20 e1       	ldi	r18, 0x10	; 16
+    1534:	30 e0       	ldi	r19, 0x00	; 0
+    1536:	02 c0       	rjmp	.+4      	; 0x153c <vfprintf+0x276>
+    1538:	20 e1       	ldi	r18, 0x10	; 16
+    153a:	32 e0       	ldi	r19, 0x02	; 2
+    153c:	b7 fe       	sbrs	r11, 7
+    153e:	08 c0       	rjmp	.+16     	; 0x1550 <vfprintf+0x28a>
+    1540:	f8 01       	movw	r30, r16
+    1542:	60 81       	ld	r22, Z
+    1544:	71 81       	ldd	r23, Z+1	; 0x01
+    1546:	82 81       	ldd	r24, Z+2	; 0x02
+    1548:	93 81       	ldd	r25, Z+3	; 0x03
+    154a:	0c 5f       	subi	r16, 0xFC	; 252
+    154c:	1f 4f       	sbci	r17, 0xFF	; 255
+    154e:	07 c0       	rjmp	.+14     	; 0x155e <vfprintf+0x298>
+    1550:	f8 01       	movw	r30, r16
+    1552:	60 81       	ld	r22, Z
+    1554:	71 81       	ldd	r23, Z+1	; 0x01
+    1556:	80 e0       	ldi	r24, 0x00	; 0
+    1558:	90 e0       	ldi	r25, 0x00	; 0
+    155a:	0e 5f       	subi	r16, 0xFE	; 254
+    155c:	1f 4f       	sbci	r17, 0xFF	; 255
+    155e:	a2 01       	movw	r20, r4
+    1560:	cc d0       	rcall	.+408    	; 0x16fa <__ultoa_invert>
+    1562:	78 2e       	mov	r7, r24
+    1564:	74 18       	sub	r7, r4
+    1566:	ff e7       	ldi	r31, 0x7F	; 127
+    1568:	bf 22       	and	r11, r31
+    156a:	b6 fe       	sbrs	r11, 6
+    156c:	0b c0       	rjmp	.+22     	; 0x1584 <vfprintf+0x2be>
+    156e:	2e ef       	ldi	r18, 0xFE	; 254
+    1570:	b2 22       	and	r11, r18
+    1572:	7e 14       	cp	r7, r14
+    1574:	38 f4       	brcc	.+14     	; 0x1584 <vfprintf+0x2be>
+    1576:	b4 fe       	sbrs	r11, 4
+    1578:	07 c0       	rjmp	.+14     	; 0x1588 <vfprintf+0x2c2>
+    157a:	b2 fc       	sbrc	r11, 2
+    157c:	05 c0       	rjmp	.+10     	; 0x1588 <vfprintf+0x2c2>
+    157e:	8f ee       	ldi	r24, 0xEF	; 239
+    1580:	b8 22       	and	r11, r24
+    1582:	02 c0       	rjmp	.+4      	; 0x1588 <vfprintf+0x2c2>
+    1584:	a7 2c       	mov	r10, r7
+    1586:	01 c0       	rjmp	.+2      	; 0x158a <vfprintf+0x2c4>
+    1588:	ae 2c       	mov	r10, r14
+    158a:	8b 2d       	mov	r24, r11
+    158c:	90 e0       	ldi	r25, 0x00	; 0
+    158e:	b4 fe       	sbrs	r11, 4
+    1590:	0d c0       	rjmp	.+26     	; 0x15ac <vfprintf+0x2e6>
+    1592:	fe 01       	movw	r30, r28
+    1594:	e7 0d       	add	r30, r7
+    1596:	f1 1d       	adc	r31, r1
+    1598:	20 81       	ld	r18, Z
+    159a:	20 33       	cpi	r18, 0x30	; 48
+    159c:	19 f4       	brne	.+6      	; 0x15a4 <vfprintf+0x2de>
+    159e:	e9 ee       	ldi	r30, 0xE9	; 233
+    15a0:	be 22       	and	r11, r30
+    15a2:	09 c0       	rjmp	.+18     	; 0x15b6 <vfprintf+0x2f0>
+    15a4:	a3 94       	inc	r10
+    15a6:	b2 fe       	sbrs	r11, 2
+    15a8:	06 c0       	rjmp	.+12     	; 0x15b6 <vfprintf+0x2f0>
+    15aa:	04 c0       	rjmp	.+8      	; 0x15b4 <vfprintf+0x2ee>
+    15ac:	86 78       	andi	r24, 0x86	; 134
+    15ae:	90 70       	andi	r25, 0x00	; 0
+    15b0:	00 97       	sbiw	r24, 0x00	; 0
+    15b2:	09 f0       	breq	.+2      	; 0x15b6 <vfprintf+0x2f0>
+    15b4:	a3 94       	inc	r10
+    15b6:	8b 2c       	mov	r8, r11
+    15b8:	99 24       	eor	r9, r9
+    15ba:	b3 fc       	sbrc	r11, 3
+    15bc:	13 c0       	rjmp	.+38     	; 0x15e4 <vfprintf+0x31e>
+    15be:	b0 fe       	sbrs	r11, 0
+    15c0:	0e c0       	rjmp	.+28     	; 0x15de <vfprintf+0x318>
+    15c2:	af 14       	cp	r10, r15
+    15c4:	28 f4       	brcc	.+10     	; 0x15d0 <vfprintf+0x30a>
+    15c6:	e7 2c       	mov	r14, r7
+    15c8:	ef 0c       	add	r14, r15
+    15ca:	ea 18       	sub	r14, r10
+    15cc:	af 2c       	mov	r10, r15
+    15ce:	07 c0       	rjmp	.+14     	; 0x15de <vfprintf+0x318>
+    15d0:	e7 2c       	mov	r14, r7
+    15d2:	05 c0       	rjmp	.+10     	; 0x15de <vfprintf+0x318>
+    15d4:	80 e2       	ldi	r24, 0x20	; 32
+    15d6:	90 e0       	ldi	r25, 0x00	; 0
+    15d8:	b6 01       	movw	r22, r12
+    15da:	63 d0       	rcall	.+198    	; 0x16a2 <fputc>
+    15dc:	a3 94       	inc	r10
+    15de:	af 14       	cp	r10, r15
+    15e0:	c8 f3       	brcs	.-14     	; 0x15d4 <vfprintf+0x30e>
+    15e2:	04 c0       	rjmp	.+8      	; 0x15ec <vfprintf+0x326>
+    15e4:	af 14       	cp	r10, r15
+    15e6:	10 f4       	brcc	.+4      	; 0x15ec <vfprintf+0x326>
+    15e8:	fa 18       	sub	r15, r10
+    15ea:	01 c0       	rjmp	.+2      	; 0x15ee <vfprintf+0x328>
+    15ec:	ff 24       	eor	r15, r15
+    15ee:	84 fe       	sbrs	r8, 4
+    15f0:	0e c0       	rjmp	.+28     	; 0x160e <vfprintf+0x348>
+    15f2:	80 e3       	ldi	r24, 0x30	; 48
+    15f4:	90 e0       	ldi	r25, 0x00	; 0
+    15f6:	b6 01       	movw	r22, r12
+    15f8:	54 d0       	rcall	.+168    	; 0x16a2 <fputc>
+    15fa:	82 fe       	sbrs	r8, 2
+    15fc:	1d c0       	rjmp	.+58     	; 0x1638 <vfprintf+0x372>
+    15fe:	81 fe       	sbrs	r8, 1
+    1600:	03 c0       	rjmp	.+6      	; 0x1608 <vfprintf+0x342>
+    1602:	88 e5       	ldi	r24, 0x58	; 88
+    1604:	90 e0       	ldi	r25, 0x00	; 0
+    1606:	10 c0       	rjmp	.+32     	; 0x1628 <vfprintf+0x362>
+    1608:	88 e7       	ldi	r24, 0x78	; 120
+    160a:	90 e0       	ldi	r25, 0x00	; 0
+    160c:	0d c0       	rjmp	.+26     	; 0x1628 <vfprintf+0x362>
+    160e:	c4 01       	movw	r24, r8
+    1610:	86 78       	andi	r24, 0x86	; 134
+    1612:	90 70       	andi	r25, 0x00	; 0
+    1614:	00 97       	sbiw	r24, 0x00	; 0
+    1616:	81 f0       	breq	.+32     	; 0x1638 <vfprintf+0x372>
+    1618:	81 fc       	sbrc	r8, 1
+    161a:	02 c0       	rjmp	.+4      	; 0x1620 <vfprintf+0x35a>
+    161c:	80 e2       	ldi	r24, 0x20	; 32
+    161e:	01 c0       	rjmp	.+2      	; 0x1622 <vfprintf+0x35c>
+    1620:	8b e2       	ldi	r24, 0x2B	; 43
+    1622:	b7 fc       	sbrc	r11, 7
+    1624:	8d e2       	ldi	r24, 0x2D	; 45
+    1626:	90 e0       	ldi	r25, 0x00	; 0
+    1628:	b6 01       	movw	r22, r12
+    162a:	3b d0       	rcall	.+118    	; 0x16a2 <fputc>
+    162c:	05 c0       	rjmp	.+10     	; 0x1638 <vfprintf+0x372>
+    162e:	80 e3       	ldi	r24, 0x30	; 48
+    1630:	90 e0       	ldi	r25, 0x00	; 0
+    1632:	b6 01       	movw	r22, r12
+    1634:	36 d0       	rcall	.+108    	; 0x16a2 <fputc>
+    1636:	ea 94       	dec	r14
+    1638:	7e 14       	cp	r7, r14
+    163a:	c8 f3       	brcs	.-14     	; 0x162e <vfprintf+0x368>
+    163c:	7a 94       	dec	r7
+    163e:	f2 01       	movw	r30, r4
+    1640:	e7 0d       	add	r30, r7
+    1642:	f1 1d       	adc	r31, r1
+    1644:	80 81       	ld	r24, Z
+    1646:	90 e0       	ldi	r25, 0x00	; 0
+    1648:	b6 01       	movw	r22, r12
+    164a:	2b d0       	rcall	.+86     	; 0x16a2 <fputc>
+    164c:	77 20       	and	r7, r7
+    164e:	b1 f7       	brne	.-20     	; 0x163c <vfprintf+0x376>
+    1650:	05 c0       	rjmp	.+10     	; 0x165c <vfprintf+0x396>
+    1652:	80 e2       	ldi	r24, 0x20	; 32
+    1654:	90 e0       	ldi	r25, 0x00	; 0
+    1656:	b6 01       	movw	r22, r12
+    1658:	24 d0       	rcall	.+72     	; 0x16a2 <fputc>
+    165a:	fa 94       	dec	r15
+    165c:	ff 20       	and	r15, r15
+    165e:	c9 f7       	brne	.-14     	; 0x1652 <vfprintf+0x38c>
+    1660:	44 ce       	rjmp	.-888    	; 0x12ea <vfprintf+0x24>
+    1662:	f6 01       	movw	r30, r12
+    1664:	26 81       	ldd	r18, Z+6	; 0x06
+    1666:	37 81       	ldd	r19, Z+7	; 0x07
+    1668:	02 c0       	rjmp	.+4      	; 0x166e <vfprintf+0x3a8>
+    166a:	2f ef       	ldi	r18, 0xFF	; 255
+    166c:	3f ef       	ldi	r19, 0xFF	; 255
+    166e:	c9 01       	movw	r24, r18
+    1670:	2c 96       	adiw	r28, 0x0c	; 12
+    1672:	e2 e1       	ldi	r30, 0x12	; 18
+    1674:	bc c0       	rjmp	.+376    	; 0x17ee <__epilogue_restores__>
+
+00001676 <strnlen_P>:
+    1676:	fc 01       	movw	r30, r24
+    1678:	05 90       	lpm	r0, Z+
+    167a:	61 50       	subi	r22, 0x01	; 1
+    167c:	70 40       	sbci	r23, 0x00	; 0
+    167e:	01 10       	cpse	r0, r1
+    1680:	d8 f7       	brcc	.-10     	; 0x1678 <strnlen_P+0x2>
+    1682:	80 95       	com	r24
+    1684:	90 95       	com	r25
+    1686:	8e 0f       	add	r24, r30
+    1688:	9f 1f       	adc	r25, r31
+    168a:	08 95       	ret
+
+0000168c <strnlen>:
+    168c:	fc 01       	movw	r30, r24
+    168e:	61 50       	subi	r22, 0x01	; 1
+    1690:	70 40       	sbci	r23, 0x00	; 0
+    1692:	01 90       	ld	r0, Z+
+    1694:	01 10       	cpse	r0, r1
+    1696:	d8 f7       	brcc	.-10     	; 0x168e <strnlen+0x2>
+    1698:	80 95       	com	r24
+    169a:	90 95       	com	r25
+    169c:	8e 0f       	add	r24, r30
+    169e:	9f 1f       	adc	r25, r31
+    16a0:	08 95       	ret
+
+000016a2 <fputc>:
+    16a2:	0f 93       	push	r16
+    16a4:	1f 93       	push	r17
+    16a6:	cf 93       	push	r28
+    16a8:	df 93       	push	r29
+    16aa:	8c 01       	movw	r16, r24
+    16ac:	eb 01       	movw	r28, r22
+    16ae:	8b 81       	ldd	r24, Y+3	; 0x03
+    16b0:	81 ff       	sbrs	r24, 1
+    16b2:	1b c0       	rjmp	.+54     	; 0x16ea <fputc+0x48>
+    16b4:	82 ff       	sbrs	r24, 2
+    16b6:	0d c0       	rjmp	.+26     	; 0x16d2 <fputc+0x30>
+    16b8:	2e 81       	ldd	r18, Y+6	; 0x06
+    16ba:	3f 81       	ldd	r19, Y+7	; 0x07
+    16bc:	8c 81       	ldd	r24, Y+4	; 0x04
+    16be:	9d 81       	ldd	r25, Y+5	; 0x05
+    16c0:	28 17       	cp	r18, r24
+    16c2:	39 07       	cpc	r19, r25
+    16c4:	64 f4       	brge	.+24     	; 0x16de <fputc+0x3c>
+    16c6:	e8 81       	ld	r30, Y
+    16c8:	f9 81       	ldd	r31, Y+1	; 0x01
+    16ca:	01 93       	st	Z+, r16
+    16cc:	f9 83       	std	Y+1, r31	; 0x01
+    16ce:	e8 83       	st	Y, r30
+    16d0:	06 c0       	rjmp	.+12     	; 0x16de <fputc+0x3c>
+    16d2:	e8 85       	ldd	r30, Y+8	; 0x08
+    16d4:	f9 85       	ldd	r31, Y+9	; 0x09
+    16d6:	80 2f       	mov	r24, r16
+    16d8:	09 95       	icall
+    16da:	00 97       	sbiw	r24, 0x00	; 0
+    16dc:	31 f4       	brne	.+12     	; 0x16ea <fputc+0x48>
+    16de:	8e 81       	ldd	r24, Y+6	; 0x06
+    16e0:	9f 81       	ldd	r25, Y+7	; 0x07
+    16e2:	01 96       	adiw	r24, 0x01	; 1
+    16e4:	9f 83       	std	Y+7, r25	; 0x07
+    16e6:	8e 83       	std	Y+6, r24	; 0x06
+    16e8:	02 c0       	rjmp	.+4      	; 0x16ee <fputc+0x4c>
+    16ea:	0f ef       	ldi	r16, 0xFF	; 255
+    16ec:	1f ef       	ldi	r17, 0xFF	; 255
+    16ee:	c8 01       	movw	r24, r16
+    16f0:	df 91       	pop	r29
+    16f2:	cf 91       	pop	r28
+    16f4:	1f 91       	pop	r17
+    16f6:	0f 91       	pop	r16
+    16f8:	08 95       	ret
+
+000016fa <__ultoa_invert>:
+    16fa:	fa 01       	movw	r30, r20
+    16fc:	aa 27       	eor	r26, r26
+    16fe:	28 30       	cpi	r18, 0x08	; 8
+    1700:	51 f1       	breq	.+84     	; 0x1756 <__ultoa_invert+0x5c>
+    1702:	20 31       	cpi	r18, 0x10	; 16
+    1704:	81 f1       	breq	.+96     	; 0x1766 <__ultoa_invert+0x6c>
+    1706:	e8 94       	clt
+    1708:	6f 93       	push	r22
+    170a:	6e 7f       	andi	r22, 0xFE	; 254
+    170c:	6e 5f       	subi	r22, 0xFE	; 254
+    170e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1710:	8f 4f       	sbci	r24, 0xFF	; 255
+    1712:	9f 4f       	sbci	r25, 0xFF	; 255
+    1714:	af 4f       	sbci	r26, 0xFF	; 255
+    1716:	b1 e0       	ldi	r27, 0x01	; 1
+    1718:	3e d0       	rcall	.+124    	; 0x1796 <__ultoa_invert+0x9c>
+    171a:	b4 e0       	ldi	r27, 0x04	; 4
+    171c:	3c d0       	rcall	.+120    	; 0x1796 <__ultoa_invert+0x9c>
+    171e:	67 0f       	add	r22, r23
+    1720:	78 1f       	adc	r23, r24
+    1722:	89 1f       	adc	r24, r25
+    1724:	9a 1f       	adc	r25, r26
+    1726:	a1 1d       	adc	r26, r1
+    1728:	68 0f       	add	r22, r24
+    172a:	79 1f       	adc	r23, r25
+    172c:	8a 1f       	adc	r24, r26
+    172e:	91 1d       	adc	r25, r1
+    1730:	a1 1d       	adc	r26, r1
+    1732:	6a 0f       	add	r22, r26
+    1734:	71 1d       	adc	r23, r1
+    1736:	81 1d       	adc	r24, r1
+    1738:	91 1d       	adc	r25, r1
+    173a:	a1 1d       	adc	r26, r1
+    173c:	20 d0       	rcall	.+64     	; 0x177e <__ultoa_invert+0x84>
+    173e:	09 f4       	brne	.+2      	; 0x1742 <__ultoa_invert+0x48>
+    1740:	68 94       	set
+    1742:	3f 91       	pop	r19
+    1744:	2a e0       	ldi	r18, 0x0A	; 10
+    1746:	26 9f       	mul	r18, r22
+    1748:	11 24       	eor	r1, r1
+    174a:	30 19       	sub	r19, r0
+    174c:	30 5d       	subi	r19, 0xD0	; 208
+    174e:	31 93       	st	Z+, r19
+    1750:	de f6       	brtc	.-74     	; 0x1708 <__ultoa_invert+0xe>
+    1752:	cf 01       	movw	r24, r30
+    1754:	08 95       	ret
+    1756:	46 2f       	mov	r20, r22
+    1758:	47 70       	andi	r20, 0x07	; 7
+    175a:	40 5d       	subi	r20, 0xD0	; 208
+    175c:	41 93       	st	Z+, r20
+    175e:	b3 e0       	ldi	r27, 0x03	; 3
+    1760:	0f d0       	rcall	.+30     	; 0x1780 <__ultoa_invert+0x86>
+    1762:	c9 f7       	brne	.-14     	; 0x1756 <__ultoa_invert+0x5c>
+    1764:	f6 cf       	rjmp	.-20     	; 0x1752 <__ultoa_invert+0x58>
+    1766:	46 2f       	mov	r20, r22
+    1768:	4f 70       	andi	r20, 0x0F	; 15
+    176a:	40 5d       	subi	r20, 0xD0	; 208
+    176c:	4a 33       	cpi	r20, 0x3A	; 58
+    176e:	18 f0       	brcs	.+6      	; 0x1776 <__ultoa_invert+0x7c>
+    1770:	49 5d       	subi	r20, 0xD9	; 217
+    1772:	31 fd       	sbrc	r19, 1
+    1774:	40 52       	subi	r20, 0x20	; 32
+    1776:	41 93       	st	Z+, r20
+    1778:	02 d0       	rcall	.+4      	; 0x177e <__ultoa_invert+0x84>
+    177a:	a9 f7       	brne	.-22     	; 0x1766 <__ultoa_invert+0x6c>
+    177c:	ea cf       	rjmp	.-44     	; 0x1752 <__ultoa_invert+0x58>
+    177e:	b4 e0       	ldi	r27, 0x04	; 4
+    1780:	a6 95       	lsr	r26
+    1782:	97 95       	ror	r25
+    1784:	87 95       	ror	r24
+    1786:	77 95       	ror	r23
+    1788:	67 95       	ror	r22
+    178a:	ba 95       	dec	r27
+    178c:	c9 f7       	brne	.-14     	; 0x1780 <__ultoa_invert+0x86>
+    178e:	00 97       	sbiw	r24, 0x00	; 0
+    1790:	61 05       	cpc	r22, r1
+    1792:	71 05       	cpc	r23, r1
+    1794:	08 95       	ret
+    1796:	9b 01       	movw	r18, r22
+    1798:	ac 01       	movw	r20, r24
+    179a:	0a 2e       	mov	r0, r26
+    179c:	06 94       	lsr	r0
+    179e:	57 95       	ror	r21
+    17a0:	47 95       	ror	r20
+    17a2:	37 95       	ror	r19
+    17a4:	27 95       	ror	r18
+    17a6:	ba 95       	dec	r27
+    17a8:	c9 f7       	brne	.-14     	; 0x179c <__ultoa_invert+0xa2>
+    17aa:	62 0f       	add	r22, r18
+    17ac:	73 1f       	adc	r23, r19
+    17ae:	84 1f       	adc	r24, r20
+    17b0:	95 1f       	adc	r25, r21
+    17b2:	a0 1d       	adc	r26, r0
+    17b4:	08 95       	ret
+
+000017b6 <__prologue_saves__>:
+    17b6:	2f 92       	push	r2
+    17b8:	3f 92       	push	r3
+    17ba:	4f 92       	push	r4
+    17bc:	5f 92       	push	r5
+    17be:	6f 92       	push	r6
+    17c0:	7f 92       	push	r7
+    17c2:	8f 92       	push	r8
+    17c4:	9f 92       	push	r9
+    17c6:	af 92       	push	r10
+    17c8:	bf 92       	push	r11
+    17ca:	cf 92       	push	r12
+    17cc:	df 92       	push	r13
+    17ce:	ef 92       	push	r14
+    17d0:	ff 92       	push	r15
+    17d2:	0f 93       	push	r16
+    17d4:	1f 93       	push	r17
+    17d6:	cf 93       	push	r28
+    17d8:	df 93       	push	r29
+    17da:	cd b7       	in	r28, 0x3d	; 61
+    17dc:	de b7       	in	r29, 0x3e	; 62
+    17de:	ca 1b       	sub	r28, r26
+    17e0:	db 0b       	sbc	r29, r27
+    17e2:	0f b6       	in	r0, 0x3f	; 63
+    17e4:	f8 94       	cli
+    17e6:	de bf       	out	0x3e, r29	; 62
+    17e8:	0f be       	out	0x3f, r0	; 63
+    17ea:	cd bf       	out	0x3d, r28	; 61
+    17ec:	09 94       	ijmp
+
+000017ee <__epilogue_restores__>:
+    17ee:	2a 88       	ldd	r2, Y+18	; 0x12
+    17f0:	39 88       	ldd	r3, Y+17	; 0x11
+    17f2:	48 88       	ldd	r4, Y+16	; 0x10
+    17f4:	5f 84       	ldd	r5, Y+15	; 0x0f
+    17f6:	6e 84       	ldd	r6, Y+14	; 0x0e
+    17f8:	7d 84       	ldd	r7, Y+13	; 0x0d
+    17fa:	8c 84       	ldd	r8, Y+12	; 0x0c
+    17fc:	9b 84       	ldd	r9, Y+11	; 0x0b
+    17fe:	aa 84       	ldd	r10, Y+10	; 0x0a
+    1800:	b9 84       	ldd	r11, Y+9	; 0x09
+    1802:	c8 84       	ldd	r12, Y+8	; 0x08
+    1804:	df 80       	ldd	r13, Y+7	; 0x07
+    1806:	ee 80       	ldd	r14, Y+6	; 0x06
+    1808:	fd 80       	ldd	r15, Y+5	; 0x05
+    180a:	0c 81       	ldd	r16, Y+4	; 0x04
+    180c:	1b 81       	ldd	r17, Y+3	; 0x03
+    180e:	aa 81       	ldd	r26, Y+2	; 0x02
+    1810:	b9 81       	ldd	r27, Y+1	; 0x01
+    1812:	ce 0f       	add	r28, r30
+    1814:	d1 1d       	adc	r29, r1
+    1816:	0f b6       	in	r0, 0x3f	; 63
+    1818:	f8 94       	cli
+    181a:	de bf       	out	0x3e, r29	; 62
+    181c:	0f be       	out	0x3f, r0	; 63
+    181e:	cd bf       	out	0x3d, r28	; 61
+    1820:	ed 01       	movw	r28, r26
+    1822:	08 95       	ret
+
+00001824 <_exit>:
+    1824:	f8 94       	cli
+
+00001826 <__stop_program>:
+    1826:	ff cf       	rjmp	.-2      	; 0x1826 <__stop_program>

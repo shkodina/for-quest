@@ -1,0 +1,2991 @@
+
+berlios_1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000f1e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000003c  00800060  00000f1e  00000fb2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000001a9  0080009c  0080009c  00000fee  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000ff0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  000016bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000120  00000000  00000000  00001741  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 0000044b  00000000  00000000  00001861  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00001aff  00000000  00000000  00001cac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000008ca  00000000  00000000  000037ab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00001319  00000000  00000000  00004075  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  000002f0  00000000  00000000  00005390  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00000b17  00000000  00000000  00005680  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000108f  00000000  00000000  00006197  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 000003c6  00000000  00000000  00007226  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 01 	jmp	0x254	; 0x254 <__ctors_end>
+   4:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+   8:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+   c:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  10:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  14:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  18:	0c 94 c4 02 	jmp	0x588	; 0x588 <__vector_6>
+  1c:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  20:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  24:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  28:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  2c:	0c 94 5d 02 	jmp	0x4ba	; 0x4ba <__vector_11>
+  30:	0c 94 36 02 	jmp	0x46c	; 0x46c <__vector_12>
+  34:	0c 94 84 02 	jmp	0x508	; 0x508 <__vector_13>
+  38:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  3c:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  40:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  44:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  48:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  4c:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+  50:	0c 94 47 01 	jmp	0x28e	; 0x28e <__bad_interrupt>
+
+00000054 <aucCRCHi>:
+  54:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+  64:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+  74:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+  84:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+  94:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+  a4:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+  b4:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+  c4:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+  d4:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+  e4:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+  f4:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+ 104:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+ 114:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+ 124:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+ 134:	01 c0 80 41 00 c1 81 40 00 c1 81 40 01 c0 80 41     ...A...@...@...A
+ 144:	00 c1 81 40 01 c0 80 41 01 c0 80 41 00 c1 81 40     ...@...A...A...@
+
+00000154 <aucCRCLo>:
+ 154:	00 c0 c1 01 c3 03 02 c2 c6 06 07 c7 05 c5 c4 04     ................
+ 164:	cc 0c 0d cd 0f cf ce 0e 0a ca cb 0b c9 09 08 c8     ................
+ 174:	d8 18 19 d9 1b db da 1a 1e de df 1f dd 1d 1c dc     ................
+ 184:	14 d4 d5 15 d7 17 16 d6 d2 12 13 d3 11 d1 d0 10     ................
+ 194:	f0 30 31 f1 33 f3 f2 32 36 f6 f7 37 f5 35 34 f4     .01.3..26..7.54.
+ 1a4:	3c fc fd 3d ff 3f 3e fe fa 3a 3b fb 39 f9 f8 38     <..=.?>..:;.9..8
+ 1b4:	28 e8 e9 29 eb 2b 2a ea ee 2e 2f ef 2d ed ec 2c     (..).+*.../.-..,
+ 1c4:	e4 24 25 e5 27 e7 e6 26 22 e2 e3 23 e1 21 20 e0     .$%.'..&"..#.! .
+ 1d4:	a0 60 61 a1 63 a3 a2 62 66 a6 a7 67 a5 65 64 a4     .`a.c..bf..g.ed.
+ 1e4:	6c ac ad 6d af 6f 6e ae aa 6a 6b ab 69 a9 a8 68     l..m.on..jk.i..h
+ 1f4:	78 b8 b9 79 bb 7b 7a ba be 7e 7f bf 7d bd bc 7c     x..y.{z..~..}..|
+ 204:	b4 74 75 b5 77 b7 b6 76 72 b2 b3 73 b1 71 70 b0     .tu.w..vr..s.qp.
+ 214:	50 90 91 51 93 53 52 92 96 56 57 97 55 95 94 54     P..Q.SR..VW.U..T
+ 224:	9c 5c 5d 9d 5f 9f 9e 5e 5a 9a 9b 5b 99 59 58 98     .\]._..^Z..[.YX.
+ 234:	88 48 49 89 4b 8b 8a 4a 4e 8e 8f 4f 8d 4d 4c 8c     .HI.K..JN..O.ML.
+ 244:	44 84 85 45 87 47 46 86 82 42 43 83 41 81 80 40     D..E.GF..BC.A..@
+
+00000254 <__ctors_end>:
+ 254:	11 24       	eor	r1, r1
+ 256:	1f be       	out	0x3f, r1	; 63
+ 258:	cf e5       	ldi	r28, 0x5F	; 95
+ 25a:	d4 e0       	ldi	r29, 0x04	; 4
+ 25c:	de bf       	out	0x3e, r29	; 62
+ 25e:	cd bf       	out	0x3d, r28	; 61
+
+00000260 <__do_copy_data>:
+ 260:	10 e0       	ldi	r17, 0x00	; 0
+ 262:	a0 e6       	ldi	r26, 0x60	; 96
+ 264:	b0 e0       	ldi	r27, 0x00	; 0
+ 266:	ee e1       	ldi	r30, 0x1E	; 30
+ 268:	ff e0       	ldi	r31, 0x0F	; 15
+ 26a:	02 c0       	rjmp	.+4      	; 0x270 <__do_copy_data+0x10>
+ 26c:	05 90       	lpm	r0, Z+
+ 26e:	0d 92       	st	X+, r0
+ 270:	ac 39       	cpi	r26, 0x9C	; 156
+ 272:	b1 07       	cpc	r27, r17
+ 274:	d9 f7       	brne	.-10     	; 0x26c <__do_copy_data+0xc>
+
+00000276 <__do_clear_bss>:
+ 276:	12 e0       	ldi	r17, 0x02	; 2
+ 278:	ac e9       	ldi	r26, 0x9C	; 156
+ 27a:	b0 e0       	ldi	r27, 0x00	; 0
+ 27c:	01 c0       	rjmp	.+2      	; 0x280 <.do_clear_bss_start>
+
+0000027e <.do_clear_bss_loop>:
+ 27e:	1d 92       	st	X+, r1
+
+00000280 <.do_clear_bss_start>:
+ 280:	a5 34       	cpi	r26, 0x45	; 69
+ 282:	b1 07       	cpc	r27, r17
+ 284:	e1 f7       	brne	.-8      	; 0x27e <.do_clear_bss_loop>
+ 286:	0e 94 49 01 	call	0x292	; 0x292 <main>
+ 28a:	0c 94 8d 07 	jmp	0xf1a	; 0xf1a <_exit>
+
+0000028e <__bad_interrupt>:
+ 28e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000292 <main>:
+volatile static unsigned char	g_reg_holding_data [REG_HOLDING_DATA_NREGS_IN_BYTES];
+
+/* ----------------------- Start implementation -----------------------------*/
+int
+main( void )
+{
+ 292:	ef 92       	push	r14
+ 294:	0f 93       	push	r16
+ 296:	1f 93       	push	r17
+    const UCHAR     ucSlaveID[] = { 0xAA, 0xBB, 0xCC };
+    eMBErrorCode    eStatus;
+
+    DDRA |= 0b00001110;
+ 298:	8a b3       	in	r24, 0x1a	; 26
+ 29a:	8e 60       	ori	r24, 0x0E	; 14
+ 29c:	8a bb       	out	0x1a, r24	; 26
+	 
+
+    eStatus = eMBInit( MB_RTU, CLIENT_ID, 0, BAUDRATE, MB_PAR_NONE );
+ 29e:	80 e0       	ldi	r24, 0x00	; 0
+ 2a0:	6a e0       	ldi	r22, 0x0A	; 10
+ 2a2:	40 e0       	ldi	r20, 0x00	; 0
+ 2a4:	00 e0       	ldi	r16, 0x00	; 0
+ 2a6:	16 e9       	ldi	r17, 0x96	; 150
+ 2a8:	20 e0       	ldi	r18, 0x00	; 0
+ 2aa:	30 e0       	ldi	r19, 0x00	; 0
+ 2ac:	ee 24       	eor	r14, r14
+ 2ae:	0e 94 eb 02 	call	0x5d6	; 0x5d6 <eMBInit>
+
+    //eStatus = eMBSetSlaveID( 0x34, TRUE, ucSlaveID, 3 );
+    sei(  );
+ 2b2:	78 94       	sei
+
+    /* Enable the Modbus Protocol Stack. */
+    eStatus = eMBEnable(  );
+ 2b4:	0e 94 99 03 	call	0x732	; 0x732 <eMBEnable>
+
+    for( ;; )
+    {
+        ( void )eMBPoll(  );
+ 2b8:	0e 94 bb 03 	call	0x776	; 0x776 <eMBPoll>
+
+        /* Here we simply count the number of poll cycles. */
+        g_reg_holding_device[0]++;
+ 2bc:	80 91 9c 00 	lds	r24, 0x009C
+ 2c0:	8f 5f       	subi	r24, 0xFF	; 255
+ 2c2:	80 93 9c 00 	sts	0x009C, r24
+ 2c6:	f8 cf       	rjmp	.-16     	; 0x2b8 <main+0x26>
+
+000002c8 <eMBRegHoldingCB>:
+
+
+  eMBErrorCode  eStatus = MB_ENOERR;
+
+	// READ REGESTERS
+	if (eMode == MB_REG_READ){
+ 2c8:	22 23       	and	r18, r18
+ 2ca:	19 f5       	brne	.+70     	; 0x312 <eMBRegHoldingCB+0x4a>
+		if (( usAddress == REG_HOLDING_START ) && 
+ 2cc:	6a 30       	cpi	r22, 0x0A	; 10
+ 2ce:	71 05       	cpc	r23, r1
+ 2d0:	f1 f5       	brne	.+124    	; 0x34e <eMBRegHoldingCB+0x86>
+ 2d2:	42 30       	cpi	r20, 0x02	; 2
+ 2d4:	51 05       	cpc	r21, r1
+ 2d6:	d9 f5       	brne	.+118    	; 0x34e <eMBRegHoldingCB+0x86>
+			( usNRegs == REG_HOLDING_NREGS )){
+
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+ 2d8:	20 91 9e 00 	lds	r18, 0x009E
+ 2dc:	32 2f       	mov	r19, r18
+ 2de:	3f 5f       	subi	r19, 0xFF	; 255
+ 2e0:	30 93 9e 00 	sts	0x009E, r19
+ 2e4:	2f 3f       	cpi	r18, 0xFF	; 255
+ 2e6:	29 f4       	brne	.+10     	; 0x2f2 <eMBRegHoldingCB+0x2a>
+				g_reg_holding_device[3]++;
+ 2e8:	20 91 9f 00 	lds	r18, 0x009F
+ 2ec:	2f 5f       	subi	r18, 0xFF	; 255
+ 2ee:	20 93 9f 00 	sts	0x009F, r18
+#define INVBIT(port, bit) port = port ^ (1<<bit);
+
+eMBErrorCode
+eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
+                 eMBRegisterMode eMode )
+{
+ 2f2:	40 e0       	ldi	r20, 0x00	; 0
+ 2f4:	09 c0       	rjmp	.+18     	; 0x308 <eMBRegHoldingCB+0x40>
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+				g_reg_holding_device[3]++;
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				pucRegBuffer[i] = g_reg_holding_device[i];
+ 2f6:	f9 01       	movw	r30, r18
+ 2f8:	e4 56       	subi	r30, 0x64	; 100
+ 2fa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2fc:	50 81       	ld	r21, Z
+ 2fe:	28 0f       	add	r18, r24
+ 300:	39 1f       	adc	r19, r25
+ 302:	f9 01       	movw	r30, r18
+ 304:	50 83       	st	Z, r21
+
+			// test debug
+			if (g_reg_holding_device[2]++ == 255)
+				g_reg_holding_device[3]++;
+
+			for (char i = 0; i < usNRegs * 2; i++){
+ 306:	4f 5f       	subi	r20, 0xFF	; 255
+ 308:	24 2f       	mov	r18, r20
+ 30a:	30 e0       	ldi	r19, 0x00	; 0
+ 30c:	44 30       	cpi	r20, 0x04	; 4
+ 30e:	99 f7       	brne	.-26     	; 0x2f6 <eMBRegHoldingCB+0x2e>
+ 310:	1a c0       	rjmp	.+52     	; 0x346 <eMBRegHoldingCB+0x7e>
+			eStatus = MB_ENORES;
+		}
+	}
+
+	// WRITE REGESTERS
+	if (eMode == MB_REG_WRITE){
+ 312:	21 30       	cpi	r18, 0x01	; 1
+ 314:	c1 f4       	brne	.+48     	; 0x346 <eMBRegHoldingCB+0x7e>
+		if (( usAddress == REG_HOLDING_DATA_START ) && 
+ 316:	64 31       	cpi	r22, 0x14	; 20
+ 318:	71 05       	cpc	r23, r1
+ 31a:	c9 f4       	brne	.+50     	; 0x34e <eMBRegHoldingCB+0x86>
+ 31c:	4f 33       	cpi	r20, 0x3F	; 63
+ 31e:	51 05       	cpc	r21, r1
+ 320:	a0 f4       	brcc	.+40     	; 0x34a <eMBRegHoldingCB+0x82>
+			( usNRegs <= REG_HOLDING_DATA_NREGS)){
+
+			for (char i = 0; i < usNRegs * 2; i++){
+ 322:	44 0f       	add	r20, r20
+ 324:	55 1f       	adc	r21, r21
+ 326:	60 e0       	ldi	r22, 0x00	; 0
+ 328:	09 c0       	rjmp	.+18     	; 0x33c <eMBRegHoldingCB+0x74>
+				g_reg_holding_data[i] = pucRegBuffer[i];
+ 32a:	fc 01       	movw	r30, r24
+ 32c:	e2 0f       	add	r30, r18
+ 32e:	f3 1f       	adc	r31, r19
+ 330:	70 81       	ld	r23, Z
+ 332:	20 56       	subi	r18, 0x60	; 96
+ 334:	3f 4f       	sbci	r19, 0xFF	; 255
+ 336:	f9 01       	movw	r30, r18
+ 338:	70 83       	st	Z, r23
+	// WRITE REGESTERS
+	if (eMode == MB_REG_WRITE){
+		if (( usAddress == REG_HOLDING_DATA_START ) && 
+			( usNRegs <= REG_HOLDING_DATA_NREGS)){
+
+			for (char i = 0; i < usNRegs * 2; i++){
+ 33a:	6f 5f       	subi	r22, 0xFF	; 255
+ 33c:	26 2f       	mov	r18, r22
+ 33e:	30 e0       	ldi	r19, 0x00	; 0
+ 340:	24 17       	cp	r18, r20
+ 342:	35 07       	cpc	r19, r21
+ 344:	90 f3       	brcs	.-28     	; 0x32a <eMBRegHoldingCB+0x62>
+                 eMBRegisterMode eMode )
+{
+
+
+
+  eMBErrorCode  eStatus = MB_ENOERR;
+ 346:	80 e0       	ldi	r24, 0x00	; 0
+ 348:	08 95       	ret
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				g_reg_holding_data[i] = pucRegBuffer[i];
+			}
+		}else{
+			eStatus = MB_ENORES;
+ 34a:	84 e0       	ldi	r24, 0x04	; 4
+		}
+	}
+
+  return eStatus;
+}
+ 34c:	08 95       	ret
+
+			for (char i = 0; i < usNRegs * 2; i++){
+				pucRegBuffer[i] = g_reg_holding_device[i];
+			}
+		}else{
+			eStatus = MB_ENORES;
+ 34e:	84 e0       	ldi	r24, 0x04	; 4
+ 350:	08 95       	ret
+
+00000352 <usMBCRC16>:
+    0x40
+};
+
+USHORT
+usMBCRC16( UCHAR * pucFrame, USHORT usLen )
+{
+ 352:	dc 01       	movw	r26, r24
+    UCHAR           ucCRCHi = 0xFF;
+    UCHAR           ucCRCLo = 0xFF;
+ 354:	4f ef       	ldi	r20, 0xFF	; 255
+};
+
+USHORT
+usMBCRC16( UCHAR * pucFrame, USHORT usLen )
+{
+    UCHAR           ucCRCHi = 0xFF;
+ 356:	5f ef       	ldi	r21, 0xFF	; 255
+    UCHAR           ucCRCLo = 0xFF;
+    int             iIndex;
+
+    while( usLen-- )
+ 358:	0f c0       	rjmp	.+30     	; 0x378 <usMBCRC16+0x26>
+    {
+        iIndex = ucCRCLo ^ *( pucFrame++ );
+ 35a:	2d 91       	ld	r18, X+
+        ucCRCLo = ucCRCHi ^ pgm_read_byte( &aucCRCHi[iIndex] );
+ 35c:	84 2f       	mov	r24, r20
+ 35e:	82 27       	eor	r24, r18
+ 360:	90 e0       	ldi	r25, 0x00	; 0
+ 362:	fc 01       	movw	r30, r24
+ 364:	ec 5a       	subi	r30, 0xAC	; 172
+ 366:	ff 4f       	sbci	r31, 0xFF	; 255
+ 368:	44 91       	lpm	r20, Z+
+ 36a:	45 27       	eor	r20, r21
+        ucCRCHi = pgm_read_byte( &aucCRCLo[iIndex] );;
+ 36c:	8c 5a       	subi	r24, 0xAC	; 172
+ 36e:	9e 4f       	sbci	r25, 0xFE	; 254
+ 370:	fc 01       	movw	r30, r24
+ 372:	54 91       	lpm	r21, Z+
+ 374:	61 50       	subi	r22, 0x01	; 1
+ 376:	70 40       	sbci	r23, 0x00	; 0
+{
+    UCHAR           ucCRCHi = 0xFF;
+    UCHAR           ucCRCLo = 0xFF;
+    int             iIndex;
+
+    while( usLen-- )
+ 378:	61 15       	cp	r22, r1
+ 37a:	71 05       	cpc	r23, r1
+ 37c:	71 f7       	brne	.-36     	; 0x35a <usMBCRC16+0x8>
+    {
+        iIndex = ucCRCLo ^ *( pucFrame++ );
+        ucCRCLo = ucCRCHi ^ pgm_read_byte( &aucCRCHi[iIndex] );
+        ucCRCHi = pgm_read_byte( &aucCRCLo[iIndex] );;
+    }
+    return ucCRCHi << 8 | ucCRCLo;
+ 37e:	35 2f       	mov	r19, r21
+ 380:	20 e0       	ldi	r18, 0x00	; 0
+ 382:	e4 2f       	mov	r30, r20
+ 384:	f0 e0       	ldi	r31, 0x00	; 0
+ 386:	e2 2b       	or	r30, r18
+ 388:	f3 2b       	or	r31, r19
+}
+ 38a:	cf 01       	movw	r24, r30
+ 38c:	08 95       	ret
+
+0000038e <xMBPortEventInit>:
+
+/* ----------------------- Start implementation -----------------------------*/
+BOOL
+xMBPortEventInit( void )
+{
+    xEventInQueue = FALSE;
+ 38e:	10 92 1c 01 	sts	0x011C, r1
+    return TRUE;
+}
+ 392:	81 e0       	ldi	r24, 0x01	; 1
+ 394:	08 95       	ret
+
+00000396 <xMBPortEventPost>:
+
+BOOL
+xMBPortEventPost( eMBEventType eEvent )
+{
+    xEventInQueue = TRUE;
+ 396:	91 e0       	ldi	r25, 0x01	; 1
+ 398:	90 93 1c 01 	sts	0x011C, r25
+    eQueuedEvent = eEvent;
+ 39c:	80 93 1d 01 	sts	0x011D, r24
+    return TRUE;
+}
+ 3a0:	81 e0       	ldi	r24, 0x01	; 1
+ 3a2:	08 95       	ret
+
+000003a4 <xMBPortEventGet>:
+BOOL
+xMBPortEventGet( eMBEventType * eEvent )
+{
+    BOOL            xEventHappened = FALSE;
+
+    if( xEventInQueue )
+ 3a4:	20 91 1c 01 	lds	r18, 0x011C
+ 3a8:	22 23       	and	r18, r18
+ 3aa:	41 f0       	breq	.+16     	; 0x3bc <xMBPortEventGet+0x18>
+    {
+        *eEvent = eQueuedEvent;
+ 3ac:	20 91 1d 01 	lds	r18, 0x011D
+ 3b0:	fc 01       	movw	r30, r24
+ 3b2:	20 83       	st	Z, r18
+        xEventInQueue = FALSE;
+ 3b4:	10 92 1c 01 	sts	0x011C, r1
+        xEventHappened = TRUE;
+ 3b8:	81 e0       	ldi	r24, 0x01	; 1
+ 3ba:	08 95       	ret
+}
+
+BOOL
+xMBPortEventGet( eMBEventType * eEvent )
+{
+    BOOL            xEventHappened = FALSE;
+ 3bc:	80 e0       	ldi	r24, 0x00	; 0
+        *eEvent = eQueuedEvent;
+        xEventInQueue = FALSE;
+        xEventHappened = TRUE;
+    }
+    return xEventHappened;
+}
+ 3be:	08 95       	ret
+
+000003c0 <vMBPortSerialEnable>:
+
+void
+vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
+{
+#ifdef RTS_ENABLE
+    UCSRB |= _BV( TXEN ) | _BV(TXCIE);
+ 3c0:	9a b1       	in	r25, 0x0a	; 10
+ 3c2:	98 64       	ori	r25, 0x48	; 72
+ 3c4:	9a b9       	out	0x0a, r25	; 10
+#else
+    UCSRB |= _BV( TXEN );
+#endif
+
+    if( xRxEnable )
+ 3c6:	88 23       	and	r24, r24
+ 3c8:	19 f0       	breq	.+6      	; 0x3d0 <vMBPortSerialEnable+0x10>
+    {
+        UCSRB |= _BV( RXEN ) | _BV( RXCIE );
+ 3ca:	8a b1       	in	r24, 0x0a	; 10
+ 3cc:	80 69       	ori	r24, 0x90	; 144
+ 3ce:	02 c0       	rjmp	.+4      	; 0x3d4 <vMBPortSerialEnable+0x14>
+    }
+    else
+    {
+        UCSRB &= ~( _BV( RXEN ) | _BV( RXCIE ) );
+ 3d0:	8a b1       	in	r24, 0x0a	; 10
+ 3d2:	8f 76       	andi	r24, 0x6F	; 111
+ 3d4:	8a b9       	out	0x0a, r24	; 10
+    }
+
+    if( xTxEnable )
+ 3d6:	66 23       	and	r22, r22
+ 3d8:	29 f0       	breq	.+10     	; 0x3e4 <vMBPortSerialEnable+0x24>
+    {
+        UCSRB |= _BV( TXEN ) | _BV( UDRE );
+ 3da:	8a b1       	in	r24, 0x0a	; 10
+ 3dc:	88 62       	ori	r24, 0x28	; 40
+ 3de:	8a b9       	out	0x0a, r24	; 10
+#ifdef RTS_ENABLE
+        RTS_HIGH;
+ 3e0:	92 9a       	sbi	0x12, 2	; 18
+ 3e2:	08 95       	ret
+#endif
+    }
+    else
+    {
+        UCSRB &= ~( _BV( UDRE ) );
+ 3e4:	55 98       	cbi	0x0a, 5	; 10
+ 3e6:	08 95       	ret
+
+000003e8 <xMBPortSerialInit>:
+    }
+}
+
+BOOL
+xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity )
+{
+ 3e8:	cf 92       	push	r12
+ 3ea:	df 92       	push	r13
+ 3ec:	ef 92       	push	r14
+ 3ee:	ff 92       	push	r15
+ 3f0:	0f 93       	push	r16
+ 3f2:	1f 93       	push	r17
+ 3f4:	6a 01       	movw	r12, r20
+ 3f6:	7b 01       	movw	r14, r22
+ 3f8:	12 2f       	mov	r17, r18
+    UCHAR ucUCSRC = 0;
+
+    /* prevent compiler warning. */
+    (void)ucPORT;
+	
+    UBRR = UART_BAUD_CALC( ulBaudRate, F_CPU );
+ 3fa:	84 e0       	ldi	r24, 0x04	; 4
+ 3fc:	cc 0c       	add	r12, r12
+ 3fe:	dd 1c       	adc	r13, r13
+ 400:	ee 1c       	adc	r14, r14
+ 402:	ff 1c       	adc	r15, r15
+ 404:	8a 95       	dec	r24
+ 406:	d1 f7       	brne	.-12     	; 0x3fc <xMBPortSerialInit+0x14>
+ 408:	60 e0       	ldi	r22, 0x00	; 0
+ 40a:	70 e8       	ldi	r23, 0x80	; 128
+ 40c:	80 e7       	ldi	r24, 0x70	; 112
+ 40e:	90 e0       	ldi	r25, 0x00	; 0
+ 410:	a7 01       	movw	r20, r14
+ 412:	96 01       	movw	r18, r12
+ 414:	0e 94 6b 07 	call	0xed6	; 0xed6 <__udivmodsi4>
+ 418:	21 50       	subi	r18, 0x01	; 1
+ 41a:	29 b9       	out	0x09, r18	; 9
+ 41c:	03 30       	cpi	r16, 0x03	; 3
+ 41e:	30 f4       	brcc	.+12     	; 0x42c <xMBPortSerialInit+0x44>
+ 420:	e0 2f       	mov	r30, r16
+ 422:	f0 e0       	ldi	r31, 0x00	; 0
+ 424:	e0 5a       	subi	r30, 0xA0	; 160
+ 426:	ff 4f       	sbci	r31, 0xFF	; 255
+ 428:	80 81       	ld	r24, Z
+ 42a:	01 c0       	rjmp	.+2      	; 0x42e <xMBPortSerialInit+0x46>
+ 42c:	80 e0       	ldi	r24, 0x00	; 0
+            break;
+        case MB_PAR_NONE:
+            break;
+    }
+
+    switch ( ucDataBits )
+ 42e:	17 30       	cpi	r17, 0x07	; 7
+ 430:	21 f0       	breq	.+8      	; 0x43a <xMBPortSerialInit+0x52>
+ 432:	18 30       	cpi	r17, 0x08	; 8
+ 434:	19 f4       	brne	.+6      	; 0x43c <xMBPortSerialInit+0x54>
+    {
+        case 8:
+            ucUCSRC |= _BV( UCSZ0 ) | _BV( UCSZ1 );
+ 436:	86 60       	ori	r24, 0x06	; 6
+            break;
+ 438:	01 c0       	rjmp	.+2      	; 0x43c <xMBPortSerialInit+0x54>
+        case 7:
+            ucUCSRC |= _BV( UCSZ1 );
+ 43a:	84 60       	ori	r24, 0x04	; 4
+#elif defined (__AVR_ATmega169__)
+    UCSRC |= ucUCSRC;
+#elif defined (__AVR_ATmega8__)
+    UCSRC = _BV( URSEL ) | ucUCSRC;
+#elif defined (__AVR_ATmega16__)
+    UCSRC = _BV( URSEL ) | ucUCSRC;
+ 43c:	80 68       	ori	r24, 0x80	; 128
+ 43e:	80 bd       	out	0x20, r24	; 32
+    UCSRC = _BV( URSEL ) | ucUCSRC;
+#elif defined (__AVR_ATmega128__)
+    UCSRC |= ucUCSRC;
+#endif
+
+    vMBPortSerialEnable( FALSE, FALSE );
+ 440:	80 e0       	ldi	r24, 0x00	; 0
+ 442:	60 e0       	ldi	r22, 0x00	; 0
+ 444:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+
+#ifdef RTS_ENABLE
+    RTS_INIT;
+ 448:	8a 9a       	sbi	0x11, 2	; 17
+ 44a:	92 98       	cbi	0x12, 2	; 18
+#endif
+    return TRUE;
+}
+ 44c:	81 e0       	ldi	r24, 0x01	; 1
+ 44e:	1f 91       	pop	r17
+ 450:	0f 91       	pop	r16
+ 452:	ff 90       	pop	r15
+ 454:	ef 90       	pop	r14
+ 456:	df 90       	pop	r13
+ 458:	cf 90       	pop	r12
+ 45a:	08 95       	ret
+
+0000045c <xMBPortSerialPutByte>:
+
+BOOL
+xMBPortSerialPutByte( CHAR ucByte )
+{
+    UDR = ucByte;
+ 45c:	8c b9       	out	0x0c, r24	; 12
+    return TRUE;
+}
+ 45e:	81 e0       	ldi	r24, 0x01	; 1
+ 460:	08 95       	ret
+
+00000462 <xMBPortSerialGetByte>:
+
+BOOL
+xMBPortSerialGetByte( CHAR * pucByte )
+{
+    *pucByte = UDR;
+ 462:	2c b1       	in	r18, 0x0c	; 12
+ 464:	fc 01       	movw	r30, r24
+ 466:	20 83       	st	Z, r18
+    return TRUE;
+}
+ 468:	81 e0       	ldi	r24, 0x01	; 1
+ 46a:	08 95       	ret
+
+0000046c <__vector_12>:
+
+SIGNAL( SIG_USART_DATA )
+{
+ 46c:	1f 92       	push	r1
+ 46e:	0f 92       	push	r0
+ 470:	0f b6       	in	r0, 0x3f	; 63
+ 472:	0f 92       	push	r0
+ 474:	11 24       	eor	r1, r1
+ 476:	2f 93       	push	r18
+ 478:	3f 93       	push	r19
+ 47a:	4f 93       	push	r20
+ 47c:	5f 93       	push	r21
+ 47e:	6f 93       	push	r22
+ 480:	7f 93       	push	r23
+ 482:	8f 93       	push	r24
+ 484:	9f 93       	push	r25
+ 486:	af 93       	push	r26
+ 488:	bf 93       	push	r27
+ 48a:	ef 93       	push	r30
+ 48c:	ff 93       	push	r31
+    pxMBFrameCBTransmitterEmpty(  );
+ 48e:	e0 91 3b 01 	lds	r30, 0x013B
+ 492:	f0 91 3c 01 	lds	r31, 0x013C
+ 496:	09 95       	icall
+}
+ 498:	ff 91       	pop	r31
+ 49a:	ef 91       	pop	r30
+ 49c:	bf 91       	pop	r27
+ 49e:	af 91       	pop	r26
+ 4a0:	9f 91       	pop	r25
+ 4a2:	8f 91       	pop	r24
+ 4a4:	7f 91       	pop	r23
+ 4a6:	6f 91       	pop	r22
+ 4a8:	5f 91       	pop	r21
+ 4aa:	4f 91       	pop	r20
+ 4ac:	3f 91       	pop	r19
+ 4ae:	2f 91       	pop	r18
+ 4b0:	0f 90       	pop	r0
+ 4b2:	0f be       	out	0x3f, r0	; 63
+ 4b4:	0f 90       	pop	r0
+ 4b6:	1f 90       	pop	r1
+ 4b8:	18 95       	reti
+
+000004ba <__vector_11>:
+
+SIGNAL( SIG_USART_RECV )
+{
+ 4ba:	1f 92       	push	r1
+ 4bc:	0f 92       	push	r0
+ 4be:	0f b6       	in	r0, 0x3f	; 63
+ 4c0:	0f 92       	push	r0
+ 4c2:	11 24       	eor	r1, r1
+ 4c4:	2f 93       	push	r18
+ 4c6:	3f 93       	push	r19
+ 4c8:	4f 93       	push	r20
+ 4ca:	5f 93       	push	r21
+ 4cc:	6f 93       	push	r22
+ 4ce:	7f 93       	push	r23
+ 4d0:	8f 93       	push	r24
+ 4d2:	9f 93       	push	r25
+ 4d4:	af 93       	push	r26
+ 4d6:	bf 93       	push	r27
+ 4d8:	ef 93       	push	r30
+ 4da:	ff 93       	push	r31
+    pxMBFrameCBByteReceived(  );
+ 4dc:	e0 91 3f 01 	lds	r30, 0x013F
+ 4e0:	f0 91 40 01 	lds	r31, 0x0140
+ 4e4:	09 95       	icall
+}
+ 4e6:	ff 91       	pop	r31
+ 4e8:	ef 91       	pop	r30
+ 4ea:	bf 91       	pop	r27
+ 4ec:	af 91       	pop	r26
+ 4ee:	9f 91       	pop	r25
+ 4f0:	8f 91       	pop	r24
+ 4f2:	7f 91       	pop	r23
+ 4f4:	6f 91       	pop	r22
+ 4f6:	5f 91       	pop	r21
+ 4f8:	4f 91       	pop	r20
+ 4fa:	3f 91       	pop	r19
+ 4fc:	2f 91       	pop	r18
+ 4fe:	0f 90       	pop	r0
+ 500:	0f be       	out	0x3f, r0	; 63
+ 502:	0f 90       	pop	r0
+ 504:	1f 90       	pop	r1
+ 506:	18 95       	reti
+
+00000508 <__vector_13>:
+
+#ifdef RTS_ENABLE
+SIGNAL( SIG_UART_TRANS )
+{
+ 508:	1f 92       	push	r1
+ 50a:	0f 92       	push	r0
+ 50c:	0f b6       	in	r0, 0x3f	; 63
+ 50e:	0f 92       	push	r0
+ 510:	11 24       	eor	r1, r1
+    RTS_LOW;
+ 512:	92 98       	cbi	0x12, 2	; 18
+}
+ 514:	0f 90       	pop	r0
+ 516:	0f be       	out	0x3f, r0	; 63
+ 518:	0f 90       	pop	r0
+ 51a:	1f 90       	pop	r1
+ 51c:	18 95       	reti
+
+0000051e <vMBPortTimersEnable>:
+
+
+inline void
+vMBPortTimersEnable(  )
+{
+    TCNT1 = 0x0000;
+ 51e:	1d bc       	out	0x2d, r1	; 45
+ 520:	1c bc       	out	0x2c, r1	; 44
+    if( usTimerOCRADelta > 0 )
+ 522:	80 91 1e 01 	lds	r24, 0x011E
+ 526:	90 91 1f 01 	lds	r25, 0x011F
+ 52a:	00 97       	sbiw	r24, 0x00	; 0
+ 52c:	29 f0       	breq	.+10     	; 0x538 <vMBPortTimersEnable+0x1a>
+    {
+        TIMSK1 |= _BV( OCIE1A );
+ 52e:	29 b7       	in	r18, 0x39	; 57
+ 530:	20 61       	ori	r18, 0x10	; 16
+ 532:	29 bf       	out	0x39, r18	; 57
+        OCR1A = usTimerOCRADelta;
+ 534:	9b bd       	out	0x2b, r25	; 43
+ 536:	8a bd       	out	0x2a, r24	; 42
+    }
+
+    TCCR1B |= _BV( CS12 ) | _BV( CS10 );
+ 538:	8e b5       	in	r24, 0x2e	; 46
+ 53a:	85 60       	ori	r24, 0x05	; 5
+ 53c:	8e bd       	out	0x2e, r24	; 46
+}
+ 53e:	08 95       	ret
+
+00000540 <vMBPortTimersDisable>:
+
+inline void
+vMBPortTimersDisable(  )
+{
+    /* Disable the timer. */
+    TCCR1B &= ~( _BV( CS12 ) | _BV( CS10 ) );
+ 540:	8e b5       	in	r24, 0x2e	; 46
+ 542:	8a 7f       	andi	r24, 0xFA	; 250
+ 544:	8e bd       	out	0x2e, r24	; 46
+    /* Disable the output compare interrupts for channel A/B. */
+    TIMSK1 &= ~( _BV( OCIE1A ) );
+ 546:	89 b7       	in	r24, 0x39	; 57
+ 548:	8f 7e       	andi	r24, 0xEF	; 239
+ 54a:	89 bf       	out	0x39, r24	; 57
+    /* Clear output compare flags for channel A/B. */
+    TIFR1 |= _BV( OCF1A ) ;
+ 54c:	88 b7       	in	r24, 0x38	; 56
+ 54e:	80 61       	ori	r24, 0x10	; 16
+ 550:	88 bf       	out	0x38, r24	; 56
+}
+ 552:	08 95       	ret
+
+00000554 <xMBPortTimersInit>:
+BOOL
+xMBPortTimersInit( USHORT usTim1Timerout50us )
+{
+    /* Calculate overflow counter an OCR values for Timer1. */
+    usTimerOCRADelta =
+        ( MB_TIMER_TICKS * usTim1Timerout50us ) / ( MB_50US_TICKS );
+ 554:	bc 01       	movw	r22, r24
+ 556:	80 e0       	ldi	r24, 0x00	; 0
+ 558:	90 e0       	ldi	r25, 0x00	; 0
+ 55a:	20 e2       	ldi	r18, 0x20	; 32
+ 55c:	3c e1       	ldi	r19, 0x1C	; 28
+ 55e:	40 e0       	ldi	r20, 0x00	; 0
+ 560:	50 e0       	ldi	r21, 0x00	; 0
+ 562:	0e 94 4c 07 	call	0xe98	; 0xe98 <__mulsi3>
+ 566:	20 e2       	ldi	r18, 0x20	; 32
+ 568:	3e e4       	ldi	r19, 0x4E	; 78
+ 56a:	40 e0       	ldi	r20, 0x00	; 0
+ 56c:	50 e0       	ldi	r21, 0x00	; 0
+ 56e:	0e 94 6b 07 	call	0xed6	; 0xed6 <__udivmodsi4>
+/* ----------------------- Start implementation -----------------------------*/
+BOOL
+xMBPortTimersInit( USHORT usTim1Timerout50us )
+{
+    /* Calculate overflow counter an OCR values for Timer1. */
+    usTimerOCRADelta =
+ 572:	30 93 1f 01 	sts	0x011F, r19
+ 576:	20 93 1e 01 	sts	0x011E, r18
+        ( MB_TIMER_TICKS * usTim1Timerout50us ) / ( MB_50US_TICKS );
+
+    TCCR1A = 0x00;
+ 57a:	1f bc       	out	0x2f, r1	; 47
+    TCCR1B = 0x00;
+ 57c:	1e bc       	out	0x2e, r1	; 46
+    TCCR1C = 0x00;
+ 57e:	1f bc       	out	0x2f, r1	; 47
+
+    vMBPortTimersDisable(  );
+ 580:	0e 94 a0 02 	call	0x540	; 0x540 <vMBPortTimersDisable>
+
+    return TRUE;
+}
+ 584:	81 e0       	ldi	r24, 0x01	; 1
+ 586:	08 95       	ret
+
+00000588 <__vector_6>:
+    /* Clear output compare flags for channel A/B. */
+    TIFR1 |= _BV( OCF1A ) ;
+}
+
+SIGNAL( SIG_OUTPUT_COMPARE1A )
+{
+ 588:	1f 92       	push	r1
+ 58a:	0f 92       	push	r0
+ 58c:	0f b6       	in	r0, 0x3f	; 63
+ 58e:	0f 92       	push	r0
+ 590:	11 24       	eor	r1, r1
+ 592:	2f 93       	push	r18
+ 594:	3f 93       	push	r19
+ 596:	4f 93       	push	r20
+ 598:	5f 93       	push	r21
+ 59a:	6f 93       	push	r22
+ 59c:	7f 93       	push	r23
+ 59e:	8f 93       	push	r24
+ 5a0:	9f 93       	push	r25
+ 5a2:	af 93       	push	r26
+ 5a4:	bf 93       	push	r27
+ 5a6:	ef 93       	push	r30
+ 5a8:	ff 93       	push	r31
+    ( void )pxMBPortCBTimerExpired(  );
+ 5aa:	e0 91 3d 01 	lds	r30, 0x013D
+ 5ae:	f0 91 3e 01 	lds	r31, 0x013E
+ 5b2:	09 95       	icall
+}
+ 5b4:	ff 91       	pop	r31
+ 5b6:	ef 91       	pop	r30
+ 5b8:	bf 91       	pop	r27
+ 5ba:	af 91       	pop	r26
+ 5bc:	9f 91       	pop	r25
+ 5be:	8f 91       	pop	r24
+ 5c0:	7f 91       	pop	r23
+ 5c2:	6f 91       	pop	r22
+ 5c4:	5f 91       	pop	r21
+ 5c6:	4f 91       	pop	r20
+ 5c8:	3f 91       	pop	r19
+ 5ca:	2f 91       	pop	r18
+ 5cc:	0f 90       	pop	r0
+ 5ce:	0f be       	out	0x3f, r0	; 63
+ 5d0:	0f 90       	pop	r0
+ 5d2:	1f 90       	pop	r1
+ 5d4:	18 95       	reti
+
+000005d6 <eMBInit>:
+};
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBInit( eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+ 5d6:	ef 92       	push	r14
+ 5d8:	0f 93       	push	r16
+ 5da:	1f 93       	push	r17
+ 5dc:	98 2f       	mov	r25, r24
+ 5de:	86 2f       	mov	r24, r22
+ 5e0:	64 2f       	mov	r22, r20
+ 5e2:	a9 01       	movw	r20, r18
+ 5e4:	98 01       	movw	r18, r16
+ 5e6:	0e 2d       	mov	r16, r14
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    /* check preconditions */
+    if( ( ucSlaveAddress == MB_ADDRESS_BROADCAST ) ||
+        ( ucSlaveAddress < MB_ADDRESS_MIN ) || ( ucSlaveAddress > MB_ADDRESS_MAX ) )
+ 5e8:	78 2f       	mov	r23, r24
+ 5ea:	71 50       	subi	r23, 0x01	; 1
+eMBInit( eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    /* check preconditions */
+    if( ( ucSlaveAddress == MB_ADDRESS_BROADCAST ) ||
+ 5ec:	77 3f       	cpi	r23, 0xF7	; 247
+ 5ee:	08 f0       	brcs	.+2      	; 0x5f2 <eMBInit+0x1c>
+ 5f0:	41 c0       	rjmp	.+130    	; 0x674 <eMBInit+0x9e>
+    {
+        eStatus = MB_EINVAL;
+    }
+    else
+    {
+        ucMBAddress = ucSlaveAddress;
+ 5f2:	80 93 22 01 	sts	0x0122, r24
+
+        switch ( eMode )
+ 5f6:	99 23       	and	r25, r25
+ 5f8:	e9 f5       	brne	.+122    	; 0x674 <eMBInit+0x9e>
+        {
+#if MB_RTU_ENABLED > 0
+        case MB_RTU:
+            pvMBFrameStartCur = eMBRTUStart;
+ 5fa:	e2 e8       	ldi	r30, 0x82	; 130
+ 5fc:	f4 e0       	ldi	r31, 0x04	; 4
+ 5fe:	f0 93 2f 01 	sts	0x012F, r31
+ 602:	e0 93 2e 01 	sts	0x012E, r30
+            pvMBFrameStopCur = eMBRTUStop;
+ 606:	ed e8       	ldi	r30, 0x8D	; 141
+ 608:	f4 e0       	ldi	r31, 0x04	; 4
+ 60a:	f0 93 2d 01 	sts	0x012D, r31
+ 60e:	e0 93 2c 01 	sts	0x012C, r30
+            peMBFrameSendCur = eMBRTUSend;
+ 612:	ec ec       	ldi	r30, 0xCC	; 204
+ 614:	f4 e0       	ldi	r31, 0x04	; 4
+ 616:	f0 93 24 01 	sts	0x0124, r31
+ 61a:	e0 93 23 01 	sts	0x0123, r30
+            peMBFrameReceiveCur = eMBRTUReceive;
+ 61e:	e6 e9       	ldi	r30, 0x96	; 150
+ 620:	f4 e0       	ldi	r31, 0x04	; 4
+ 622:	f0 93 21 01 	sts	0x0121, r31
+ 626:	e0 93 20 01 	sts	0x0120, r30
+            pvMBFrameCloseCur = MB_PORT_HAS_CLOSE ? vMBPortClose : NULL;
+ 62a:	10 92 31 01 	sts	0x0131, r1
+ 62e:	10 92 30 01 	sts	0x0130, r1
+            pxMBFrameCBByteReceived = xMBRTUReceiveFSM;
+ 632:	e9 e1       	ldi	r30, 0x19	; 25
+ 634:	f5 e0       	ldi	r31, 0x05	; 5
+ 636:	f0 93 40 01 	sts	0x0140, r31
+ 63a:	e0 93 3f 01 	sts	0x013F, r30
+            pxMBFrameCBTransmitterEmpty = xMBRTUTransmitFSM;
+ 63e:	e2 e6       	ldi	r30, 0x62	; 98
+ 640:	f5 e0       	ldi	r31, 0x05	; 5
+ 642:	f0 93 3c 01 	sts	0x013C, r31
+ 646:	e0 93 3b 01 	sts	0x013B, r30
+            pxMBPortCBTimerExpired = xMBRTUTimerT35Expired;
+ 64a:	ee e9       	ldi	r30, 0x9E	; 158
+ 64c:	f5 e0       	ldi	r31, 0x05	; 5
+ 64e:	f0 93 3e 01 	sts	0x013E, r31
+ 652:	e0 93 3d 01 	sts	0x013D, r30
+
+            eStatus = eMBRTUInit( ucMBAddress, ucPort, ulBaudRate, eParity );
+ 656:	0e 94 49 04 	call	0x892	; 0x892 <eMBRTUInit>
+ 65a:	08 2f       	mov	r16, r24
+#endif
+        default:
+            eStatus = MB_EINVAL;
+        }
+
+        if( eStatus == MB_ENOERR )
+ 65c:	88 23       	and	r24, r24
+ 65e:	69 f4       	brne	.+26     	; 0x67a <eMBInit+0xa4>
+        {
+            if( !xMBPortEventInit(  ) )
+ 660:	0e 94 c7 01 	call	0x38e	; 0x38e <xMBPortEventInit>
+ 664:	88 23       	and	r24, r24
+ 666:	41 f0       	breq	.+16     	; 0x678 <eMBInit+0xa2>
+                /* port dependent event module initalization failed. */
+                eStatus = MB_EPORTERR;
+            }
+            else
+            {
+                eMBCurrentMode = eMode;
+ 668:	10 92 32 01 	sts	0x0132, r1
+                eMBState = STATE_DISABLED;
+ 66c:	81 e0       	ldi	r24, 0x01	; 1
+ 66e:	80 93 63 00 	sts	0x0063, r24
+ 672:	03 c0       	rjmp	.+6      	; 0x67a <eMBInit+0xa4>
+
+            eStatus = eMBASCIIInit( ucMBAddress, ucPort, ulBaudRate, eParity );
+            break;
+#endif
+        default:
+            eStatus = MB_EINVAL;
+ 674:	02 e0       	ldi	r16, 0x02	; 2
+ 676:	01 c0       	rjmp	.+2      	; 0x67a <eMBInit+0xa4>
+        if( eStatus == MB_ENOERR )
+        {
+            if( !xMBPortEventInit(  ) )
+            {
+                /* port dependent event module initalization failed. */
+                eStatus = MB_EPORTERR;
+ 678:	03 e0       	ldi	r16, 0x03	; 3
+                eMBState = STATE_DISABLED;
+            }
+        }
+    }
+    return eStatus;
+}
+ 67a:	80 2f       	mov	r24, r16
+ 67c:	1f 91       	pop	r17
+ 67e:	0f 91       	pop	r16
+ 680:	ef 90       	pop	r14
+ 682:	08 95       	ret
+
+00000684 <eMBRegisterCB>:
+eMBRegisterCB( UCHAR ucFunctionCode, pxMBFunctionHandler pxHandler )
+{
+    int             i;
+    eMBErrorCode    eStatus;
+
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+ 684:	18 16       	cp	r1, r24
+ 686:	0c f0       	brlt	.+2      	; 0x68a <eMBRegisterCB+0x6>
+ 688:	41 c0       	rjmp	.+130    	; 0x70c <eMBRegisterCB+0x88>
+    {
+        ENTER_CRITICAL_SECTION(  );
+ 68a:	f8 94       	cli
+        if( pxHandler != NULL )
+ 68c:	61 15       	cp	r22, r1
+ 68e:	71 05       	cpc	r23, r1
+ 690:	11 f1       	breq	.+68     	; 0x6d6 <eMBRegisterCB+0x52>
+ 692:	e5 e6       	ldi	r30, 0x65	; 101
+ 694:	f0 e0       	ldi	r31, 0x00	; 0
+ 696:	20 e0       	ldi	r18, 0x00	; 0
+ 698:	30 e0       	ldi	r19, 0x00	; 0
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+            {
+                if( ( xFuncHandlers[i].pxHandler == NULL ) ||
+ 69a:	40 81       	ld	r20, Z
+ 69c:	51 81       	ldd	r21, Z+1	; 0x01
+ 69e:	41 15       	cp	r20, r1
+ 6a0:	51 05       	cpc	r21, r1
+ 6a2:	19 f0       	breq	.+6      	; 0x6aa <eMBRegisterCB+0x26>
+ 6a4:	46 17       	cp	r20, r22
+ 6a6:	57 07       	cpc	r21, r23
+ 6a8:	71 f4       	brne	.+28     	; 0x6c6 <eMBRegisterCB+0x42>
+                    ( xFuncHandlers[i].pxHandler == pxHandler ) )
+                {
+                    xFuncHandlers[i].ucFunctionCode = ucFunctionCode;
+ 6aa:	f9 01       	movw	r30, r18
+ 6ac:	ee 0f       	add	r30, r30
+ 6ae:	ff 1f       	adc	r31, r31
+ 6b0:	e2 0f       	add	r30, r18
+ 6b2:	f3 1f       	adc	r31, r19
+ 6b4:	ec 59       	subi	r30, 0x9C	; 156
+ 6b6:	ff 4f       	sbci	r31, 0xFF	; 255
+ 6b8:	80 83       	st	Z, r24
+                    xFuncHandlers[i].pxHandler = pxHandler;
+ 6ba:	72 83       	std	Z+2, r23	; 0x02
+ 6bc:	61 83       	std	Z+1, r22	; 0x01
+                    break;
+                }
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+ 6be:	20 31       	cpi	r18, 0x10	; 16
+ 6c0:	31 05       	cpc	r19, r1
+ 6c2:	09 f5       	brne	.+66     	; 0x706 <eMBRegisterCB+0x82>
+ 6c4:	06 c0       	rjmp	.+12     	; 0x6d2 <eMBRegisterCB+0x4e>
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+ 6c6:	2f 5f       	subi	r18, 0xFF	; 255
+ 6c8:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6ca:	33 96       	adiw	r30, 0x03	; 3
+ 6cc:	20 31       	cpi	r18, 0x10	; 16
+ 6ce:	31 05       	cpc	r19, r1
+ 6d0:	21 f7       	brne	.-56     	; 0x69a <eMBRegisterCB+0x16>
+                    xFuncHandlers[i].ucFunctionCode = ucFunctionCode;
+                    xFuncHandlers[i].pxHandler = pxHandler;
+                    break;
+                }
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+ 6d2:	84 e0       	ldi	r24, 0x04	; 4
+ 6d4:	19 c0       	rjmp	.+50     	; 0x708 <eMBRegisterCB+0x84>
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+ 6d6:	e4 e6       	ldi	r30, 0x64	; 100
+ 6d8:	f0 e0       	ldi	r31, 0x00	; 0
+    eMBErrorCode    eStatus;
+
+    if( ( 0 < ucFunctionCode ) && ( ucFunctionCode <= 127 ) )
+    {
+        ENTER_CRITICAL_SECTION(  );
+        if( pxHandler != NULL )
+ 6da:	20 e0       	ldi	r18, 0x00	; 0
+ 6dc:	30 e0       	ldi	r19, 0x00	; 0
+        }
+        else
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+            {
+                if( xFuncHandlers[i].ucFunctionCode == ucFunctionCode )
+ 6de:	90 81       	ld	r25, Z
+ 6e0:	98 17       	cp	r25, r24
+ 6e2:	59 f4       	brne	.+22     	; 0x6fa <eMBRegisterCB+0x76>
+                {
+                    xFuncHandlers[i].ucFunctionCode = 0;
+ 6e4:	f9 01       	movw	r30, r18
+ 6e6:	ee 0f       	add	r30, r30
+ 6e8:	ff 1f       	adc	r31, r31
+ 6ea:	e2 0f       	add	r30, r18
+ 6ec:	f3 1f       	adc	r31, r19
+ 6ee:	ec 59       	subi	r30, 0x9C	; 156
+ 6f0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 6f2:	10 82       	st	Z, r1
+                    xFuncHandlers[i].pxHandler = NULL;
+ 6f4:	12 82       	std	Z+2, r1	; 0x02
+ 6f6:	11 82       	std	Z+1, r1	; 0x01
+ 6f8:	06 c0       	rjmp	.+12     	; 0x706 <eMBRegisterCB+0x82>
+            }
+            eStatus = ( i != MB_FUNC_HANDLERS_MAX ) ? MB_ENOERR : MB_ENORES;
+        }
+        else
+        {
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+ 6fa:	2f 5f       	subi	r18, 0xFF	; 255
+ 6fc:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6fe:	33 96       	adiw	r30, 0x03	; 3
+ 700:	20 31       	cpi	r18, 0x10	; 16
+ 702:	31 05       	cpc	r19, r1
+ 704:	61 f7       	brne	.-40     	; 0x6de <eMBRegisterCB+0x5a>
+                    xFuncHandlers[i].pxHandler = NULL;
+                    break;
+                }
+            }
+            /* Remove can't fail. */
+            eStatus = MB_ENOERR;
+ 706:	80 e0       	ldi	r24, 0x00	; 0
+        }
+        EXIT_CRITICAL_SECTION(  );
+ 708:	78 94       	sei
+ 70a:	08 95       	ret
+    }
+    else
+    {
+        eStatus = MB_EINVAL;
+ 70c:	82 e0       	ldi	r24, 0x02	; 2
+    }
+    return eStatus;
+}
+ 70e:	08 95       	ret
+
+00000710 <eMBClose>:
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    if( eMBState == STATE_DISABLED )
+ 710:	80 91 63 00 	lds	r24, 0x0063
+ 714:	81 30       	cpi	r24, 0x01	; 1
+ 716:	49 f4       	brne	.+18     	; 0x72a <eMBClose+0x1a>
+    {
+        if( pvMBFrameCloseCur != NULL )
+ 718:	e0 91 30 01 	lds	r30, 0x0130
+ 71c:	f0 91 31 01 	lds	r31, 0x0131
+ 720:	30 97       	sbiw	r30, 0x00	; 0
+ 722:	29 f0       	breq	.+10     	; 0x72e <eMBClose+0x1e>
+        {
+            pvMBFrameCloseCur(  );
+ 724:	09 95       	icall
+
+
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+ 726:	80 e0       	ldi	r24, 0x00	; 0
+ 728:	08 95       	ret
+            pvMBFrameCloseCur(  );
+        }
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+ 72a:	86 e0       	ldi	r24, 0x06	; 6
+ 72c:	08 95       	ret
+
+
+eMBErrorCode
+eMBClose( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+ 72e:	80 e0       	ldi	r24, 0x00	; 0
+    else
+    {
+        eStatus = MB_EILLSTATE;
+    }
+    return eStatus;
+}
+ 730:	08 95       	ret
+
+00000732 <eMBEnable>:
+eMBErrorCode
+eMBEnable( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    if( eMBState == STATE_DISABLED )
+ 732:	80 91 63 00 	lds	r24, 0x0063
+ 736:	81 30       	cpi	r24, 0x01	; 1
+ 738:	49 f4       	brne	.+18     	; 0x74c <eMBEnable+0x1a>
+    {
+        /* Activate the protocol stack. */
+        pvMBFrameStartCur(  );
+ 73a:	e0 91 2e 01 	lds	r30, 0x012E
+ 73e:	f0 91 2f 01 	lds	r31, 0x012F
+ 742:	09 95       	icall
+        eMBState = STATE_ENABLED;
+ 744:	10 92 63 00 	sts	0x0063, r1
+}
+
+eMBErrorCode
+eMBEnable( void )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+ 748:	80 e0       	ldi	r24, 0x00	; 0
+ 74a:	08 95       	ret
+        pvMBFrameStartCur(  );
+        eMBState = STATE_ENABLED;
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+ 74c:	86 e0       	ldi	r24, 0x06	; 6
+    }
+    return eStatus;
+}
+ 74e:	08 95       	ret
+
+00000750 <eMBDisable>:
+eMBErrorCode
+eMBDisable( void )
+{
+    eMBErrorCode    eStatus;
+
+    if( eMBState == STATE_ENABLED )
+ 750:	80 91 63 00 	lds	r24, 0x0063
+ 754:	88 23       	and	r24, r24
+ 756:	49 f4       	brne	.+18     	; 0x76a <eMBDisable+0x1a>
+    {
+        pvMBFrameStopCur(  );
+ 758:	e0 91 2c 01 	lds	r30, 0x012C
+ 75c:	f0 91 2d 01 	lds	r31, 0x012D
+ 760:	09 95       	icall
+        eMBState = STATE_DISABLED;
+ 762:	81 e0       	ldi	r24, 0x01	; 1
+ 764:	80 93 63 00 	sts	0x0063, r24
+ 768:	02 c0       	rjmp	.+4      	; 0x76e <eMBDisable+0x1e>
+        eStatus = MB_ENOERR;
+    }
+    else if( eMBState == STATE_DISABLED )
+ 76a:	81 30       	cpi	r24, 0x01	; 1
+ 76c:	11 f4       	brne	.+4      	; 0x772 <eMBDisable+0x22>
+    {
+        eStatus = MB_ENOERR;
+ 76e:	80 e0       	ldi	r24, 0x00	; 0
+ 770:	08 95       	ret
+    }
+    else
+    {
+        eStatus = MB_EILLSTATE;
+ 772:	86 e0       	ldi	r24, 0x06	; 6
+    }
+    return eStatus;
+}
+ 774:	08 95       	ret
+
+00000776 <eMBPoll>:
+
+eMBErrorCode
+eMBPoll( void )
+{
+ 776:	df 93       	push	r29
+ 778:	cf 93       	push	r28
+ 77a:	0f 92       	push	r0
+ 77c:	cd b7       	in	r28, 0x3d	; 61
+ 77e:	de b7       	in	r29, 0x3e	; 62
+    int             i;
+    eMBErrorCode    eStatus = MB_ENOERR;
+    eMBEventType    eEvent;
+
+    /* Check if the protocol stack is ready. */
+    if( eMBState != STATE_ENABLED )
+ 780:	80 91 63 00 	lds	r24, 0x0063
+ 784:	88 23       	and	r24, r24
+ 786:	09 f0       	breq	.+2      	; 0x78a <eMBPoll+0x14>
+ 788:	7d c0       	rjmp	.+250    	; 0x884 <eMBPoll+0x10e>
+        return MB_EILLSTATE;
+    }
+
+    /* Check if there is a event available. If not return control to caller.
+     * Otherwise we will handle the event. */
+    if( xMBPortEventGet( &eEvent ) == TRUE )
+ 78a:	ce 01       	movw	r24, r28
+ 78c:	01 96       	adiw	r24, 0x01	; 1
+ 78e:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <xMBPortEventGet>
+ 792:	81 30       	cpi	r24, 0x01	; 1
+ 794:	09 f0       	breq	.+2      	; 0x798 <eMBPoll+0x22>
+ 796:	78 c0       	rjmp	.+240    	; 0x888 <eMBPoll+0x112>
+    {
+        switch ( eEvent )
+ 798:	99 81       	ldd	r25, Y+1	; 0x01
+ 79a:	91 30       	cpi	r25, 0x01	; 1
+ 79c:	21 f0       	breq	.+8      	; 0x7a6 <eMBPoll+0x30>
+ 79e:	92 30       	cpi	r25, 0x02	; 2
+ 7a0:	09 f0       	breq	.+2      	; 0x7a4 <eMBPoll+0x2e>
+ 7a2:	72 c0       	rjmp	.+228    	; 0x888 <eMBPoll+0x112>
+ 7a4:	1b c0       	rjmp	.+54     	; 0x7dc <eMBPoll+0x66>
+        {
+        case EV_READY:
+            break;
+
+        case EV_FRAME_RECEIVED:
+            eStatus = peMBFrameReceiveCur( &ucRcvAddress, &ucMBFrame, &usLength );
+ 7a6:	e0 91 20 01 	lds	r30, 0x0120
+ 7aa:	f0 91 21 01 	lds	r31, 0x0121
+ 7ae:	89 e2       	ldi	r24, 0x29	; 41
+ 7b0:	91 e0       	ldi	r25, 0x01	; 1
+ 7b2:	6a e2       	ldi	r22, 0x2A	; 42
+ 7b4:	71 e0       	ldi	r23, 0x01	; 1
+ 7b6:	46 e2       	ldi	r20, 0x26	; 38
+ 7b8:	51 e0       	ldi	r21, 0x01	; 1
+ 7ba:	09 95       	icall
+            if( eStatus == MB_ENOERR )
+ 7bc:	88 23       	and	r24, r24
+ 7be:	09 f0       	breq	.+2      	; 0x7c2 <eMBPoll+0x4c>
+ 7c0:	63 c0       	rjmp	.+198    	; 0x888 <eMBPoll+0x112>
+            {
+                /* Check if the frame is for us. If not ignore the frame. */
+                if( ( ucRcvAddress == ucMBAddress ) || ( ucRcvAddress == MB_ADDRESS_BROADCAST ) )
+ 7c2:	80 91 29 01 	lds	r24, 0x0129
+ 7c6:	90 91 22 01 	lds	r25, 0x0122
+ 7ca:	89 17       	cp	r24, r25
+ 7cc:	19 f0       	breq	.+6      	; 0x7d4 <eMBPoll+0x5e>
+ 7ce:	88 23       	and	r24, r24
+ 7d0:	09 f0       	breq	.+2      	; 0x7d4 <eMBPoll+0x5e>
+ 7d2:	5a c0       	rjmp	.+180    	; 0x888 <eMBPoll+0x112>
+                {
+                    ( void )xMBPortEventPost( EV_EXECUTE );
+ 7d4:	82 e0       	ldi	r24, 0x02	; 2
+ 7d6:	0e 94 cb 01 	call	0x396	; 0x396 <xMBPortEventPost>
+ 7da:	56 c0       	rjmp	.+172    	; 0x888 <eMBPoll+0x112>
+                }
+            }
+            break;
+
+        case EV_EXECUTE:
+            ucFunctionCode = ucMBFrame[MB_PDU_FUNC_OFF];
+ 7dc:	a0 91 2a 01 	lds	r26, 0x012A
+ 7e0:	b0 91 2b 01 	lds	r27, 0x012B
+ 7e4:	9c 91       	ld	r25, X
+ 7e6:	90 93 28 01 	sts	0x0128, r25
+            eException = MB_EX_ILLEGAL_FUNCTION;
+ 7ea:	80 93 25 01 	sts	0x0125, r24
+ 7ee:	e4 e6       	ldi	r30, 0x64	; 100
+ 7f0:	f0 e0       	ldi	r31, 0x00	; 0
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+ 7f2:	20 e0       	ldi	r18, 0x00	; 0
+ 7f4:	30 e0       	ldi	r19, 0x00	; 0
+            {
+                /* No more function handlers registered. Abort. */
+                if( xFuncHandlers[i].ucFunctionCode == 0 )
+ 7f6:	80 81       	ld	r24, Z
+ 7f8:	88 23       	and	r24, r24
+ 7fa:	c9 f0       	breq	.+50     	; 0x82e <eMBPoll+0xb8>
+                {
+                    break;
+                }
+                else if( xFuncHandlers[i].ucFunctionCode == ucFunctionCode )
+ 7fc:	89 17       	cp	r24, r25
+ 7fe:	89 f4       	brne	.+34     	; 0x822 <eMBPoll+0xac>
+                {
+                    eException = xFuncHandlers[i].pxHandler( ucMBFrame, &usLength );
+ 800:	f9 01       	movw	r30, r18
+ 802:	ee 0f       	add	r30, r30
+ 804:	ff 1f       	adc	r31, r31
+ 806:	e2 0f       	add	r30, r18
+ 808:	f3 1f       	adc	r31, r19
+ 80a:	ec 59       	subi	r30, 0x9C	; 156
+ 80c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 80e:	01 80       	ldd	r0, Z+1	; 0x01
+ 810:	f2 81       	ldd	r31, Z+2	; 0x02
+ 812:	e0 2d       	mov	r30, r0
+ 814:	cd 01       	movw	r24, r26
+ 816:	66 e2       	ldi	r22, 0x26	; 38
+ 818:	71 e0       	ldi	r23, 0x01	; 1
+ 81a:	09 95       	icall
+ 81c:	80 93 25 01 	sts	0x0125, r24
+                    break;
+ 820:	06 c0       	rjmp	.+12     	; 0x82e <eMBPoll+0xb8>
+            break;
+
+        case EV_EXECUTE:
+            ucFunctionCode = ucMBFrame[MB_PDU_FUNC_OFF];
+            eException = MB_EX_ILLEGAL_FUNCTION;
+            for( i = 0; i < MB_FUNC_HANDLERS_MAX; i++ )
+ 822:	2f 5f       	subi	r18, 0xFF	; 255
+ 824:	3f 4f       	sbci	r19, 0xFF	; 255
+ 826:	33 96       	adiw	r30, 0x03	; 3
+ 828:	20 31       	cpi	r18, 0x10	; 16
+ 82a:	31 05       	cpc	r19, r1
+ 82c:	21 f7       	brne	.-56     	; 0x7f6 <eMBPoll+0x80>
+                }
+            }
+
+            /* If the request was not sent to the broadcast address we
+             * return a reply. */
+            if( ucRcvAddress != MB_ADDRESS_BROADCAST )
+ 82e:	80 91 29 01 	lds	r24, 0x0129
+ 832:	88 23       	and	r24, r24
+ 834:	49 f1       	breq	.+82     	; 0x888 <eMBPoll+0x112>
+            {
+                if( eException != MB_EX_NONE )
+ 836:	90 91 25 01 	lds	r25, 0x0125
+ 83a:	99 23       	and	r25, r25
+ 83c:	99 f0       	breq	.+38     	; 0x864 <eMBPoll+0xee>
+                {
+                    /* An exception occured. Build an error frame. */
+                    usLength = 0;
+                    ucMBFrame[usLength++] = ( UCHAR )( ucFunctionCode | MB_FUNC_ERROR );
+ 83e:	e0 91 2a 01 	lds	r30, 0x012A
+ 842:	f0 91 2b 01 	lds	r31, 0x012B
+ 846:	80 91 28 01 	lds	r24, 0x0128
+ 84a:	80 68       	ori	r24, 0x80	; 128
+ 84c:	80 83       	st	Z, r24
+                    ucMBFrame[usLength++] = eException;
+ 84e:	e0 91 2a 01 	lds	r30, 0x012A
+ 852:	f0 91 2b 01 	lds	r31, 0x012B
+ 856:	91 83       	std	Z+1, r25	; 0x01
+ 858:	82 e0       	ldi	r24, 0x02	; 2
+ 85a:	90 e0       	ldi	r25, 0x00	; 0
+ 85c:	90 93 27 01 	sts	0x0127, r25
+ 860:	80 93 26 01 	sts	0x0126, r24
+                }
+                if( ( eMBCurrentMode == MB_ASCII ) && MB_ASCII_TIMEOUT_WAIT_BEFORE_SEND_MS )
+                {
+                    vMBPortTimersDelay( MB_ASCII_TIMEOUT_WAIT_BEFORE_SEND_MS );
+                }                
+                eStatus = peMBFrameSendCur( ucMBAddress, ucMBFrame, usLength );
+ 864:	60 91 2a 01 	lds	r22, 0x012A
+ 868:	70 91 2b 01 	lds	r23, 0x012B
+ 86c:	40 91 26 01 	lds	r20, 0x0126
+ 870:	50 91 27 01 	lds	r21, 0x0127
+ 874:	e0 91 23 01 	lds	r30, 0x0123
+ 878:	f0 91 24 01 	lds	r31, 0x0124
+ 87c:	80 91 22 01 	lds	r24, 0x0122
+ 880:	09 95       	icall
+ 882:	02 c0       	rjmp	.+4      	; 0x888 <eMBPoll+0x112>
+    eMBEventType    eEvent;
+
+    /* Check if the protocol stack is ready. */
+    if( eMBState != STATE_ENABLED )
+    {
+        return MB_EILLSTATE;
+ 884:	86 e0       	ldi	r24, 0x06	; 6
+ 886:	01 c0       	rjmp	.+2      	; 0x88a <eMBPoll+0x114>
+
+        case EV_FRAME_SENT:
+            break;
+        }
+    }
+    return MB_ENOERR;
+ 888:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 88a:	0f 90       	pop	r0
+ 88c:	cf 91       	pop	r28
+ 88e:	df 91       	pop	r29
+ 890:	08 95       	ret
+
+00000892 <eMBRTUInit>:
+static volatile USHORT usRcvBufferPos;
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBRTUInit( UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+ 892:	cf 92       	push	r12
+ 894:	df 92       	push	r13
+ 896:	ef 92       	push	r14
+ 898:	ff 92       	push	r15
+ 89a:	0f 93       	push	r16
+ 89c:	86 2f       	mov	r24, r22
+ 89e:	69 01       	movw	r12, r18
+ 8a0:	7a 01       	movw	r14, r20
+    eMBErrorCode    eStatus = MB_ENOERR;
+    ULONG           usTimerT35_50us;
+
+    ( void )ucSlaveAddress;
+    ENTER_CRITICAL_SECTION(  );
+ 8a2:	f8 94       	cli
+
+    /* Modbus RTU uses 8 Databits. */
+    if( xMBPortSerialInit( ucPort, ulBaudRate, 8, eParity ) != TRUE )
+ 8a4:	ba 01       	movw	r22, r20
+ 8a6:	a9 01       	movw	r20, r18
+ 8a8:	28 e0       	ldi	r18, 0x08	; 8
+ 8aa:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <xMBPortSerialInit>
+ 8ae:	81 30       	cpi	r24, 0x01	; 1
+ 8b0:	09 f5       	brne	.+66     	; 0x8f4 <eMBRTUInit+0x62>
+    else
+    {
+        /* If baudrate > 19200 then we should use the fixed timer values
+         * t35 = 1750us. Otherwise t35 must be 3.5 times the character time.
+         */
+        if( ulBaudRate > 19200 )
+ 8b2:	81 e0       	ldi	r24, 0x01	; 1
+ 8b4:	c8 16       	cp	r12, r24
+ 8b6:	8b e4       	ldi	r24, 0x4B	; 75
+ 8b8:	d8 06       	cpc	r13, r24
+ 8ba:	80 e0       	ldi	r24, 0x00	; 0
+ 8bc:	e8 06       	cpc	r14, r24
+ 8be:	80 e0       	ldi	r24, 0x00	; 0
+ 8c0:	f8 06       	cpc	r15, r24
+ 8c2:	68 f4       	brcc	.+26     	; 0x8de <eMBRTUInit+0x4c>
+             *             = 11 * Ticks_per_1s / Baudrate
+             *             = 220000 / Baudrate
+             * The reload for t3.5 is 1.5 times this value and similary
+             * for t3.5.
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+ 8c4:	a7 01       	movw	r20, r14
+ 8c6:	96 01       	movw	r18, r12
+ 8c8:	22 0f       	add	r18, r18
+ 8ca:	33 1f       	adc	r19, r19
+ 8cc:	44 1f       	adc	r20, r20
+ 8ce:	55 1f       	adc	r21, r21
+ 8d0:	60 ea       	ldi	r22, 0xA0	; 160
+ 8d2:	7f e7       	ldi	r23, 0x7F	; 127
+ 8d4:	87 e1       	ldi	r24, 0x17	; 23
+ 8d6:	90 e0       	ldi	r25, 0x00	; 0
+ 8d8:	0e 94 6b 07 	call	0xed6	; 0xed6 <__udivmodsi4>
+ 8dc:	04 c0       	rjmp	.+8      	; 0x8e6 <eMBRTUInit+0x54>
+        /* If baudrate > 19200 then we should use the fixed timer values
+         * t35 = 1750us. Otherwise t35 must be 3.5 times the character time.
+         */
+        if( ulBaudRate > 19200 )
+        {
+            usTimerT35_50us = 35;       /* 1800us. */
+ 8de:	23 e2       	ldi	r18, 0x23	; 35
+ 8e0:	30 e0       	ldi	r19, 0x00	; 0
+ 8e2:	40 e0       	ldi	r20, 0x00	; 0
+ 8e4:	50 e0       	ldi	r21, 0x00	; 0
+             * The reload for t3.5 is 1.5 times this value and similary
+             * for t3.5.
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+        }
+        if( xMBPortTimersInit( ( USHORT ) usTimerT35_50us ) != TRUE )
+ 8e6:	c9 01       	movw	r24, r18
+ 8e8:	0e 94 aa 02 	call	0x554	; 0x554 <xMBPortTimersInit>
+ 8ec:	81 30       	cpi	r24, 0x01	; 1
+ 8ee:	11 f4       	brne	.+4      	; 0x8f4 <eMBRTUInit+0x62>
+
+/* ----------------------- Start implementation -----------------------------*/
+eMBErrorCode
+eMBRTUInit( UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+ 8f0:	80 e0       	ldi	r24, 0x00	; 0
+ 8f2:	01 c0       	rjmp	.+2      	; 0x8f6 <eMBRTUInit+0x64>
+             */
+            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );
+        }
+        if( xMBPortTimersInit( ( USHORT ) usTimerT35_50us ) != TRUE )
+        {
+            eStatus = MB_EPORTERR;
+ 8f4:	83 e0       	ldi	r24, 0x03	; 3
+        }
+    }
+    EXIT_CRITICAL_SECTION(  );
+ 8f6:	78 94       	sei
+
+    return eStatus;
+}
+ 8f8:	0f 91       	pop	r16
+ 8fa:	ff 90       	pop	r15
+ 8fc:	ef 90       	pop	r14
+ 8fe:	df 90       	pop	r13
+ 900:	cf 90       	pop	r12
+ 902:	08 95       	ret
+
+00000904 <eMBRTUStart>:
+
+void
+eMBRTUStart( void )
+{
+    ENTER_CRITICAL_SECTION(  );
+ 904:	f8 94       	cli
+    /* Initially the receiver is in the state STATE_RX_INIT. we start
+     * the timer and if no character is received within t3.5 we change
+     * to STATE_RX_IDLE. This makes sure that we delay startup of the
+     * modbus protocol stack until the bus is free.
+     */
+    eRcvState = STATE_RX_INIT;
+ 906:	10 92 33 01 	sts	0x0133, r1
+    vMBPortSerialEnable( TRUE, FALSE );
+ 90a:	81 e0       	ldi	r24, 0x01	; 1
+ 90c:	60 e0       	ldi	r22, 0x00	; 0
+ 90e:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+    vMBPortTimersEnable(  );
+ 912:	0e 94 8f 02 	call	0x51e	; 0x51e <vMBPortTimersEnable>
+
+    EXIT_CRITICAL_SECTION(  );
+ 916:	78 94       	sei
+}
+ 918:	08 95       	ret
+
+0000091a <eMBRTUStop>:
+
+void
+eMBRTUStop( void )
+{
+    ENTER_CRITICAL_SECTION(  );
+ 91a:	f8 94       	cli
+    vMBPortSerialEnable( FALSE, FALSE );
+ 91c:	80 e0       	ldi	r24, 0x00	; 0
+ 91e:	60 e0       	ldi	r22, 0x00	; 0
+ 920:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+    vMBPortTimersDisable(  );
+ 924:	0e 94 a0 02 	call	0x540	; 0x540 <vMBPortTimersDisable>
+    EXIT_CRITICAL_SECTION(  );
+ 928:	78 94       	sei
+}
+ 92a:	08 95       	ret
+
+0000092c <eMBRTUReceive>:
+
+eMBErrorCode
+eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
+{
+ 92c:	ef 92       	push	r14
+ 92e:	ff 92       	push	r15
+ 930:	0f 93       	push	r16
+ 932:	1f 93       	push	r17
+ 934:	cf 93       	push	r28
+ 936:	df 93       	push	r29
+ 938:	8c 01       	movw	r16, r24
+ 93a:	7b 01       	movw	r14, r22
+ 93c:	ea 01       	movw	r28, r20
+    BOOL            xFrameReceived = FALSE;
+    eMBErrorCode    eStatus = MB_ENOERR;
+
+    ENTER_CRITICAL_SECTION(  );
+ 93e:	f8 94       	cli
+    assert( usRcvBufferPos < MB_SER_PDU_SIZE_MAX );
+
+    /* Length and CRC check */
+    if( ( usRcvBufferPos >= MB_SER_PDU_SIZE_MIN )
+ 940:	80 91 39 01 	lds	r24, 0x0139
+ 944:	90 91 3a 01 	lds	r25, 0x013A
+ 948:	84 30       	cpi	r24, 0x04	; 4
+ 94a:	91 05       	cpc	r25, r1
+ 94c:	e0 f0       	brcs	.+56     	; 0x986 <eMBRTUReceive+0x5a>
+        && ( usMBCRC16( ( UCHAR * ) ucRTUBuf, usRcvBufferPos ) == 0 ) )
+ 94e:	60 91 39 01 	lds	r22, 0x0139
+ 952:	70 91 3a 01 	lds	r23, 0x013A
+ 956:	85 e4       	ldi	r24, 0x45	; 69
+ 958:	91 e0       	ldi	r25, 0x01	; 1
+ 95a:	0e 94 a9 01 	call	0x352	; 0x352 <usMBCRC16>
+ 95e:	00 97       	sbiw	r24, 0x00	; 0
+ 960:	91 f4       	brne	.+36     	; 0x986 <eMBRTUReceive+0x5a>
+    {
+        /* Save the address field. All frames are passed to the upper layed
+         * and the decision if a frame is used is done there.
+         */
+        *pucRcvAddress = ucRTUBuf[MB_SER_PDU_ADDR_OFF];
+ 962:	80 91 45 01 	lds	r24, 0x0145
+ 966:	f8 01       	movw	r30, r16
+ 968:	80 83       	st	Z, r24
+
+        /* Total length of Modbus-PDU is Modbus-Serial-Line-PDU minus
+         * size of address field and CRC checksum.
+         */
+        *pusLength = ( USHORT )( usRcvBufferPos - MB_SER_PDU_PDU_OFF - MB_SER_PDU_SIZE_CRC );
+ 96a:	80 91 39 01 	lds	r24, 0x0139
+ 96e:	90 91 3a 01 	lds	r25, 0x013A
+ 972:	03 97       	sbiw	r24, 0x03	; 3
+ 974:	99 83       	std	Y+1, r25	; 0x01
+ 976:	88 83       	st	Y, r24
+
+        /* Return the start of the Modbus PDU to the caller. */
+        *pucFrame = ( UCHAR * ) & ucRTUBuf[MB_SER_PDU_PDU_OFF];
+ 978:	86 e4       	ldi	r24, 0x46	; 70
+ 97a:	91 e0       	ldi	r25, 0x01	; 1
+ 97c:	f7 01       	movw	r30, r14
+ 97e:	91 83       	std	Z+1, r25	; 0x01
+ 980:	80 83       	st	Z, r24
+
+eMBErrorCode
+eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
+{
+    BOOL            xFrameReceived = FALSE;
+    eMBErrorCode    eStatus = MB_ENOERR;
+ 982:	80 e0       	ldi	r24, 0x00	; 0
+         */
+        *pusLength = ( USHORT )( usRcvBufferPos - MB_SER_PDU_PDU_OFF - MB_SER_PDU_SIZE_CRC );
+
+        /* Return the start of the Modbus PDU to the caller. */
+        *pucFrame = ( UCHAR * ) & ucRTUBuf[MB_SER_PDU_PDU_OFF];
+        xFrameReceived = TRUE;
+ 984:	01 c0       	rjmp	.+2      	; 0x988 <eMBRTUReceive+0x5c>
+    }
+    else
+    {
+        eStatus = MB_EIO;
+ 986:	85 e0       	ldi	r24, 0x05	; 5
+    }
+
+    EXIT_CRITICAL_SECTION(  );
+ 988:	78 94       	sei
+    return eStatus;
+}
+ 98a:	df 91       	pop	r29
+ 98c:	cf 91       	pop	r28
+ 98e:	1f 91       	pop	r17
+ 990:	0f 91       	pop	r16
+ 992:	ff 90       	pop	r15
+ 994:	ef 90       	pop	r14
+ 996:	08 95       	ret
+
+00000998 <eMBRTUSend>:
+
+eMBErrorCode
+eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
+{
+ 998:	1f 93       	push	r17
+    eMBErrorCode    eStatus = MB_ENOERR;
+    USHORT          usCRC16;
+
+    ENTER_CRITICAL_SECTION(  );
+ 99a:	f8 94       	cli
+
+    /* Check if the receiver is still in idle state. If not we where to
+     * slow with processing the received frame and the master sent another
+     * frame on the network. We have to abort sending the frame.
+     */
+    if( eRcvState == STATE_RX_IDLE )
+ 99c:	10 91 33 01 	lds	r17, 0x0133
+ 9a0:	11 30       	cpi	r17, 0x01	; 1
+ 9a2:	09 f0       	breq	.+2      	; 0x9a6 <eMBRTUSend+0xe>
+ 9a4:	42 c0       	rjmp	.+132    	; 0xa2a <eMBRTUSend+0x92>
+    {
+        /* First byte before the Modbus-PDU is the slave address. */
+        pucSndBufferCur = ( UCHAR * ) pucFrame - 1;
+ 9a6:	fb 01       	movw	r30, r22
+ 9a8:	31 97       	sbiw	r30, 0x01	; 1
+ 9aa:	f0 93 38 01 	sts	0x0138, r31
+ 9ae:	e0 93 37 01 	sts	0x0137, r30
+        usSndBufferCount = 1;
+ 9b2:	21 e0       	ldi	r18, 0x01	; 1
+ 9b4:	30 e0       	ldi	r19, 0x00	; 0
+ 9b6:	30 93 36 01 	sts	0x0136, r19
+ 9ba:	20 93 35 01 	sts	0x0135, r18
+
+        /* Now copy the Modbus-PDU into the Modbus-Serial-Line-PDU. */
+        pucSndBufferCur[MB_SER_PDU_ADDR_OFF] = ucSlaveAddress;
+ 9be:	80 83       	st	Z, r24
+        usSndBufferCount += usLength;
+ 9c0:	80 91 35 01 	lds	r24, 0x0135
+ 9c4:	90 91 36 01 	lds	r25, 0x0136
+ 9c8:	84 0f       	add	r24, r20
+ 9ca:	95 1f       	adc	r25, r21
+ 9cc:	90 93 36 01 	sts	0x0136, r25
+ 9d0:	80 93 35 01 	sts	0x0135, r24
+
+        /* Calculate CRC16 checksum for Modbus-Serial-Line-PDU. */
+        usCRC16 = usMBCRC16( ( UCHAR * ) pucSndBufferCur, usSndBufferCount );
+ 9d4:	60 91 35 01 	lds	r22, 0x0135
+ 9d8:	70 91 36 01 	lds	r23, 0x0136
+ 9dc:	cf 01       	movw	r24, r30
+ 9de:	0e 94 a9 01 	call	0x352	; 0x352 <usMBCRC16>
+ 9e2:	49 2f       	mov	r20, r25
+        ucRTUBuf[usSndBufferCount++] = ( UCHAR )( usCRC16 & 0xFF );
+ 9e4:	20 91 35 01 	lds	r18, 0x0135
+ 9e8:	30 91 36 01 	lds	r19, 0x0136
+ 9ec:	f9 01       	movw	r30, r18
+ 9ee:	eb 5b       	subi	r30, 0xBB	; 187
+ 9f0:	fe 4f       	sbci	r31, 0xFE	; 254
+ 9f2:	80 83       	st	Z, r24
+ 9f4:	2f 5f       	subi	r18, 0xFF	; 255
+ 9f6:	3f 4f       	sbci	r19, 0xFF	; 255
+ 9f8:	30 93 36 01 	sts	0x0136, r19
+ 9fc:	20 93 35 01 	sts	0x0135, r18
+        ucRTUBuf[usSndBufferCount++] = ( UCHAR )( usCRC16 >> 8 );
+ a00:	80 91 35 01 	lds	r24, 0x0135
+ a04:	90 91 36 01 	lds	r25, 0x0136
+ a08:	fc 01       	movw	r30, r24
+ a0a:	eb 5b       	subi	r30, 0xBB	; 187
+ a0c:	fe 4f       	sbci	r31, 0xFE	; 254
+ a0e:	40 83       	st	Z, r20
+ a10:	01 96       	adiw	r24, 0x01	; 1
+ a12:	90 93 36 01 	sts	0x0136, r25
+ a16:	80 93 35 01 	sts	0x0135, r24
+
+        /* Activate the transmitter. */
+        eSndState = STATE_TX_XMIT;
+ a1a:	10 93 34 01 	sts	0x0134, r17
+        vMBPortSerialEnable( FALSE, TRUE );
+ a1e:	80 e0       	ldi	r24, 0x00	; 0
+ a20:	61 e0       	ldi	r22, 0x01	; 1
+ a22:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+}
+
+eMBErrorCode
+eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
+{
+    eMBErrorCode    eStatus = MB_ENOERR;
+ a26:	80 e0       	ldi	r24, 0x00	; 0
+ a28:	01 c0       	rjmp	.+2      	; 0xa2c <eMBRTUSend+0x94>
+        eSndState = STATE_TX_XMIT;
+        vMBPortSerialEnable( FALSE, TRUE );
+    }
+    else
+    {
+        eStatus = MB_EIO;
+ a2a:	85 e0       	ldi	r24, 0x05	; 5
+    }
+    EXIT_CRITICAL_SECTION(  );
+ a2c:	78 94       	sei
+    return eStatus;
+}
+ a2e:	1f 91       	pop	r17
+ a30:	08 95       	ret
+
+00000a32 <xMBRTUReceiveFSM>:
+
+BOOL
+xMBRTUReceiveFSM( void )
+{
+ a32:	df 93       	push	r29
+ a34:	cf 93       	push	r28
+ a36:	0f 92       	push	r0
+ a38:	cd b7       	in	r28, 0x3d	; 61
+ a3a:	de b7       	in	r29, 0x3e	; 62
+    UCHAR           ucByte;
+
+    assert( eSndState == STATE_TX_IDLE );
+
+    /* Always read the character. */
+    ( void )xMBPortSerialGetByte( ( CHAR * ) & ucByte );
+ a3c:	ce 01       	movw	r24, r28
+ a3e:	01 96       	adiw	r24, 0x01	; 1
+ a40:	0e 94 31 02 	call	0x462	; 0x462 <xMBPortSerialGetByte>
+
+    switch ( eRcvState )
+ a44:	80 91 33 01 	lds	r24, 0x0133
+ a48:	81 30       	cpi	r24, 0x01	; 1
+ a4a:	39 f0       	breq	.+14     	; 0xa5a <xMBRTUReceiveFSM+0x28>
+ a4c:	81 30       	cpi	r24, 0x01	; 1
+ a4e:	98 f1       	brcs	.+102    	; 0xab6 <xMBRTUReceiveFSM+0x84>
+ a50:	82 30       	cpi	r24, 0x02	; 2
+ a52:	b9 f0       	breq	.+46     	; 0xa82 <xMBRTUReceiveFSM+0x50>
+ a54:	83 30       	cpi	r24, 0x03	; 3
+ a56:	89 f5       	brne	.+98     	; 0xaba <xMBRTUReceiveFSM+0x88>
+ a58:	2e c0       	rjmp	.+92     	; 0xab6 <xMBRTUReceiveFSM+0x84>
+        /* In the idle state we wait for a new character. If a character
+         * is received the t1.5 and t3.5 timers are started and the
+         * receiver is in the state STATE_RX_RECEIVCE.
+         */
+    case STATE_RX_IDLE:
+        usRcvBufferPos = 0;
+ a5a:	10 92 3a 01 	sts	0x013A, r1
+ a5e:	10 92 39 01 	sts	0x0139, r1
+        ucRTUBuf[usRcvBufferPos++] = ucByte;
+ a62:	80 91 39 01 	lds	r24, 0x0139
+ a66:	90 91 3a 01 	lds	r25, 0x013A
+ a6a:	29 81       	ldd	r18, Y+1	; 0x01
+ a6c:	fc 01       	movw	r30, r24
+ a6e:	eb 5b       	subi	r30, 0xBB	; 187
+ a70:	fe 4f       	sbci	r31, 0xFE	; 254
+ a72:	20 83       	st	Z, r18
+ a74:	01 96       	adiw	r24, 0x01	; 1
+ a76:	90 93 3a 01 	sts	0x013A, r25
+ a7a:	80 93 39 01 	sts	0x0139, r24
+        eRcvState = STATE_RX_RCV;
+ a7e:	82 e0       	ldi	r24, 0x02	; 2
+ a80:	18 c0       	rjmp	.+48     	; 0xab2 <xMBRTUReceiveFSM+0x80>
+         * every character received. If more than the maximum possible
+         * number of bytes in a modbus frame is received the frame is
+         * ignored.
+         */
+    case STATE_RX_RCV:
+        if( usRcvBufferPos < MB_SER_PDU_SIZE_MAX )
+ a82:	80 91 39 01 	lds	r24, 0x0139
+ a86:	90 91 3a 01 	lds	r25, 0x013A
+ a8a:	8f 3f       	cpi	r24, 0xFF	; 255
+ a8c:	91 05       	cpc	r25, r1
+ a8e:	09 f0       	breq	.+2      	; 0xa92 <xMBRTUReceiveFSM+0x60>
+ a90:	78 f4       	brcc	.+30     	; 0xab0 <xMBRTUReceiveFSM+0x7e>
+        {
+            ucRTUBuf[usRcvBufferPos++] = ucByte;
+ a92:	80 91 39 01 	lds	r24, 0x0139
+ a96:	90 91 3a 01 	lds	r25, 0x013A
+ a9a:	29 81       	ldd	r18, Y+1	; 0x01
+ a9c:	fc 01       	movw	r30, r24
+ a9e:	eb 5b       	subi	r30, 0xBB	; 187
+ aa0:	fe 4f       	sbci	r31, 0xFE	; 254
+ aa2:	20 83       	st	Z, r18
+ aa4:	01 96       	adiw	r24, 0x01	; 1
+ aa6:	90 93 3a 01 	sts	0x013A, r25
+ aaa:	80 93 39 01 	sts	0x0139, r24
+ aae:	03 c0       	rjmp	.+6      	; 0xab6 <xMBRTUReceiveFSM+0x84>
+        }
+        else
+        {
+            eRcvState = STATE_RX_ERROR;
+ ab0:	83 e0       	ldi	r24, 0x03	; 3
+ ab2:	80 93 33 01 	sts	0x0133, r24
+        }
+        vMBPortTimersEnable(  );
+ ab6:	0e 94 8f 02 	call	0x51e	; 0x51e <vMBPortTimersEnable>
+        break;
+    }
+    return xTaskNeedSwitch;
+}
+ aba:	80 e0       	ldi	r24, 0x00	; 0
+ abc:	0f 90       	pop	r0
+ abe:	cf 91       	pop	r28
+ ac0:	df 91       	pop	r29
+ ac2:	08 95       	ret
+
+00000ac4 <xMBRTUTransmitFSM>:
+
+BOOL
+xMBRTUTransmitFSM( void )
+{
+ ac4:	1f 93       	push	r17
+    BOOL            xNeedPoll = FALSE;
+
+    assert( eRcvState == STATE_RX_IDLE );
+
+    switch ( eSndState )
+ ac6:	80 91 34 01 	lds	r24, 0x0134
+ aca:	88 23       	and	r24, r24
+ acc:	19 f0       	breq	.+6      	; 0xad4 <xMBRTUTransmitFSM+0x10>
+ ace:	81 30       	cpi	r24, 0x01	; 1
+ ad0:	89 f5       	brne	.+98     	; 0xb34 <xMBRTUTransmitFSM+0x70>
+ ad2:	05 c0       	rjmp	.+10     	; 0xade <xMBRTUTransmitFSM+0x1a>
+    {
+        /* We should not get a transmitter event if the transmitter is in
+         * idle state.  */
+    case STATE_TX_IDLE:
+        /* enable receiver/disable transmitter. */
+        vMBPortSerialEnable( TRUE, FALSE );
+ ad4:	81 e0       	ldi	r24, 0x01	; 1
+ ad6:	60 e0       	ldi	r22, 0x00	; 0
+ ad8:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+ adc:	2b c0       	rjmp	.+86     	; 0xb34 <xMBRTUTransmitFSM+0x70>
+        break;
+
+    case STATE_TX_XMIT:
+        /* check if we are finished. */
+        if( usSndBufferCount != 0 )
+ ade:	80 91 35 01 	lds	r24, 0x0135
+ ae2:	90 91 36 01 	lds	r25, 0x0136
+ ae6:	00 97       	sbiw	r24, 0x00	; 0
+ ae8:	d1 f0       	breq	.+52     	; 0xb1e <xMBRTUTransmitFSM+0x5a>
+        {
+            xMBPortSerialPutByte( ( CHAR )*pucSndBufferCur );
+ aea:	e0 91 37 01 	lds	r30, 0x0137
+ aee:	f0 91 38 01 	lds	r31, 0x0138
+ af2:	80 81       	ld	r24, Z
+ af4:	0e 94 2e 02 	call	0x45c	; 0x45c <xMBPortSerialPutByte>
+            pucSndBufferCur++;  /* next byte in sendbuffer. */
+ af8:	80 91 37 01 	lds	r24, 0x0137
+ afc:	90 91 38 01 	lds	r25, 0x0138
+ b00:	01 96       	adiw	r24, 0x01	; 1
+ b02:	90 93 38 01 	sts	0x0138, r25
+ b06:	80 93 37 01 	sts	0x0137, r24
+            usSndBufferCount--;
+ b0a:	80 91 35 01 	lds	r24, 0x0135
+ b0e:	90 91 36 01 	lds	r25, 0x0136
+ b12:	01 97       	sbiw	r24, 0x01	; 1
+ b14:	90 93 36 01 	sts	0x0136, r25
+ b18:	80 93 35 01 	sts	0x0135, r24
+ b1c:	0b c0       	rjmp	.+22     	; 0xb34 <xMBRTUTransmitFSM+0x70>
+        }
+        else
+        {
+            xNeedPoll = xMBPortEventPost( EV_FRAME_SENT );
+ b1e:	83 e0       	ldi	r24, 0x03	; 3
+ b20:	0e 94 cb 01 	call	0x396	; 0x396 <xMBPortEventPost>
+ b24:	18 2f       	mov	r17, r24
+            /* Disable transmitter. This prevents another transmit buffer
+             * empty interrupt. */
+            vMBPortSerialEnable( TRUE, FALSE );
+ b26:	81 e0       	ldi	r24, 0x01	; 1
+ b28:	60 e0       	ldi	r22, 0x00	; 0
+ b2a:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <vMBPortSerialEnable>
+            eSndState = STATE_TX_IDLE;
+ b2e:	10 92 34 01 	sts	0x0134, r1
+ b32:	01 c0       	rjmp	.+2      	; 0xb36 <xMBRTUTransmitFSM+0x72>
+}
+
+BOOL
+xMBRTUTransmitFSM( void )
+{
+    BOOL            xNeedPoll = FALSE;
+ b34:	10 e0       	ldi	r17, 0x00	; 0
+        }
+        break;
+    }
+
+    return xNeedPoll;
+}
+ b36:	81 2f       	mov	r24, r17
+ b38:	1f 91       	pop	r17
+ b3a:	08 95       	ret
+
+00000b3c <xMBRTUTimerT35Expired>:
+
+BOOL
+xMBRTUTimerT35Expired( void )
+{
+ b3c:	df 93       	push	r29
+ b3e:	cf 93       	push	r28
+ b40:	0f 92       	push	r0
+ b42:	cd b7       	in	r28, 0x3d	; 61
+ b44:	de b7       	in	r29, 0x3e	; 62
+    BOOL            xNeedPoll = FALSE;
+
+    switch ( eRcvState )
+ b46:	80 91 33 01 	lds	r24, 0x0133
+ b4a:	88 23       	and	r24, r24
+ b4c:	19 f0       	breq	.+6      	; 0xb54 <xMBRTUTimerT35Expired+0x18>
+ b4e:	82 30       	cpi	r24, 0x02	; 2
+ b50:	39 f4       	brne	.+14     	; 0xb60 <xMBRTUTimerT35Expired+0x24>
+ b52:	02 c0       	rjmp	.+4      	; 0xb58 <xMBRTUTimerT35Expired+0x1c>
+    {
+        /* Timer t35 expired. Startup phase is finished. */
+    case STATE_RX_INIT:
+        xNeedPoll = xMBPortEventPost( EV_READY );
+ b54:	80 e0       	ldi	r24, 0x00	; 0
+ b56:	01 c0       	rjmp	.+2      	; 0xb5a <xMBRTUTimerT35Expired+0x1e>
+        break;
+
+        /* A frame was received and t35 expired. Notify the listener that
+         * a new frame was received. */
+    case STATE_RX_RCV:
+        xNeedPoll = xMBPortEventPost( EV_FRAME_RECEIVED );
+ b58:	81 e0       	ldi	r24, 0x01	; 1
+ b5a:	0e 94 cb 01 	call	0x396	; 0x396 <xMBPortEventPost>
+        break;
+ b5e:	01 c0       	rjmp	.+2      	; 0xb62 <xMBRTUTimerT35Expired+0x26>
+}
+
+BOOL
+xMBRTUTimerT35Expired( void )
+{
+    BOOL            xNeedPoll = FALSE;
+ b60:	80 e0       	ldi	r24, 0x00	; 0
+    default:
+        assert( ( eRcvState == STATE_RX_INIT ) ||
+                ( eRcvState == STATE_RX_RCV ) || ( eRcvState == STATE_RX_ERROR ) );
+    }
+
+    vMBPortTimersDisable(  );
+ b62:	89 83       	std	Y+1, r24	; 0x01
+ b64:	0e 94 a0 02 	call	0x540	; 0x540 <vMBPortTimersDisable>
+    eRcvState = STATE_RX_IDLE;
+ b68:	91 e0       	ldi	r25, 0x01	; 1
+ b6a:	90 93 33 01 	sts	0x0133, r25
+
+    return xNeedPoll;
+}
+ b6e:	89 81       	ldd	r24, Y+1	; 0x01
+ b70:	0f 90       	pop	r0
+ b72:	cf 91       	pop	r28
+ b74:	df 91       	pop	r29
+ b76:	08 95       	ret
+
+00000b78 <eMBFuncWriteHoldingRegister>:
+{
+    USHORT          usRegAddress;
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_WRITE_SIZE + MB_PDU_SIZE_MIN ) )
+ b78:	fb 01       	movw	r30, r22
+ b7a:	20 81       	ld	r18, Z
+ b7c:	31 81       	ldd	r19, Z+1	; 0x01
+ b7e:	25 30       	cpi	r18, 0x05	; 5
+ b80:	31 05       	cpc	r19, r1
+ b82:	a1 f4       	brne	.+40     	; 0xbac <eMBFuncWriteHoldingRegister+0x34>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_ADDR_OFF] << 8 );
+ b84:	fc 01       	movw	r30, r24
+ b86:	31 81       	ldd	r19, Z+1	; 0x01
+ b88:	20 e0       	ldi	r18, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_ADDR_OFF + 1] );
+ b8a:	62 81       	ldd	r22, Z+2	; 0x02
+ b8c:	70 e0       	ldi	r23, 0x00	; 0
+ b8e:	62 2b       	or	r22, r18
+ b90:	73 2b       	or	r23, r19
+        usRegAddress++;
+ b92:	6f 5f       	subi	r22, 0xFF	; 255
+ b94:	7f 4f       	sbci	r23, 0xFF	; 255
+
+        /* Make callback to update the value. */
+        eRegStatus = eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_WRITE_VALUE_OFF],
+ b96:	03 96       	adiw	r24, 0x03	; 3
+ b98:	41 e0       	ldi	r20, 0x01	; 1
+ b9a:	50 e0       	ldi	r21, 0x00	; 0
+ b9c:	21 e0       	ldi	r18, 0x01	; 1
+ b9e:	0e 94 64 01 	call	0x2c8	; 0x2c8 <eMBRegHoldingCB>
+                                      usRegAddress, 1, MB_REG_WRITE );
+
+        /* If an error occured convert it into a Modbus exception. */
+        if( eRegStatus != MB_ENOERR )
+ ba2:	88 23       	and	r24, r24
+ ba4:	29 f0       	breq	.+10     	; 0xbb0 <eMBFuncWriteHoldingRegister+0x38>
+        {
+            eStatus = prveMBError2Exception( eRegStatus );
+ ba6:	0e 94 42 07 	call	0xe84	; 0xe84 <prveMBError2Exception>
+ baa:	08 95       	ret
+        }
+    }
+    else
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+ bac:	83 e0       	ldi	r24, 0x03	; 3
+ bae:	08 95       	ret
+
+eMBException
+eMBFuncWriteHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+    USHORT          usRegAddress;
+    eMBException    eStatus = MB_EX_NONE;
+ bb0:	80 e0       	ldi	r24, 0x00	; 0
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+ bb2:	08 95       	ret
+
+00000bb4 <eMBFuncWriteMultipleHoldingRegister>:
+#endif
+
+#if MB_FUNC_WRITE_MULTIPLE_HOLDING_ENABLED > 0
+eMBException
+eMBFuncWriteMultipleHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+ bb4:	cf 93       	push	r28
+ bb6:	df 93       	push	r29
+ bb8:	fc 01       	movw	r30, r24
+ bba:	eb 01       	movw	r28, r22
+    UCHAR           ucRegByteCount;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_WRITE_MUL_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+ bbc:	88 81       	ld	r24, Y
+ bbe:	99 81       	ldd	r25, Y+1	; 0x01
+ bc0:	86 30       	cpi	r24, 0x06	; 6
+ bc2:	91 05       	cpc	r25, r1
+ bc4:	48 f1       	brcs	.+82     	; 0xc18 <eMBFuncWriteMultipleHoldingRegister+0x64>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF] << 8 );
+ bc6:	21 81       	ldd	r18, Z+1	; 0x01
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF + 1] );
+ bc8:	62 81       	ldd	r22, Z+2	; 0x02
+        usRegAddress++;
+
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF] << 8 );
+ bca:	93 81       	ldd	r25, Z+3	; 0x03
+ bcc:	80 e0       	ldi	r24, 0x00	; 0
+        usRegCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF + 1] );
+ bce:	44 81       	ldd	r20, Z+4	; 0x04
+ bd0:	50 e0       	ldi	r21, 0x00	; 0
+ bd2:	48 2b       	or	r20, r24
+ bd4:	59 2b       	or	r21, r25
+
+        ucRegByteCount = pucFrame[MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF];
+ bd6:	35 81       	ldd	r19, Z+5	; 0x05
+
+        if( ( usRegCount >= 1 ) &&
+ bd8:	ca 01       	movw	r24, r20
+ bda:	01 97       	sbiw	r24, 0x01	; 1
+ bdc:	88 37       	cpi	r24, 0x78	; 120
+ bde:	91 05       	cpc	r25, r1
+ be0:	d8 f4       	brcc	.+54     	; 0xc18 <eMBFuncWriteMultipleHoldingRegister+0x64>
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+            ( ucRegByteCount == ( UCHAR ) ( 2 * usRegCount ) ) )
+ be2:	84 2f       	mov	r24, r20
+ be4:	88 0f       	add	r24, r24
+        usRegCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF + 1] );
+
+        ucRegByteCount = pucFrame[MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF];
+
+        if( ( usRegCount >= 1 ) &&
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+ be6:	38 17       	cp	r19, r24
+ be8:	b9 f4       	brne	.+46     	; 0xc18 <eMBFuncWriteMultipleHoldingRegister+0x64>
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_WRITE_MUL_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF] << 8 );
+ bea:	92 2f       	mov	r25, r18
+ bec:	80 e0       	ldi	r24, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_WRITE_MUL_ADDR_OFF + 1] );
+ bee:	70 e0       	ldi	r23, 0x00	; 0
+ bf0:	68 2b       	or	r22, r24
+ bf2:	79 2b       	or	r23, r25
+        usRegAddress++;
+ bf4:	6f 5f       	subi	r22, 0xFF	; 255
+ bf6:	7f 4f       	sbci	r23, 0xFF	; 255
+        if( ( usRegCount >= 1 ) &&
+            ( usRegCount <= MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX ) &&
+            ( ucRegByteCount == ( UCHAR ) ( 2 * usRegCount ) ) )
+        {
+            /* Make callback to update the register values. */
+            eRegStatus =
+ bf8:	cf 01       	movw	r24, r30
+ bfa:	06 96       	adiw	r24, 0x06	; 6
+ bfc:	21 e0       	ldi	r18, 0x01	; 1
+ bfe:	0e 94 64 01 	call	0x2c8	; 0x2c8 <eMBRegHoldingCB>
+                eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_WRITE_MUL_VALUES_OFF],
+                                 usRegAddress, usRegCount, MB_REG_WRITE );
+
+            /* If an error occured convert it into a Modbus exception. */
+            if( eRegStatus != MB_ENOERR )
+ c02:	88 23       	and	r24, r24
+ c04:	19 f0       	breq	.+6      	; 0xc0c <eMBFuncWriteMultipleHoldingRegister+0x58>
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+ c06:	0e 94 42 07 	call	0xe84	; 0xe84 <prveMBError2Exception>
+ c0a:	07 c0       	rjmp	.+14     	; 0xc1a <eMBFuncWriteMultipleHoldingRegister+0x66>
+            {
+                /* The response contains the function code, the starting
+                 * address and the quantity of registers. We reuse the
+                 * old values in the buffer because they are still valid.
+                 */
+                *usLen = MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF;
+ c0c:	85 e0       	ldi	r24, 0x05	; 5
+ c0e:	90 e0       	ldi	r25, 0x00	; 0
+ c10:	99 83       	std	Y+1, r25	; 0x01
+ c12:	88 83       	st	Y, r24
+{
+    USHORT          usRegAddress;
+    USHORT          usRegCount;
+    UCHAR           ucRegByteCount;
+
+    eMBException    eStatus = MB_EX_NONE;
+ c14:	80 e0       	ldi	r24, 0x00	; 0
+ c16:	01 c0       	rjmp	.+2      	; 0xc1a <eMBFuncWriteMultipleHoldingRegister+0x66>
+                *usLen = MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF;
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+ c18:	83 e0       	ldi	r24, 0x03	; 3
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+ c1a:	df 91       	pop	r29
+ c1c:	cf 91       	pop	r28
+ c1e:	08 95       	ret
+
+00000c20 <eMBFuncReadHoldingRegister>:
+
+#if MB_FUNC_READ_HOLDING_ENABLED > 0
+
+eMBException
+eMBFuncReadHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+ c20:	0f 93       	push	r16
+ c22:	1f 93       	push	r17
+ c24:	cf 93       	push	r28
+ c26:	df 93       	push	r29
+ c28:	fc 01       	movw	r30, r24
+ c2a:	eb 01       	movw	r28, r22
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_READ_SIZE + MB_PDU_SIZE_MIN ) )
+ c2c:	88 81       	ld	r24, Y
+ c2e:	99 81       	ldd	r25, Y+1	; 0x01
+ c30:	85 30       	cpi	r24, 0x05	; 5
+ c32:	91 05       	cpc	r25, r1
+ c34:	c9 f5       	brne	.+114    	; 0xca8 <eMBFuncReadHoldingRegister+0x88>
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF] << 8 );
+ c36:	cf 01       	movw	r24, r30
+ c38:	01 96       	adiw	r24, 0x01	; 1
+ c3a:	51 81       	ldd	r21, Z+1	; 0x01
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF + 1] );
+ c3c:	62 81       	ldd	r22, Z+2	; 0x02
+        usRegAddress++;
+
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_REGCNT_OFF] << 8 );
+        usRegCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_REGCNT_OFF + 1] );
+ c3e:	44 81       	ldd	r20, Z+4	; 0x04
+ c40:	04 2f       	mov	r16, r20
+ c42:	10 e0       	ldi	r17, 0x00	; 0
+
+        /* Check if the number of registers to read is valid. If not
+         * return Modbus illegal data value exception. 
+         */
+        if( ( usRegCount >= 1 ) && ( usRegCount <= MB_PDU_FUNC_READ_REGCNT_MAX ) )
+ c44:	98 01       	movw	r18, r16
+ c46:	21 50       	subi	r18, 0x01	; 1
+ c48:	30 40       	sbci	r19, 0x00	; 0
+ c4a:	2d 37       	cpi	r18, 0x7D	; 125
+ c4c:	31 05       	cpc	r19, r1
+ c4e:	60 f5       	brcc	.+88     	; 0xca8 <eMBFuncReadHoldingRegister+0x88>
+        {
+            /* Set the current PDU data pointer to the beginning. */
+            pucFrameCur = &pucFrame[MB_PDU_FUNC_OFF];
+            *usLen = MB_PDU_FUNC_OFF;
+ c50:	19 82       	std	Y+1, r1	; 0x01
+ c52:	18 82       	st	Y, r1
+
+            /* First byte contains the function code. */
+            *pucFrameCur++ = MB_FUNC_READ_HOLDING_REGISTER;
+ c54:	23 e0       	ldi	r18, 0x03	; 3
+ c56:	20 83       	st	Z, r18
+            *usLen += 1;
+ c58:	28 81       	ld	r18, Y
+ c5a:	39 81       	ldd	r19, Y+1	; 0x01
+ c5c:	2f 5f       	subi	r18, 0xFF	; 255
+ c5e:	3f 4f       	sbci	r19, 0xFF	; 255
+ c60:	39 83       	std	Y+1, r19	; 0x01
+ c62:	28 83       	st	Y, r18
+
+            /* Second byte in the response contain the number of bytes. */
+            *pucFrameCur++ = ( UCHAR ) ( usRegCount * 2 );
+ c64:	44 0f       	add	r20, r20
+ c66:	41 83       	std	Z+1, r20	; 0x01
+            *usLen += 1;
+ c68:	28 81       	ld	r18, Y
+ c6a:	39 81       	ldd	r19, Y+1	; 0x01
+ c6c:	2f 5f       	subi	r18, 0xFF	; 255
+ c6e:	3f 4f       	sbci	r19, 0xFF	; 255
+ c70:	39 83       	std	Y+1, r19	; 0x01
+ c72:	28 83       	st	Y, r18
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen == ( MB_PDU_FUNC_READ_SIZE + MB_PDU_SIZE_MIN ) )
+    {
+        usRegAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF] << 8 );
+ c74:	35 2f       	mov	r19, r21
+ c76:	20 e0       	ldi	r18, 0x00	; 0
+        usRegAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READ_ADDR_OFF + 1] );
+ c78:	70 e0       	ldi	r23, 0x00	; 0
+ c7a:	62 2b       	or	r22, r18
+ c7c:	73 2b       	or	r23, r19
+        usRegAddress++;
+ c7e:	6f 5f       	subi	r22, 0xFF	; 255
+ c80:	7f 4f       	sbci	r23, 0xFF	; 255
+            /* Second byte in the response contain the number of bytes. */
+            *pucFrameCur++ = ( UCHAR ) ( usRegCount * 2 );
+            *usLen += 1;
+
+            /* Make callback to fill the buffer. */
+            eRegStatus = eMBRegHoldingCB( pucFrameCur, usRegAddress, usRegCount, MB_REG_READ );
+ c82:	01 96       	adiw	r24, 0x01	; 1
+ c84:	a8 01       	movw	r20, r16
+ c86:	0e 94 64 01 	call	0x2c8	; 0x2c8 <eMBRegHoldingCB>
+            /* If an error occured convert it into a Modbus exception. */
+            if( eRegStatus != MB_ENOERR )
+ c8a:	88 23       	and	r24, r24
+ c8c:	19 f0       	breq	.+6      	; 0xc94 <eMBFuncReadHoldingRegister+0x74>
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+ c8e:	0e 94 42 07 	call	0xe84	; 0xe84 <prveMBError2Exception>
+ c92:	0b c0       	rjmp	.+22     	; 0xcaa <eMBFuncReadHoldingRegister+0x8a>
+            }
+            else
+            {
+                *usLen += usRegCount * 2;
+ c94:	00 0f       	add	r16, r16
+ c96:	11 1f       	adc	r17, r17
+ c98:	88 81       	ld	r24, Y
+ c9a:	99 81       	ldd	r25, Y+1	; 0x01
+ c9c:	80 0f       	add	r24, r16
+ c9e:	91 1f       	adc	r25, r17
+ ca0:	99 83       	std	Y+1, r25	; 0x01
+ ca2:	88 83       	st	Y, r24
+{
+    USHORT          usRegAddress;
+    USHORT          usRegCount;
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+ ca4:	80 e0       	ldi	r24, 0x00	; 0
+ ca6:	01 c0       	rjmp	.+2      	; 0xcaa <eMBFuncReadHoldingRegister+0x8a>
+                *usLen += usRegCount * 2;
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+ ca8:	83 e0       	ldi	r24, 0x03	; 3
+    {
+        /* Can't be a valid request because the length is incorrect. */
+        eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+    }
+    return eStatus;
+}
+ caa:	df 91       	pop	r29
+ cac:	cf 91       	pop	r28
+ cae:	1f 91       	pop	r17
+ cb0:	0f 91       	pop	r16
+ cb2:	08 95       	ret
+
+00000cb4 <eMBFuncReadWriteMultipleHoldingRegister>:
+
+#if MB_FUNC_READWRITE_HOLDING_ENABLED > 0
+
+eMBException
+eMBFuncReadWriteMultipleHoldingRegister( UCHAR * pucFrame, USHORT * usLen )
+{
+ cb4:	af 92       	push	r10
+ cb6:	bf 92       	push	r11
+ cb8:	cf 92       	push	r12
+ cba:	df 92       	push	r13
+ cbc:	ef 92       	push	r14
+ cbe:	ff 92       	push	r15
+ cc0:	0f 93       	push	r16
+ cc2:	1f 93       	push	r17
+ cc4:	cf 93       	push	r28
+ cc6:	df 93       	push	r29
+ cc8:	ec 01       	movw	r28, r24
+ cca:	8b 01       	movw	r16, r22
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_READWRITE_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+ ccc:	fb 01       	movw	r30, r22
+ cce:	80 81       	ld	r24, Z
+ cd0:	91 81       	ldd	r25, Z+1	; 0x01
+ cd2:	8a 30       	cpi	r24, 0x0A	; 10
+ cd4:	91 05       	cpc	r25, r1
+ cd6:	08 f4       	brcc	.+2      	; 0xcda <eMBFuncReadWriteMultipleHoldingRegister+0x26>
+ cd8:	6a c0       	rjmp	.+212    	; 0xdae <eMBFuncReadWriteMultipleHoldingRegister+0xfa>
+    {
+        usRegReadAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF] << 8U );
+ cda:	6e 01       	movw	r12, r28
+ cdc:	08 94       	sec
+ cde:	c1 1c       	adc	r12, r1
+ ce0:	d1 1c       	adc	r13, r1
+ ce2:	b9 80       	ldd	r11, Y+1	; 0x01
+        usRegReadAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF + 1] );
+ ce4:	aa 80       	ldd	r10, Y+2	; 0x02
+        usRegReadAddress++;
+
+        usRegReadCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF] << 8U );
+ ce6:	9b 81       	ldd	r25, Y+3	; 0x03
+ ce8:	80 e0       	ldi	r24, 0x00	; 0
+        usRegReadCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF + 1] );
+ cea:	ec 80       	ldd	r14, Y+4	; 0x04
+ cec:	ff 24       	eor	r15, r15
+ cee:	e8 2a       	or	r14, r24
+ cf0:	f9 2a       	or	r15, r25
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+ cf2:	7d 81       	ldd	r23, Y+5	; 0x05
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+ cf4:	6e 81       	ldd	r22, Y+6	; 0x06
+        usRegWriteAddress++;
+
+        usRegWriteCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF] << 8U );
+ cf6:	9f 81       	ldd	r25, Y+7	; 0x07
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+ cf8:	48 85       	ldd	r20, Y+8	; 0x08
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+ cfa:	89 85       	ldd	r24, Y+9	; 0x09
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+ cfc:	97 01       	movw	r18, r14
+ cfe:	21 50       	subi	r18, 0x01	; 1
+ d00:	30 40       	sbci	r19, 0x00	; 0
+ d02:	2d 37       	cpi	r18, 0x7D	; 125
+ d04:	31 05       	cpc	r19, r1
+ d06:	08 f0       	brcs	.+2      	; 0xd0a <eMBFuncReadWriteMultipleHoldingRegister+0x56>
+ d08:	54 c0       	rjmp	.+168    	; 0xdb2 <eMBFuncReadWriteMultipleHoldingRegister+0xfe>
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+        usRegWriteAddress++;
+
+        usRegWriteCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF] << 8U );
+ d0a:	39 2f       	mov	r19, r25
+ d0c:	20 e0       	ldi	r18, 0x00	; 0
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+ d0e:	50 e0       	ldi	r21, 0x00	; 0
+ d10:	42 2b       	or	r20, r18
+ d12:	53 2b       	or	r21, r19
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+ d14:	41 15       	cp	r20, r1
+ d16:	51 05       	cpc	r21, r1
+ d18:	09 f4       	brne	.+2      	; 0xd1c <eMBFuncReadWriteMultipleHoldingRegister+0x68>
+ d1a:	4b c0       	rjmp	.+150    	; 0xdb2 <eMBFuncReadWriteMultipleHoldingRegister+0xfe>
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+ d1c:	4a 37       	cpi	r20, 0x7A	; 122
+ d1e:	51 05       	cpc	r21, r1
+ d20:	08 f0       	brcs	.+2      	; 0xd24 <eMBFuncReadWriteMultipleHoldingRegister+0x70>
+ d22:	47 c0       	rjmp	.+142    	; 0xdb2 <eMBFuncReadWriteMultipleHoldingRegister+0xfe>
+            ( ( 2 * usRegWriteCount ) == ucRegWriteByteCount ) )
+ d24:	9a 01       	movw	r18, r20
+ d26:	22 0f       	add	r18, r18
+ d28:	33 1f       	adc	r19, r19
+ d2a:	90 e0       	ldi	r25, 0x00	; 0
+        usRegWriteCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF + 1] );
+
+        ucRegWriteByteCount = pucFrame[MB_PDU_FUNC_READWRITE_BYTECNT_OFF];
+
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+ d2c:	28 17       	cp	r18, r24
+ d2e:	39 07       	cpc	r19, r25
+ d30:	09 f0       	breq	.+2      	; 0xd34 <eMBFuncReadWriteMultipleHoldingRegister+0x80>
+ d32:	3f c0       	rjmp	.+126    	; 0xdb2 <eMBFuncReadWriteMultipleHoldingRegister+0xfe>
+        usRegReadAddress++;
+
+        usRegReadCount = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF] << 8U );
+        usRegReadCount |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF + 1] );
+
+        usRegWriteAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF] << 8U );
+ d34:	97 2f       	mov	r25, r23
+ d36:	80 e0       	ldi	r24, 0x00	; 0
+        usRegWriteAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF + 1] );
+ d38:	70 e0       	ldi	r23, 0x00	; 0
+ d3a:	68 2b       	or	r22, r24
+ d3c:	79 2b       	or	r23, r25
+        usRegWriteAddress++;
+ d3e:	6f 5f       	subi	r22, 0xFF	; 255
+ d40:	7f 4f       	sbci	r23, 0xFF	; 255
+        if( ( usRegReadCount >= 1 ) && ( usRegReadCount <= 0x7D ) &&
+            ( usRegWriteCount >= 1 ) && ( usRegWriteCount <= 0x79 ) &&
+            ( ( 2 * usRegWriteCount ) == ucRegWriteByteCount ) )
+        {
+            /* Make callback to update the register values. */
+            eRegStatus = eMBRegHoldingCB( &pucFrame[MB_PDU_FUNC_READWRITE_WRITE_VALUES_OFF],
+ d42:	ce 01       	movw	r24, r28
+ d44:	0a 96       	adiw	r24, 0x0a	; 10
+ d46:	21 e0       	ldi	r18, 0x01	; 1
+ d48:	0e 94 64 01 	call	0x2c8	; 0x2c8 <eMBRegHoldingCB>
+                                          usRegWriteAddress, usRegWriteCount, MB_REG_WRITE );
+
+            if( eRegStatus == MB_ENOERR )
+ d4c:	88 23       	and	r24, r24
+ d4e:	61 f5       	brne	.+88     	; 0xda8 <eMBFuncReadWriteMultipleHoldingRegister+0xf4>
+            {
+                /* Set the current PDU data pointer to the beginning. */
+                pucFrameCur = &pucFrame[MB_PDU_FUNC_OFF];
+                *usLen = MB_PDU_FUNC_OFF;
+ d50:	f8 01       	movw	r30, r16
+ d52:	11 82       	std	Z+1, r1	; 0x01
+ d54:	10 82       	st	Z, r1
+
+                /* First byte contains the function code. */
+                *pucFrameCur++ = MB_FUNC_READWRITE_MULTIPLE_REGISTERS;
+ d56:	87 e1       	ldi	r24, 0x17	; 23
+ d58:	88 83       	st	Y, r24
+                *usLen += 1;
+ d5a:	80 81       	ld	r24, Z
+ d5c:	91 81       	ldd	r25, Z+1	; 0x01
+ d5e:	01 96       	adiw	r24, 0x01	; 1
+ d60:	91 83       	std	Z+1, r25	; 0x01
+ d62:	80 83       	st	Z, r24
+
+                /* Second byte in the response contain the number of bytes. */
+                *pucFrameCur++ = ( UCHAR ) ( usRegReadCount * 2 );
+ d64:	8e 2d       	mov	r24, r14
+ d66:	88 0f       	add	r24, r24
+ d68:	89 83       	std	Y+1, r24	; 0x01
+                *usLen += 1;
+ d6a:	80 81       	ld	r24, Z
+ d6c:	91 81       	ldd	r25, Z+1	; 0x01
+ d6e:	01 96       	adiw	r24, 0x01	; 1
+ d70:	91 83       	std	Z+1, r25	; 0x01
+ d72:	80 83       	st	Z, r24
+    eMBException    eStatus = MB_EX_NONE;
+    eMBErrorCode    eRegStatus;
+
+    if( *usLen >= ( MB_PDU_FUNC_READWRITE_SIZE_MIN + MB_PDU_SIZE_MIN ) )
+    {
+        usRegReadAddress = ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF] << 8U );
+ d74:	9b 2d       	mov	r25, r11
+ d76:	80 e0       	ldi	r24, 0x00	; 0
+        usRegReadAddress |= ( USHORT )( pucFrame[MB_PDU_FUNC_READWRITE_READ_ADDR_OFF + 1] );
+ d78:	6a 2d       	mov	r22, r10
+ d7a:	70 e0       	ldi	r23, 0x00	; 0
+ d7c:	68 2b       	or	r22, r24
+ d7e:	79 2b       	or	r23, r25
+        usRegReadAddress++;
+ d80:	6f 5f       	subi	r22, 0xFF	; 255
+ d82:	7f 4f       	sbci	r23, 0xFF	; 255
+                /* Second byte in the response contain the number of bytes. */
+                *pucFrameCur++ = ( UCHAR ) ( usRegReadCount * 2 );
+                *usLen += 1;
+
+                /* Make the read callback. */
+                eRegStatus =
+ d84:	c6 01       	movw	r24, r12
+ d86:	01 96       	adiw	r24, 0x01	; 1
+ d88:	a7 01       	movw	r20, r14
+ d8a:	20 e0       	ldi	r18, 0x00	; 0
+ d8c:	0e 94 64 01 	call	0x2c8	; 0x2c8 <eMBRegHoldingCB>
+                    eMBRegHoldingCB( pucFrameCur, usRegReadAddress, usRegReadCount, MB_REG_READ );
+                if( eRegStatus == MB_ENOERR )
+ d90:	88 23       	and	r24, r24
+ d92:	51 f4       	brne	.+20     	; 0xda8 <eMBFuncReadWriteMultipleHoldingRegister+0xf4>
+                {
+                    *usLen += 2 * usRegReadCount;
+ d94:	ee 0c       	add	r14, r14
+ d96:	ff 1c       	adc	r15, r15
+ d98:	f8 01       	movw	r30, r16
+ d9a:	80 81       	ld	r24, Z
+ d9c:	91 81       	ldd	r25, Z+1	; 0x01
+ d9e:	8e 0d       	add	r24, r14
+ da0:	9f 1d       	adc	r25, r15
+ da2:	91 83       	std	Z+1, r25	; 0x01
+ da4:	80 83       	st	Z, r24
+ da6:	03 c0       	rjmp	.+6      	; 0xdae <eMBFuncReadWriteMultipleHoldingRegister+0xfa>
+                }
+            }
+            if( eRegStatus != MB_ENOERR )
+            {
+                eStatus = prveMBError2Exception( eRegStatus );
+ da8:	0e 94 42 07 	call	0xe84	; 0xe84 <prveMBError2Exception>
+ dac:	03 c0       	rjmp	.+6      	; 0xdb4 <eMBFuncReadWriteMultipleHoldingRegister+0x100>
+    USHORT          usRegWriteAddress;
+    USHORT          usRegWriteCount;
+    UCHAR           ucRegWriteByteCount;
+    UCHAR          *pucFrameCur;
+
+    eMBException    eStatus = MB_EX_NONE;
+ dae:	80 e0       	ldi	r24, 0x00	; 0
+ db0:	01 c0       	rjmp	.+2      	; 0xdb4 <eMBFuncReadWriteMultipleHoldingRegister+0x100>
+                eStatus = prveMBError2Exception( eRegStatus );
+            }
+        }
+        else
+        {
+            eStatus = MB_EX_ILLEGAL_DATA_VALUE;
+ db2:	83 e0       	ldi	r24, 0x03	; 3
+        }
+    }
+    return eStatus;
+}
+ db4:	df 91       	pop	r29
+ db6:	cf 91       	pop	r28
+ db8:	1f 91       	pop	r17
+ dba:	0f 91       	pop	r16
+ dbc:	ff 90       	pop	r15
+ dbe:	ef 90       	pop	r14
+ dc0:	df 90       	pop	r13
+ dc2:	cf 90       	pop	r12
+ dc4:	bf 90       	pop	r11
+ dc6:	af 90       	pop	r10
+ dc8:	08 95       	ret
+
+00000dca <xMBUtilSetBits>:
+
+/* ----------------------- Start implementation -----------------------------*/
+void
+xMBUtilSetBits( UCHAR * ucByteBuf, USHORT usBitOffset, UCHAR ucNBits,
+                UCHAR ucValue )
+{
+ dca:	cf 93       	push	r28
+ dcc:	df 93       	push	r29
+    USHORT          usWordBuf;
+    USHORT          usMask;
+    USHORT          usByteOffset;
+    USHORT          usNPreBits;
+    USHORT          usValue = ucValue;
+ dce:	30 e0       	ldi	r19, 0x00	; 0
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+ dd0:	eb 01       	movw	r28, r22
+ dd2:	53 e0       	ldi	r21, 0x03	; 3
+ dd4:	d6 95       	lsr	r29
+ dd6:	c7 95       	ror	r28
+ dd8:	5a 95       	dec	r21
+ dda:	e1 f7       	brne	.-8      	; 0xdd4 <xMBUtilSetBits+0xa>
+ ddc:	67 70       	andi	r22, 0x07	; 7
+ dde:	70 70       	andi	r23, 0x00	; 0
+
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+ de0:	e1 e0       	ldi	r30, 0x01	; 1
+ de2:	f0 e0       	ldi	r31, 0x00	; 0
+ de4:	02 c0       	rjmp	.+4      	; 0xdea <xMBUtilSetBits+0x20>
+ de6:	ee 0f       	add	r30, r30
+ de8:	ff 1f       	adc	r31, r31
+ dea:	4a 95       	dec	r20
+ dec:	e2 f7       	brpl	.-8      	; 0xde6 <xMBUtilSetBits+0x1c>
+ dee:	31 97       	sbiw	r30, 0x01	; 1
+    usMask <<= usBitOffset - usByteOffset * BITS_UCHAR;
+
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+ df0:	dc 01       	movw	r26, r24
+ df2:	ac 0f       	add	r26, r28
+ df4:	bd 1f       	adc	r27, r29
+ df6:	4c 91       	ld	r20, X
+ df8:	50 e0       	ldi	r21, 0x00	; 0
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+ dfa:	21 96       	adiw	r28, 0x01	; 1
+ dfc:	c8 0f       	add	r28, r24
+ dfe:	d9 1f       	adc	r29, r25
+ e00:	98 81       	ld	r25, Y
+ e02:	80 e0       	ldi	r24, 0x00	; 0
+ e04:	48 2b       	or	r20, r24
+ e06:	59 2b       	or	r21, r25
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+    usMask <<= usBitOffset - usByteOffset * BITS_UCHAR;
+ e08:	06 2e       	mov	r0, r22
+ e0a:	02 c0       	rjmp	.+4      	; 0xe10 <xMBUtilSetBits+0x46>
+ e0c:	ee 0f       	add	r30, r30
+ e0e:	ff 1f       	adc	r31, r31
+ e10:	0a 94       	dec	r0
+ e12:	e2 f7       	brpl	.-8      	; 0xe0c <xMBUtilSetBits+0x42>
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* Zero out bit field bits and then or value bits into them. */
+    usWordBuf = ( USHORT )( ( usWordBuf & ( ~usMask ) ) | usValue );
+ e14:	e0 95       	com	r30
+ e16:	f0 95       	com	r31
+ e18:	4e 23       	and	r20, r30
+ e1a:	5f 23       	and	r21, r31
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+
+    /* Move bit field into position over bits to set */
+    usValue <<= usNPreBits;
+ e1c:	02 c0       	rjmp	.+4      	; 0xe22 <xMBUtilSetBits+0x58>
+ e1e:	22 0f       	add	r18, r18
+ e20:	33 1f       	adc	r19, r19
+ e22:	6a 95       	dec	r22
+ e24:	e2 f7       	brpl	.-8      	; 0xe1e <xMBUtilSetBits+0x54>
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* Zero out bit field bits and then or value bits into them. */
+    usWordBuf = ( USHORT )( ( usWordBuf & ( ~usMask ) ) | usValue );
+ e26:	42 2b       	or	r20, r18
+ e28:	53 2b       	or	r21, r19
+
+    /* move bits back into storage */
+    ucByteBuf[usByteOffset] = ( UCHAR )( usWordBuf & 0xFF );
+ e2a:	4c 93       	st	X, r20
+    ucByteBuf[usByteOffset + 1] = ( UCHAR )( usWordBuf >> BITS_UCHAR );
+ e2c:	58 83       	st	Y, r21
+}
+ e2e:	df 91       	pop	r29
+ e30:	cf 91       	pop	r28
+ e32:	08 95       	ret
+
+00000e34 <xMBUtilGetBits>:
+    USHORT          usByteOffset;
+    USHORT          usNPreBits;
+
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+ e34:	9b 01       	movw	r18, r22
+ e36:	f3 e0       	ldi	r31, 0x03	; 3
+ e38:	36 95       	lsr	r19
+ e3a:	27 95       	ror	r18
+ e3c:	fa 95       	dec	r31
+ e3e:	e1 f7       	brne	.-8      	; 0xe38 <xMBUtilGetBits+0x4>
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+ e40:	dc 01       	movw	r26, r24
+ e42:	a2 0f       	add	r26, r18
+ e44:	b3 1f       	adc	r27, r19
+ e46:	8c 91       	ld	r24, X
+ e48:	90 e0       	ldi	r25, 0x00	; 0
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+ e4a:	11 96       	adiw	r26, 0x01	; 1
+ e4c:	fc 91       	ld	r31, X
+ e4e:	11 97       	sbiw	r26, 0x01	; 1
+ e50:	e0 e0       	ldi	r30, 0x00	; 0
+ e52:	8e 2b       	or	r24, r30
+ e54:	9f 2b       	or	r25, r31
+    /* Calculate byte offset for first byte containing the bit values starting
+     * at usBitOffset. */
+    usByteOffset = ( USHORT )( ( usBitOffset ) / BITS_UCHAR );
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+ e56:	e3 e0       	ldi	r30, 0x03	; 3
+ e58:	22 0f       	add	r18, r18
+ e5a:	33 1f       	adc	r19, r19
+ e5c:	ea 95       	dec	r30
+ e5e:	e1 f7       	brne	.-8      	; 0xe58 <xMBUtilGetBits+0x24>
+ e60:	62 1b       	sub	r22, r18
+ e62:	73 0b       	sbc	r23, r19
+    /* copy bits into temporary storage. */
+    usWordBuf = ucByteBuf[usByteOffset];
+    usWordBuf |= ucByteBuf[usByteOffset + 1] << BITS_UCHAR;
+
+    /* throw away unneeded bits. */
+    usWordBuf >>= usNPreBits;
+ e64:	02 c0       	rjmp	.+4      	; 0xe6a <xMBUtilGetBits+0x36>
+ e66:	96 95       	lsr	r25
+ e68:	87 95       	ror	r24
+ e6a:	6a 95       	dec	r22
+ e6c:	e2 f7       	brpl	.-8      	; 0xe66 <xMBUtilGetBits+0x32>
+
+    /* How many bits precede our bits to set. */
+    usNPreBits = ( USHORT )( usBitOffset - usByteOffset * BITS_UCHAR );
+
+    /* Prepare a mask for setting the new bits. */
+    usMask = ( USHORT )( ( 1 << ( USHORT ) ucNBits ) - 1 );
+ e6e:	21 e0       	ldi	r18, 0x01	; 1
+ e70:	30 e0       	ldi	r19, 0x00	; 0
+ e72:	02 c0       	rjmp	.+4      	; 0xe78 <xMBUtilGetBits+0x44>
+ e74:	22 0f       	add	r18, r18
+ e76:	33 1f       	adc	r19, r19
+ e78:	4a 95       	dec	r20
+ e7a:	e2 f7       	brpl	.-8      	; 0xe74 <xMBUtilGetBits+0x40>
+ e7c:	21 50       	subi	r18, 0x01	; 1
+ e7e:	30 40       	sbci	r19, 0x00	; 0
+
+    /* mask away bits above the requested bitfield. */
+    usWordBuf &= usMask;
+
+    return ( UCHAR ) usWordBuf;
+}
+ e80:	82 23       	and	r24, r18
+ e82:	08 95       	ret
+
+00000e84 <prveMBError2Exception>:
+
+eMBException
+prveMBError2Exception( eMBErrorCode eErrorCode )
+{
+ e84:	88 30       	cpi	r24, 0x08	; 8
+ e86:	30 f4       	brcc	.+12     	; 0xe94 <prveMBError2Exception+0x10>
+ e88:	e8 2f       	mov	r30, r24
+ e8a:	f0 e0       	ldi	r31, 0x00	; 0
+ e8c:	ec 56       	subi	r30, 0x6C	; 108
+ e8e:	ff 4f       	sbci	r31, 0xFF	; 255
+ e90:	80 81       	ld	r24, Z
+ e92:	08 95       	ret
+ e94:	84 e0       	ldi	r24, 0x04	; 4
+            eStatus = MB_EX_SLAVE_DEVICE_FAILURE;
+            break;
+    }
+
+    return eStatus;
+}
+ e96:	08 95       	ret
+
+00000e98 <__mulsi3>:
+ e98:	62 9f       	mul	r22, r18
+ e9a:	d0 01       	movw	r26, r0
+ e9c:	73 9f       	mul	r23, r19
+ e9e:	f0 01       	movw	r30, r0
+ ea0:	82 9f       	mul	r24, r18
+ ea2:	e0 0d       	add	r30, r0
+ ea4:	f1 1d       	adc	r31, r1
+ ea6:	64 9f       	mul	r22, r20
+ ea8:	e0 0d       	add	r30, r0
+ eaa:	f1 1d       	adc	r31, r1
+ eac:	92 9f       	mul	r25, r18
+ eae:	f0 0d       	add	r31, r0
+ eb0:	83 9f       	mul	r24, r19
+ eb2:	f0 0d       	add	r31, r0
+ eb4:	74 9f       	mul	r23, r20
+ eb6:	f0 0d       	add	r31, r0
+ eb8:	65 9f       	mul	r22, r21
+ eba:	f0 0d       	add	r31, r0
+ ebc:	99 27       	eor	r25, r25
+ ebe:	72 9f       	mul	r23, r18
+ ec0:	b0 0d       	add	r27, r0
+ ec2:	e1 1d       	adc	r30, r1
+ ec4:	f9 1f       	adc	r31, r25
+ ec6:	63 9f       	mul	r22, r19
+ ec8:	b0 0d       	add	r27, r0
+ eca:	e1 1d       	adc	r30, r1
+ ecc:	f9 1f       	adc	r31, r25
+ ece:	bd 01       	movw	r22, r26
+ ed0:	cf 01       	movw	r24, r30
+ ed2:	11 24       	eor	r1, r1
+ ed4:	08 95       	ret
+
+00000ed6 <__udivmodsi4>:
+ ed6:	a1 e2       	ldi	r26, 0x21	; 33
+ ed8:	1a 2e       	mov	r1, r26
+ eda:	aa 1b       	sub	r26, r26
+ edc:	bb 1b       	sub	r27, r27
+ ede:	fd 01       	movw	r30, r26
+ ee0:	0d c0       	rjmp	.+26     	; 0xefc <__udivmodsi4_ep>
+
+00000ee2 <__udivmodsi4_loop>:
+ ee2:	aa 1f       	adc	r26, r26
+ ee4:	bb 1f       	adc	r27, r27
+ ee6:	ee 1f       	adc	r30, r30
+ ee8:	ff 1f       	adc	r31, r31
+ eea:	a2 17       	cp	r26, r18
+ eec:	b3 07       	cpc	r27, r19
+ eee:	e4 07       	cpc	r30, r20
+ ef0:	f5 07       	cpc	r31, r21
+ ef2:	20 f0       	brcs	.+8      	; 0xefc <__udivmodsi4_ep>
+ ef4:	a2 1b       	sub	r26, r18
+ ef6:	b3 0b       	sbc	r27, r19
+ ef8:	e4 0b       	sbc	r30, r20
+ efa:	f5 0b       	sbc	r31, r21
+
+00000efc <__udivmodsi4_ep>:
+ efc:	66 1f       	adc	r22, r22
+ efe:	77 1f       	adc	r23, r23
+ f00:	88 1f       	adc	r24, r24
+ f02:	99 1f       	adc	r25, r25
+ f04:	1a 94       	dec	r1
+ f06:	69 f7       	brne	.-38     	; 0xee2 <__udivmodsi4_loop>
+ f08:	60 95       	com	r22
+ f0a:	70 95       	com	r23
+ f0c:	80 95       	com	r24
+ f0e:	90 95       	com	r25
+ f10:	9b 01       	movw	r18, r22
+ f12:	ac 01       	movw	r20, r24
+ f14:	bd 01       	movw	r22, r26
+ f16:	cf 01       	movw	r24, r30
+ f18:	08 95       	ret
+
+00000f1a <_exit>:
+ f1a:	f8 94       	cli
+
+00000f1c <__stop_program>:
+ f1c:	ff cf       	rjmp	.-2      	; 0xf1c <__stop_program>
