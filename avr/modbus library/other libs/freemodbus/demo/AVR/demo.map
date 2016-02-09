@@ -1,0 +1,603 @@
+Archive member included because of file (symbol)
+
+C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_mulsi3.o)
+                              port/porttimer.o (__mulsi3)
+C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_udivmodsi4.o)
+                              port/portserial.o (__udivmodsi4)
+C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_clear_bss.o)
+                              demo.o (__do_clear_bss)
+C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                              ../../modbus/functions/mbfuncother.o (memcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+pxMBFrameCBTransmitterEmpty
+                    0x2               ../../modbus/mb.o
+pxMBPortCBTimerExpired
+                    0x2               ../../modbus/mb.o
+ucRTUBuf            0x100             ../../modbus/rtu/mbrtu.o
+pxMBFrameCBByteReceived
+                    0x2               ../../modbus/mb.o
+pxMBFrameCBTransmitFSMCur
+                    0x2               ../../modbus/mb.o
+pxMBFrameCBReceiveFSMCur
+                    0x2               ../../modbus/mb.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+LOAD demo.o
+LOAD port/portserial.o
+LOAD port/portevent.o
+LOAD port/porttimer.o
+LOAD port/mbcrc.o
+LOAD ../../modbus/mb.o
+LOAD ../../modbus/rtu/mbrtu.o
+LOAD ../../modbus/ascii/mbascii.o
+LOAD ../../modbus/functions/mbfunccoils.o
+LOAD ../../modbus/functions/mbfuncdiag.o
+LOAD ../../modbus/functions/mbfuncholding.o
+LOAD ../../modbus/functions/mbfuncinput.o
+LOAD ../../modbus/functions/mbfuncother.o
+LOAD ../../modbus/functions/mbfuncdisc.o
+LOAD ../../modbus/functions/mbutils.o
+LOAD C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a
+LOAD C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5\libc.a
+LOAD C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1636
+ *(.vectors)
+ .vectors       0x00000000       0x8c C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+                0x0000008c                __ctors_start = .
+ *(.ctors)
+                0x0000008c                __ctors_end = .
+                0x0000008c                __dtors_start = .
+ *(.dtors)
+                0x0000008c                __dtors_end = .
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000008c      0x200 port/mbcrc.o
+                0x0000028c                . = ALIGN (0x2)
+ *(.init0)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000028c        0xc C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+ *(.init3)
+ *(.init4)
+ .init4         0x00000298       0x1a C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+                0x00000298                __do_copy_data
+ .init4         0x000002b2       0x10 C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_clear_bss.o)
+                0x000002b2                __do_clear_bss
+ *(.init5)
+ *(.init6)
+ *(.init7)
+ *(.init8)
+ *(.init9)
+ .init9         0x000002c2        0x4 C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+ *(.text)
+ .text          0x000002c6        0x4 C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+                0x000002c6                __vector_22
+                0x000002c6                __vector_28
+                0x000002c6                __vector_1
+                0x000002c6                __vector_32
+                0x000002c6                __vector_34
+                0x000002c6                __vector_24
+                0x000002c6                __bad_interrupt
+                0x000002c6                __vector_6
+                0x000002c6                __vector_31
+                0x000002c6                __vector_3
+                0x000002c6                __vector_23
+                0x000002c6                __vector_30
+                0x000002c6                __vector_25
+                0x000002c6                __vector_11
+                0x000002c6                __vector_13
+                0x000002c6                __vector_17
+                0x000002c6                __vector_7
+                0x000002c6                __vector_27
+                0x000002c6                __vector_5
+                0x000002c6                __vector_33
+                0x000002c6                __vector_4
+                0x000002c6                __vector_9
+                0x000002c6                __vector_2
+                0x000002c6                __vector_21
+                0x000002c6                __vector_15
+                0x000002c6                __vector_29
+                0x000002c6                __vector_8
+                0x000002c6                __vector_26
+                0x000002c6                __vector_14
+                0x000002c6                __vector_10
+                0x000002c6                __vector_16
+                0x000002c6                __vector_20
+ .text          0x000002ca      0x494 demo.o
+                0x0000053a                eMBRegDiscreteCB
+                0x000002ca                main
+                0x0000052e                eMBRegInputCB
+                0x00000534                eMBRegHoldingCB
+                0x00000480                eMBRegCoilsCB
+ .text          0x0000075e      0x160 port/portserial.o
+                0x0000075e                vMBPortSerialEnable
+                0x00000816                xMBPortSerialGetByte
+                0x00000780                xMBPortSerialInit
+                0x00000822                __vector_19
+                0x0000080e                xMBPortSerialPutByte
+                0x00000870                __vector_18
+ .text          0x000008be       0x46 port/portevent.o
+                0x000008be                xMBPortEventInit
+                0x000008dc                xMBPortEventGet
+                0x000008c8                xMBPortEventPost
+ .text          0x00000904       0xd6 port/porttimer.o
+                0x0000098c                __vector_12
+                0x00000918                xMBPortTimersInit
+                0x00000904                vMBPortTimersDisable
+                0x00000968                vMBPortTimersEnable
+ .text          0x000009da       0x4a port/mbcrc.o
+                0x000009da                usMBCRC16
+ .text          0x00000a24      0x32a ../../modbus/mb.o
+                0x00000bca                eMBDisable
+                0x00000b66                eMBClose
+                0x00000c08                eMBPoll
+                0x00000b96                eMBEnable
+                0x00000af0                eMBRegisterCB
+                0x00000a24                eMBInit
+ .text          0x00000d4e      0x370 ../../modbus/rtu/mbrtu.o
+                0x00000dd2                eMBRTUStart
+                0x00000d4e                eMBRTUInit
+                0x00000fec                xMBRTUTransmitFSM
+                0x00000f32                xMBRTUReceiveFSM
+                0x00000e78                eMBRTUSend
+                0x0000107a                xMBRTUTimerT35Expired
+                0x00000dfe                eMBRTUReceive
+                0x00000dec                eMBRTUStop
+ .text          0x000010be      0x1ec ../../modbus/functions/mbfunccoils.o
+                0x0000117c                eMBFuncWriteCoil
+                0x000010be                eMBFuncReadCoils
+                0x00001210                eMBFuncWriteMultipleCoils
+ .text          0x000012aa       0xac ../../modbus/functions/mbfuncinput.o
+                0x000012aa                eMBFuncReadInputRegister
+ .text          0x00001356       0xaa ../../modbus/functions/mbfuncother.o
+                0x00001356                eMBSetSlaveID
+                0x000013cc                eMBFuncReportSlaveID
+ .text          0x00001400       0xba ../../modbus/functions/mbfuncdisc.o
+                0x00001400                eMBFuncReadDiscreteInputs
+ .text          0x000014ba       0xe0 ../../modbus/functions/mbutils.o
+                0x00001524                xMBUtilGetBits
+                0x000014ba                xMBUtilSetBits
+                0x00001570                prveMBError2Exception
+ .text          0x0000159a       0x1a C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x0000159a                memcpy
+                0x000015b4                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000015b4       0x3e C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_mulsi3.o)
+                0x000015b4                __mulsi3
+ .text.libgcc   0x000015f2       0x44 C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_udivmodsi4.o)
+                0x000015f2                __udivmodsi4
+                0x00001636                . = ALIGN (0x2)
+ *(.fini9)
+ *(.fini8)
+ *(.fini7)
+ *(.fini6)
+ *(.fini5)
+ *(.fini4)
+ *(.fini3)
+ *(.fini2)
+ *(.fini1)
+ *(.fini0)
+                0x00001636                _etext = .
+
+.data           0x00800100       0x32 load address 0x00001636
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100       0x32 ../../modbus/mb.o
+ *(.gnu.linkonce.d*)
+                0x00800132                . = ALIGN (0x2)
+                0x00800132                _edata = .
+                0x00800132                PROVIDE (__data_end, .)
+
+.bss            0x00800132      0x156
+                0x00800132                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800132        0x4 demo.o
+ .bss           0x00800136        0x3 port/portevent.o
+ .bss           0x00800139        0x4 port/porttimer.o
+ .bss           0x0080013d       0x15 ../../modbus/mb.o
+ .bss           0x00800152        0xa ../../modbus/rtu/mbrtu.o
+ .bss           0x0080015c       0x22 ../../modbus/functions/mbfuncother.o
+ *(COMMON)
+ COMMON         0x0080017e        0xa ../../modbus/mb.o
+                0x0080017e                pxMBFrameCBTransmitterEmpty
+                0x00800180                pxMBPortCBTimerExpired
+                0x00800182                pxMBFrameCBByteReceived
+                0x00800184                pxMBFrameCBTransmitFSMCur
+                0x00800186                pxMBFrameCBReceiveFSMCur
+ COMMON         0x00800188      0x100 ../../modbus/rtu/mbrtu.o
+                0x00800188                ucRTUBuf
+                0x00800288                PROVIDE (__bss_end, .)
+                0x00001636                __data_load_start = LOADADDR (.data)
+                0x00001668                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800288        0x0
+                0x00800288                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800288                PROVIDE (__noinit_end, .)
+                0x00800288                _end = .
+                0x00800288                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.stab           0x00000000     0x44a0
+ *(.stab)
+ .stab          0x00000000      0x408 C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+ .stab          0x00000408      0xc3c demo.o
+                                0xc48 (size before relaxing)
+ .stab          0x00001044      0x3d8 port/portserial.o
+                                0x6a8 (size before relaxing)
+ .stab          0x0000141c      0x2a0 port/portevent.o
+                                0x570 (size before relaxing)
+ .stab          0x000016bc      0x2d0 port/porttimer.o
+                                0x5a0 (size before relaxing)
+ .stab          0x0000198c      0x30c port/mbcrc.o
+                                0x4f8 (size before relaxing)
+ .stab          0x00001c98      0x8b8 ../../modbus/mb.o
+                                0xb88 (size before relaxing)
+ .stab          0x00002550      0x7d4 ../../modbus/rtu/mbrtu.o
+                                0xb40 (size before relaxing)
+ .stab          0x00002d24      0x1a4 ../../modbus/ascii/mbascii.o
+                                0x510 (size before relaxing)
+ .stab          0x00002ec8      0x5c4 ../../modbus/functions/mbfunccoils.o
+                                0x930 (size before relaxing)
+ .stab          0x0000348c      0x120 ../../modbus/functions/mbfuncdiag.o
+                                0x12c (size before relaxing)
+ .stab          0x000035ac      0x1a4 ../../modbus/functions/mbfuncholding.o
+                                0x510 (size before relaxing)
+ .stab          0x00003750      0x30c ../../modbus/functions/mbfuncinput.o
+                                0x678 (size before relaxing)
+ .stab          0x00003a5c      0x2e8 ../../modbus/functions/mbfuncother.o
+                                0x654 (size before relaxing)
+ .stab          0x00003d44      0x33c ../../modbus/functions/mbfuncdisc.o
+                                0x6a8 (size before relaxing)
+ .stab          0x00004080      0x420 ../../modbus/functions/mbutils.o
+                                0x744 (size before relaxing)
+
+.stabstr        0x00000000     0x1f05
+ *(.stabstr)
+ .stabstr       0x00000000     0x1f05 C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(demo.elf elf32-avr)
+
+Cross Reference Table
+
+Symbol                                            File
+__bad_interrupt                                   C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__bss_end                                         C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__data_load_start                                 C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__data_start                                      C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__do_clear_bss                                    C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_clear_bss.o)
+                                                  ../../modbus/functions/mbutils.o
+                                                  ../../modbus/functions/mbfuncdisc.o
+                                                  ../../modbus/functions/mbfuncother.o
+                                                  ../../modbus/functions/mbfuncinput.o
+                                                  ../../modbus/functions/mbfuncholding.o
+                                                  ../../modbus/functions/mbfuncdiag.o
+                                                  ../../modbus/functions/mbfunccoils.o
+                                                  ../../modbus/ascii/mbascii.o
+                                                  ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+                                                  port/mbcrc.o
+                                                  port/porttimer.o
+                                                  port/portevent.o
+                                                  port/portserial.o
+                                                  demo.o
+__do_copy_data                                    C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+                                                  ../../modbus/functions/mbutils.o
+                                                  ../../modbus/functions/mbfuncdisc.o
+                                                  ../../modbus/functions/mbfuncother.o
+                                                  ../../modbus/functions/mbfuncinput.o
+                                                  ../../modbus/functions/mbfuncholding.o
+                                                  ../../modbus/functions/mbfuncdiag.o
+                                                  ../../modbus/functions/mbfunccoils.o
+                                                  ../../modbus/ascii/mbascii.o
+                                                  ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+                                                  port/mbcrc.o
+                                                  port/porttimer.o
+                                                  port/portevent.o
+                                                  port/portserial.o
+                                                  demo.o
+__heap_end                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__init                                            C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__mulsi3                                          C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_mulsi3.o)
+                                                  port/porttimer.o
+__stack                                           C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+                                                  demo.o
+__udivmodsi4                                      C:/WinAVR-2006/lib/gcc/avr/3.4.5/avr5\libgcc.a(_udivmodsi4.o)
+                                                  ../../modbus/rtu/mbrtu.o
+                                                  port/porttimer.o
+                                                  port/portserial.o
+__vector_1                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_10                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_11                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_12                                       port/porttimer.o
+                                                  C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_13                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_14                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_15                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_16                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_17                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_18                                       port/portserial.o
+                                                  C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_19                                       port/portserial.o
+                                                  C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_2                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_20                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_21                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_22                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_23                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_24                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_25                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_26                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_27                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_28                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_29                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_3                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_30                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_31                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_32                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_33                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_34                                       C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_4                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_5                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_6                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_7                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_8                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_9                                        C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vector_default                                  C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+__vectors                                         C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+eMBClose                                          ../../modbus/mb.o
+eMBDisable                                        ../../modbus/mb.o
+eMBEnable                                         ../../modbus/mb.o
+                                                  demo.o
+eMBFuncReadCoils                                  ../../modbus/functions/mbfunccoils.o
+                                                  ../../modbus/mb.o
+eMBFuncReadDiscreteInputs                         ../../modbus/functions/mbfuncdisc.o
+                                                  ../../modbus/mb.o
+eMBFuncReadInputRegister                          ../../modbus/functions/mbfuncinput.o
+                                                  ../../modbus/mb.o
+eMBFuncReportSlaveID                              ../../modbus/functions/mbfuncother.o
+                                                  ../../modbus/mb.o
+eMBFuncWriteCoil                                  ../../modbus/functions/mbfunccoils.o
+                                                  ../../modbus/mb.o
+eMBFuncWriteMultipleCoils                         ../../modbus/functions/mbfunccoils.o
+                                                  ../../modbus/mb.o
+eMBInit                                           ../../modbus/mb.o
+                                                  demo.o
+eMBPoll                                           ../../modbus/mb.o
+                                                  demo.o
+eMBRTUInit                                        ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+eMBRTUReceive                                     ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+eMBRTUSend                                        ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+eMBRTUStart                                       ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+eMBRTUStop                                        ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+eMBRegCoilsCB                                     demo.o
+                                                  ../../modbus/functions/mbfunccoils.o
+eMBRegDiscreteCB                                  demo.o
+                                                  ../../modbus/functions/mbfuncdisc.o
+eMBRegHoldingCB                                   demo.o
+eMBRegInputCB                                     demo.o
+                                                  ../../modbus/functions/mbfuncinput.o
+eMBRegisterCB                                     ../../modbus/mb.o
+eMBSetSlaveID                                     ../../modbus/functions/mbfuncother.o
+main                                              demo.o
+                                                  C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5/crtm128.o
+memcpy                                            C:/WinAVR-2006/bin/../lib/gcc/avr/3.4.5/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                                                  ../../modbus/functions/mbfuncother.o
+prveMBError2Exception                             ../../modbus/functions/mbutils.o
+                                                  ../../modbus/functions/mbfuncdisc.o
+                                                  ../../modbus/functions/mbfuncinput.o
+                                                  ../../modbus/functions/mbfunccoils.o
+pxMBFrameCBByteReceived                           ../../modbus/mb.o
+                                                  port/portserial.o
+pxMBFrameCBReceiveFSMCur                          ../../modbus/mb.o
+pxMBFrameCBTransmitFSMCur                         ../../modbus/mb.o
+pxMBFrameCBTransmitterEmpty                       ../../modbus/mb.o
+                                                  port/portserial.o
+pxMBPortCBTimerExpired                            ../../modbus/mb.o
+                                                  port/porttimer.o
+ucRTUBuf                                          ../../modbus/rtu/mbrtu.o
+usMBCRC16                                         port/mbcrc.o
+                                                  ../../modbus/rtu/mbrtu.o
+vMBPortSerialEnable                               port/portserial.o
+                                                  ../../modbus/rtu/mbrtu.o
+vMBPortTimersDisable                              port/porttimer.o
+                                                  ../../modbus/rtu/mbrtu.o
+vMBPortTimersEnable                               port/porttimer.o
+                                                  ../../modbus/rtu/mbrtu.o
+xMBPortEventGet                                   port/portevent.o
+                                                  ../../modbus/mb.o
+xMBPortEventInit                                  port/portevent.o
+                                                  ../../modbus/mb.o
+xMBPortEventPost                                  port/portevent.o
+                                                  ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+xMBPortSerialGetByte                              port/portserial.o
+                                                  ../../modbus/rtu/mbrtu.o
+xMBPortSerialInit                                 port/portserial.o
+                                                  ../../modbus/rtu/mbrtu.o
+xMBPortSerialPutByte                              port/portserial.o
+                                                  ../../modbus/rtu/mbrtu.o
+xMBPortTimersInit                                 port/porttimer.o
+                                                  ../../modbus/rtu/mbrtu.o
+xMBRTUReceiveFSM                                  ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+xMBRTUTimerT35Expired                             ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+xMBRTUTransmitFSM                                 ../../modbus/rtu/mbrtu.o
+                                                  ../../modbus/mb.o
+xMBUtilGetBits                                    ../../modbus/functions/mbutils.o
+                                                  demo.o
+xMBUtilSetBits                                    ../../modbus/functions/mbutils.o
+                                                  demo.o

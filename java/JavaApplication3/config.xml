@@ -1,0 +1,18 @@
+<config>
+	<comport 	
+				name="COM4" 
+				speed="115200" 
+	/>
+	
+	<modbus 	
+				client_start_id="1" 
+				client_max_count="10" 
+				data_start_address="20" 
+	/>
+	
+	<exchange 	
+				file="map.xml"
+				check_period="2000"
+	/>
+	
+</config>

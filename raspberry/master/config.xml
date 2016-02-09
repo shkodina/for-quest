@@ -1,0 +1,20 @@
+<config>
+	<comport 	
+				name="/dev/ttyAMA0" 
+				speed="38400" 
+	/>
+	
+	<modbus 	
+				client_start_id="1" 
+				client_max_count="10" 
+				data_start_address="20"
+				client_data_address="10"
+	/>
+	
+	<exchange 	
+				map_file="map.xml"
+				time_file="time_map.xml"
+				check_period="2000"
+	/>
+	
+</config>

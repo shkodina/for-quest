@@ -1,0 +1,23 @@
+дать малинке доступ в интернет и выполнить команду
+
+sudo apt-get install librxtx-java
+
+положить в папку 
+
+/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/lib/ext
+
+
+
+следующие джар архивы
+
+dom4j-1.6.1
+modbus4J
+RXTXcomm
+seroUtils
+
+запускать мастера скриптом. для этого в консоли перейти в папку с этими файлами и выполнить
+
+./my_start
+
+
+
