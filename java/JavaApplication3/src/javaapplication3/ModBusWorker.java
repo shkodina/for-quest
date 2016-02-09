@@ -76,6 +76,7 @@ public class ModBusWorker {
         //System.out.println("Gathering data from slaves");
 
         for (int i = client_start_id_; i <= client_max_count_; i++){
+            // TODO FOR DEBUG
             int addr = 1;
             try{
                 ReadHoldingRegistersResponse res = (ReadHoldingRegistersResponse)master_.send(new ReadHoldingRegistersRequest(
@@ -98,12 +99,14 @@ public class ModBusWorker {
         
         //data_xml_worker_.test();
         
+        map_ = time_data_xml_worker_.upDateData(map_);
         map_ = data_xml_worker_.upDateData(map_);
         
         //System.out.println("Update xml finished");
         
         //System.out.println("Send Braodcast data");
         
+        // TODO need set broadcast address
         try {
             master_.send(new WriteRegistersRequest(1, data_start_address_ - 1, map_.array()));            
         } catch (ModbusTransportException ex) {
@@ -139,6 +142,10 @@ public class ModBusWorker {
     public void setDataXmlWorker(DataXmlWorker data_xml_worker){
         data_xml_worker_ = data_xml_worker;
     }
+
+    public void setTimeDataXmlWorker(TimeDataXmlWorker time_data_xml_worker){
+        time_data_xml_worker_ = time_data_xml_worker;
+    }
     
     public void destroy(){
         master_.destroy();
@@ -159,6 +166,7 @@ public class ModBusWorker {
     private ShortBuffer map_;
     
     private DataXmlWorker data_xml_worker_;
+    private TimeDataXmlWorker time_data_xml_worker_;
     
     
 }

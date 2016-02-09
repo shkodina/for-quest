@@ -1,6 +1,6 @@
 <config>
 	<comport 	
-				name="COM4" 
+				name="COM9" 
 				speed="115200" 
 	/>
 	
@@ -12,7 +12,8 @@
 	/>
 	
 	<exchange 	
-				file="map.xml"
+				map_file="map.xml"
+				time_file="time_map.xml"
 				check_period="2000"
 	/>
 	

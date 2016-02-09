@@ -26,8 +26,13 @@ public class JavaApplication3 {
 
         //----------------------------------------------------------------------
         DataXmlWorker dataxmlworker = new DataXmlWorker();
-        dataxmlworker.setFileParams(cnf_reader.getCnfParam("exchange", "file"), 
-                                    Integer.parseInt(cnf_reader.getCnfParam("exchange", "check_period")));       
+        dataxmlworker.setFileParams(cnf_reader.getCnfParam("exchange", "map_file"), 
+                                    Integer.parseInt(cnf_reader.getCnfParam("exchange", "check_period")),
+                                    Integer.parseInt(cnf_reader.getCnfParam("modbus", "data_start_address")));       
+        //----------------------------------------------------------------------
+        TimeDataXmlWorker timedataxmlworker = new TimeDataXmlWorker();
+        timedataxmlworker.setFileParams(cnf_reader.getCnfParam("exchange", "time_file"), 
+                                    Integer.parseInt(cnf_reader.getCnfParam("modbus", "data_start_address")));       
         //----------------------------------------------------------------------
         ModBusWorker modbus_worker = new ModBusWorker();
         modbus_worker.setComPortParams(cnf_reader.getCnfParam("comport", "name"), 
@@ -38,6 +43,7 @@ public class JavaApplication3 {
                             Integer.parseInt(cnf_reader.getCnfParam("modbus", "client_data_address")));
         
         modbus_worker.setDataXmlWorker(dataxmlworker);
+        modbus_worker.setTimeDataXmlWorker(timedataxmlworker);
         
         //dataxmlworker.test();
         

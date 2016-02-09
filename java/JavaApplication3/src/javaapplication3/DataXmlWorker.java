@@ -25,10 +25,10 @@ public class DataXmlWorker {
     
     // FUNCTIONS
     
-    public void setFileParams(String file_name, int check_period){
+    public void setFileParams(String file_name, int check_period, int mem_shift){
         file_name_ = file_name;
         check_period_ = check_period;
-        mem_shift_ = 20;
+        mem_shift_ = mem_shift;
         last_change_timestamp_ = getChangeTimeStamp();
         
         //System.out.println("getChangeTimeStamp() = " + last_change_timestamp_);
@@ -54,19 +54,6 @@ public class DataXmlWorker {
         setXmlData(mem_data);
         last_change_timestamp_ = getChangeTimeStamp();
         return mem_data;
-    }
-    
-    public void test(){
-        ShortBuffer al = ShortBuffer.allocate(10);
-        
-        ShortBuffer all = 
-        getXmlData(al);
-        
-        for (int i = 0; i < all.limit(); i++){
-            all.put(i, (short)(all.get(i) + 1));
-        }
-        
-        setXmlData(all);
     }
     
     private ShortBuffer getXmlData(ShortBuffer mem_data){
