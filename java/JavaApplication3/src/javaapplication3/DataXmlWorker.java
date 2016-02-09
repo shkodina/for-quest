@@ -25,8 +25,9 @@ public class DataXmlWorker {
     
     // FUNCTIONS
     
-    public void setFileParams(String file_name, int check_period, int mem_shift){
-        file_name_ = file_name;
+    public void setFileParams(String file_name_from_unit, String file_name_to_unit, int check_period, int mem_shift){
+        file_name_from_unit_ = file_name_from_unit;
+        file_name_to_unit_ = file_name_to_unit;
         check_period_ = check_period;
         mem_shift_ = mem_shift;
         last_change_timestamp_ = getChangeTimeStamp();
@@ -63,10 +64,10 @@ public class DataXmlWorker {
         
         SAXReader reader = new SAXReader();
 
-        File f = new File(file_name_);
+        File f = new File(file_name_to_unit_);
 
         if (!f.exists()){
-            System.out.println("no data file " + file_name_);
+            System.out.println("no data file " + file_name_to_unit_);
         }
         
         try {
@@ -97,10 +98,10 @@ public class DataXmlWorker {
     private void setXmlData(ShortBuffer mem_data){
         SAXReader reader = new SAXReader();
 
-        File f = new File(file_name_);
+        File f = new File(file_name_from_unit_);
 
         if (!f.exists()){
-            System.out.println("no data file " + file_name_);
+            System.out.println("no data file " + file_name_from_unit_);
         }
         
         try {
@@ -127,7 +128,7 @@ public class DataXmlWorker {
             }
             
 //            XMLWriter writer = new XMLWriter( new FileWriter( "output.xml" ));
-            XMLWriter writer = new XMLWriter( new FileWriter( file_name_ ));
+            XMLWriter writer = new XMLWriter( new FileWriter( file_name_from_unit_ ));
             writer.write( document );
             writer.close();
             
@@ -142,11 +143,12 @@ public class DataXmlWorker {
     }
     
     private long getChangeTimeStamp (){
-        return new File(file_name_).lastModified();
+        return new File(file_name_to_unit_).lastModified();
     }
     
     // FIELDS
-    private String file_name_;
+    private String file_name_from_unit_;
+    private String file_name_to_unit_;
     private int check_period_;
     private long last_change_timestamp_;
     private int mem_shift_;

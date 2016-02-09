@@ -82,7 +82,7 @@ public class ModBusWorker {
                 ReadHoldingRegistersResponse res = (ReadHoldingRegistersResponse)master_.send(new ReadHoldingRegistersRequest(
                                 addr, 
                                 client_data_address_ - 1, 
-                                reg_count_per_client_));
+                                reg_count_per_client_to_read_));
 
                 map_.position(i * reg_count_per_client_);
                 map_.put(ByteBuffer.wrap(res.getData()).asShortBuffer());
@@ -136,7 +136,8 @@ public class ModBusWorker {
         client_start_id_ = client_start_id;
         client_max_count_ = client_max_count;
         data_start_address_ = data_start_address;
-        reg_count_per_client_ = 2;
+        reg_count_per_client_ = 4;
+        reg_count_per_client_to_read_ = 2;
         client_data_address_ = client_data_address;
         
         map_ = ShortBuffer.allocate((client_max_count_ + 1 ) * reg_count_per_client_ );
@@ -166,6 +167,7 @@ public class ModBusWorker {
     private int client_max_count_; 
     private int data_start_address_;
     private int reg_count_per_client_;
+    private int reg_count_per_client_to_read_;
     private int client_data_address_; 
     
     private String port_name_;

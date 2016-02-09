@@ -13,7 +13,8 @@
 	/>
 	
 	<exchange 	
-				map_file="map.xml"
+				map_file_from_unit="from_unit_to_web_map.xml"
+				map_file_to_unit="from_web_to_unit_map.xml"
 				time_file="time_map.xml"
 				check_period="2000"
 	/>

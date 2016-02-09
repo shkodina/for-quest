@@ -36,7 +36,8 @@ public class JavaApplication3 {
 
         //----------------------------------------------------------------------
         DataXmlWorker dataxmlworker = new DataXmlWorker();
-        dataxmlworker.setFileParams(cnf_reader.getCnfParam("exchange", "map_file"), 
+        dataxmlworker.setFileParams(cnf_reader.getCnfParam("exchange", "map_file_from_unit"), 
+                                    cnf_reader.getCnfParam("exchange", "map_file_to_unit"),
                                     Integer.parseInt(cnf_reader.getCnfParam("exchange", "check_period")),
                                     Integer.parseInt(cnf_reader.getCnfParam("modbus", "data_start_address")));       
         //----------------------------------------------------------------------

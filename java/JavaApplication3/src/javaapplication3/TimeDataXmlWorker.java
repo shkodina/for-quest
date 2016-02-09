@@ -39,7 +39,7 @@ public class TimeDataXmlWorker {
         
         if (last_change_timestamp_ < getChangeTimeStamp()){
             try{
-                System.out.println("some new data in XML");
+                //System.out.println("some new data in XML");
                 ShortBuffer cur_data = getXmlData(mem_data);
                 last_change_timestamp_ = getChangeTimeStamp();
                 return cur_data;
