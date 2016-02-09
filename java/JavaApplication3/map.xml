@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exchange>
 	<map>
-		<reg addr="22" value="5"/>
-		<reg addr="23" value="2"/>
+		<reg addr="21" value="0"/>
+		<reg addr="22" value="65535"/>
+		<reg addr="23" value="29"/>
 		<reg addr="24" value="5"/>
 		<reg addr="28" value="5"/>
 

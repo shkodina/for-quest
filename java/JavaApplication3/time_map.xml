@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exchange>
-	<map>
 		<reg addr="20" value="99"/>
-		<reg addr="21" value="32233"/>
-	</map>
 </exchange>

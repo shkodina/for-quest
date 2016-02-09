@@ -16,10 +16,20 @@ public class JavaApplication3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
+        String config_path = "config.xml";
+        
+        if (args.length == 0){
+            System.out.println("Usage: master config_path");
+            //System.exit(1);
+        }else{
+            config_path = args[0];
+        }
+        
+         
         
         ConfigReader cnf_reader = new ConfigReader();
         try {
-            cnf_reader.parse(args[0]);
+            cnf_reader.parse(config_path);
         }catch (Exception e){
             System.out.println("Exeption: " + e.getMessage());
         }
@@ -45,14 +55,13 @@ public class JavaApplication3 {
         modbus_worker.setDataXmlWorker(dataxmlworker);
         modbus_worker.setTimeDataXmlWorker(timedataxmlworker);
         
-        //dataxmlworker.test();
-        
+        int poll_period = Integer.parseInt(cnf_reader.getCnfParam("modbus", "poll_period"));
         try {
             modbus_worker.init();
             long curtime = System.currentTimeMillis();
             while (true){
                 //dataxmlworker.test();
-                if (System.currentTimeMillis() - curtime > 1000){
+                if (System.currentTimeMillis() - curtime > poll_period){
                     curtime = System.currentTimeMillis();
                     modbus_worker.updateData();
                 }

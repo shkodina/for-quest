@@ -103,10 +103,13 @@ public class ModBusWorker {
 
         
         map_ = time_data_xml_worker_.upDateData(map_);
-        // for (char ii = 0; ii < map_.limit(); ii++){
-        //    System.out.println("map+t[" + ii + "]=" + map_.get(ii));
-        //}
+//         for (int ii = 0; ii < map_.limit(); ii++){
+//            System.out.println("map+t[" + ii + "]=" + map_.get(ii));
+//        }
        map_ = data_xml_worker_.upDateData(map_);
+//         for (int iii = 0; iii < map_.limit(); iii++){
+//            System.out.println("map+time+t[" + iii + "]=" + map_.get(iii));
+//        }
         
         //System.out.println("Update xml finished");
         

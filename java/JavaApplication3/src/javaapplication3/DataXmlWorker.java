@@ -59,7 +59,7 @@ public class DataXmlWorker {
     private ShortBuffer getXmlData(ShortBuffer mem_data){
         
         ShortBuffer exitData = ShortBuffer.allocate(mem_data.limit());
-        exitData.put(mem_data);
+        exitData.put(mem_data.array());
         
         SAXReader reader = new SAXReader();
 
@@ -82,7 +82,7 @@ public class DataXmlWorker {
                 
                 int mem_adr = Integer.parseInt(element.attributeValue("addr")) - mem_shift_;
                 if (mem_adr < mem_data.limit())
-                    exitData.put(mem_adr, Short.parseShort(element.attributeValue("value")));
+                    exitData.put(mem_adr, (short) Integer.parseInt(element.attributeValue("value")));
             }
 
             return exitData;
@@ -117,9 +117,13 @@ public class DataXmlWorker {
                 int mem_adr = Integer.parseInt(element.attributeValue("addr")) - mem_shift_;
                 //System.out.println("mem_adr = " + mem_adr);
                 
-                if (mem_adr < mem_data.limit())
-                    element.attribute("value").setValue(Integer.toString(mem_data.get(mem_adr)));
-                
+                if (mem_adr < mem_data.limit()){
+                    int data = mem_data.get(mem_adr);
+                    if (data < 0 )
+                        data += 65536;
+                    //System.out.println("in put attr to xml int = " + data);
+                    element.attribute("value").setValue(Integer.toString(data));
+                }
             }
             
 //            XMLWriter writer = new XMLWriter( new FileWriter( "output.xml" ));

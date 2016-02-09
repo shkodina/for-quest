@@ -1,14 +1,15 @@
 <config>
 	<comport 	
-				name="COM9" 
+				name="COM4" 
 				speed="115200" 
 	/>
 	
 	<modbus 	
 				client_start_id="1" 
-				client_max_count="10" 
+				client_max_count="1" 
 				data_start_address="20"
 				client_data_address="10"
+                                poll_period="5000"
 	/>
 	
 	<exchange 	
