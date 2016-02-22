@@ -10,6 +10,7 @@
 				data_start_address="20"
 				client_data_address="10"
                                 poll_period="5000"
+                                timeout_ms="100"
 	/>
 	
 	<exchange 	
