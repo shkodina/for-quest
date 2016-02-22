@@ -59,7 +59,7 @@ public class ModBusWorker {
           return;
         }
 
- 
+        sedix_alg = new SedixAlgorithms();
     }
     
     // FUNCTIONS update data
@@ -111,9 +111,16 @@ public class ModBusWorker {
 //            System.out.println("map+time+t[" + iii + "]=" + map_.get(iii));
 //        }
         
-        //System.out.println("Update xml finished");
+        map_ = sedix_alg.aplyAlgo(map_);
+//         for (int iiii = 0; iiii < map_.limit(); iiii++){
+//            System.out.println("map+time+alg+t[" + iiii + "]=" + map_.get(iiii));
+//        }
+
+
+//System.out.println("Update xml finished");
         
         //System.out.println("Send Braodcast data");
+        
         
         
         // TODO need set broadcast address
@@ -180,5 +187,5 @@ public class ModBusWorker {
     private DataXmlWorker data_xml_worker_;
     private TimeDataXmlWorker time_data_xml_worker_;
     
-    
+    private SedixAlgorithms sedix_alg;
 }
