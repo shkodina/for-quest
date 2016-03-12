@@ -37,7 +37,7 @@ public class DataXmlWorker {
     
     public ShortBuffer upDateData (ShortBuffer mem_data){
         
-        if (last_change_timestamp_ < getChangeTimeStamp()){
+        if (last_change_timestamp_ != getChangeTimeStamp()){
             //System.out.println("some new data in XML");
             ShortBuffer cur_data = getXmlData(mem_data);
             setXmlData(mem_data);
